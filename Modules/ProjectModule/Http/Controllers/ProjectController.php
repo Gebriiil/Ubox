@@ -15,7 +15,7 @@ class ProjectController extends Controller
      */
     public function index( ProjectDatatable $projectdatatable)
     {
-        return $projectdatatable->render('projectmodule::projects.index')
+        return $projectdatatable->render('projectmodule::projects.index',['title'=>'Project_page']);
     }
 
     // public function dataTales()
