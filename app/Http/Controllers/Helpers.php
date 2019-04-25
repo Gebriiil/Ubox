@@ -1,0 +1,183 @@
+<?php
+
+if (!function_exists('active_menu')) {
+
+	function active_menu($key) {
+
+		if (!is_array($key)) {
+
+			if (preg_match('/' . $key . '/i', Request::segment(2)) && Request::segment(2) != 'order-status-types') {
+				return 'active';
+			} elseif ((Request::segment(2) == 'voucher' || Request::segment(2) == 'order-status-types' || Request::segment(2) == 'suppliers') && $key == 'config') {
+				return 'active';
+			}
+		} elseif (is_array($key) && in_array(Request::segment(2), $key)) {
+			return 'active';
+
+		}
+
+	}
+
+}
+
+if (!function_exists('offer_price')) {
+
+	function offer_price($product) {
+
+		if ($product) {
+
+			if ($product->offers and $product->offers->active == 1) {
+
+				$sell_price = $product->sell_price;
+				$offer_price = $product->offers->offer_price;
+				$divi = $sell_price - $offer_price;
+
+				$percent = round($divi / $sell_price * 100, 1);
+
+				return ['offer_price' => $offer_price, 'percent' => $percent];
+			}
+		}
+
+		return ['offer_price' => '', 'percent' => ''];
+
+	}
+
+}
+
+if (!function_exists('lang')) {
+
+	function lang() {
+
+		if (!session()->has('lang')) {
+
+			session()->put('lang', 'ar');
+
+		}
+
+		return session('lang');
+
+	}
+}
+
+if (!function_exists('checkInWishlist')) {
+
+	function checkInWishlist($id) {
+
+		if (user()) {
+
+			return in_array($id, user()->wishlist()->pluck('product_id')->toArray()) ? 'color: #F8694A;box-shadow: 0px 0px 0px 1px #F8694A inset, 0px 0px 0px 0px #F86' : '';
+		}
+
+		return '';
+
+	}
+}
+
+if (!function_exists('CartlastElement')) {
+
+	function CartlastElement() {
+
+		if (Cart::count() > 0) {
+
+			return Cart::content();
+
+		}
+
+		return [];
+
+	}
+}
+
+if (!function_exists('governments')) {
+
+	function governments() {
+
+		return \Modules\AreaModule\Entities\Government::all();
+
+	}
+}
+
+if (!function_exists('cities')) {
+
+	function cities() {
+
+		return \Modules\AreaModule\Entities\City::all();
+
+	}
+}
+
+if (!function_exists('zones')) {
+
+	function zones() {
+
+		return \Modules\AreaModule\Entities\Zone::all();
+
+	}
+}
+
+if (!function_exists('checkInCart')) {
+
+	function checkInCart($id) {
+
+		foreach (Cart::content() as $product) {
+
+			if ($id == $product->id) {
+				return [
+					"status" => true,
+					"style" => "color: #FFF;
+                     background-color: #30323A;
+                     pointer-events:none;",
+				];
+			}
+
+		}
+
+		return [
+			"status" => false,
+			"style" => "",
+		];
+
+	}
+}
+
+if (!function_exists('user')) {
+
+	function user() {
+
+		return auth('user')->user();
+
+	}
+
+}
+if (!function_exists('link')) {
+
+	function our_link($string) {
+
+		$num = strcspn($string, "=");
+		return substr($string, $num);
+
+	}
+
+}
+
+if (!function_exists('quick_sort')) {
+	function quick_sort($my_array) {
+
+		$loe = $gt = [];
+
+		if (count($my_array) < 2) {
+			return $my_array;
+		}
+		$pivot_key = key($my_array);
+		$pivot = array_shift($my_array);
+		foreach ($my_array as $val) {
+			if ($val >= $pivot) {
+				$loe[] = $val;
+			} elseif ($val < $pivot) {
+				$gt[] = $val;
+			}
+		}
+
+		return array_merge(quick_sort($loe), array($pivot_key => $pivot), quick_sort($gt));
+	}
+}
