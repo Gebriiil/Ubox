@@ -11,6 +11,9 @@
 |
 */
 
-Route::prefix('projectmodule')->group(function() {
-    Route::get('/', 'ProjectModuleController@index');
+Route::prefix('admin-panel')->group(function() {
+
+    Route::resource('project','ProjectController');
+	Route::get('project/ajax','ProjectController@dataTales');
+
 });

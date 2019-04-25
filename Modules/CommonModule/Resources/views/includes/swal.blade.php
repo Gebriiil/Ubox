@@ -1,5 +1,5 @@
 
-<script src="{{asset('assets/admin/plugins/sweetalert/sweetalert.min.js')}}"></script>
+<script src="{{asset('../assets/admin/plugins/sweetalert/sweetalert.min.js')}}"></script>
 
 @if (session('success'))
     <script>
