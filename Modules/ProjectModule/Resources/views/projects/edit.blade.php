@@ -1,7 +1,7 @@
 @extends('commonmodule::layouts.master')
 
 @section('title')
-  @lang('projectmodule::project.pagetitle')
+  @lang('projectmodule::project.edit')
 @endsection
 
 @section('css')
@@ -21,7 +21,8 @@
       @endforeach
     @endif
     <!-- /.box-header -->
-    <form class="form-horizontal" action="{{url('/admin-panel/project')}}" method="POST" enctype="multipart/form-data">
+    <form class="form-horizontal" action="{{url('/admin-panel/project/' . $project->id)}}" method="POST" enctype="multipart/form-data">
+      {{ method_field('PUT') }}
       {{ csrf_field() }}
 
       <div class="box-body">
@@ -45,7 +46,7 @@
                   <label class="control-label col-sm-2" for="title">{{__('projectmodule::project.title')}} ({{ my_lang($locale) }}):</label>
                   <div class="col-sm-8">
                     <input type="text" autocomplete="off" class="form-control"
-                      placeholder="Write Title" name="{{ $locale }}[name]" required>
+                      placeholder="Write Title" value="{{ $project->translate($locale)->name }}" name="{{ $locale }}[name]" required>
                   </div>
                 </div>
 
@@ -53,7 +54,7 @@
                   {{-- Description --}}
                   <label class="control-label col-sm-2" for="title">{{__('projectmodule::project.desc')}} ({{ my_lang($locale) }}):</label>
                   <div class="col-sm-8">
-                    <textarea id="editor{{$locale}}" name="{{$locale}}[desc]" placeholder="Write Description" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                    <textarea id="editor{{$locale}}"name="{{$locale}}[desc]" placeholder="Write Description" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{ $project->translate($locale)->desc }}</textarea>
                   </div>
                 </div>
               </div>

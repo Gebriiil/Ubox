@@ -11,6 +11,9 @@
 |
 */
 
-Route::prefix('commonmodule')->group(function() {
-    Route::get('/', 'CommonModuleController@index');
+Route::prefix('admin-panel')->group(function() {
+    Route::get('/{lang}', function($lang){
+    		App::setLocale($lang);
+    		return back();
+    } );
 });

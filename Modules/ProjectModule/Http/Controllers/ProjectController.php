@@ -6,9 +6,14 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use  Modules\ProjectModule\Entities\Project;
+use  Modules\ProjectModule\Entities\ProjectTranslation;
 use App\DataTables\ProjectDatatable;
 class ProjectController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
+    }
     /**
      * Display a listing of the resource.
      * @return Response
@@ -42,7 +47,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //return view('projectmodule::create');
+        return view('projectmodule::projects.create');
     }
 
     /**
@@ -52,27 +57,30 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rules=[];
+        foreach(config('translatable.locales') as $locale){
+            $rules+=[$locale . '.*'=>'required'];
+        }
+        $rules+=['image'=>'required|image|mimes:jpg,png,jpeg,JPG,PNG,JPEG'];
+        $request->validate($rules);
+        $image_name= image_name($request->image);
+        $data=$request->except(['image']);
+        $data['image']=$image_name;
+        Project::create($data);
+        image_upload($request->image , $image_name);
+        session()->flash('success' , __('projectmodule::project.success'));
+        return redirect(route('project.index'));
     }
 
-    /**
-     * Show the specified resource.
-     * @param int $id
-     * @return Response
-     */
     public function show($id)
     {
         //return view('projectmodule::show');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     * @param int $id
-     * @return Response
-     */
     public function edit($id)
     {
-        //return view('projectmodule::edit');
+        $project=Project::find($id);
+        return view('projectmodule::projects.edit', compact('project'));
     }
 
     /**
@@ -83,7 +91,21 @@ class ProjectController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $rules=[];
+        foreach(config('translatable.locales') as $locale){
+            $rules+=[$locale . '.*'=>'required'];
+        }
+        $rules+=['image'=>'required|image|mimes:jpg,png,jpeg,JPG,PNG,JPEG'];
+        $request->validate($rules);
+        $image_name= image_name($request->image);
+        $data=$request->except(['image']);
+        $data['image']=$image_name;
+
+        $project=Project::find($id);
+        $project->update($data);
+        image_upload($request->image , $image_name);
+        session()->flash('success' , __('projectmodule::project.success'));
+        return redirect(route('project.index'));
     }
 
     /**
@@ -93,6 +115,8 @@ class ProjectController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $project=Project::find($id);
+        $project->destroy();
+        return back();
     }
 }

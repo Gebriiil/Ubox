@@ -26,7 +26,8 @@
                         <span class="hidden-xs">{{__('main.language')}}</span>
                     </a>
                     <ul class="dropdown-menu">
-                                                        
+                           <li><a href="{{url('admin-panel/ar')}}"> @lang('commonmodule::sidebar.arabic')</a></li>                             
+                           <li><a href="{{url('admin-panel/en')}}"> @lang('commonmodule::sidebar.english')></a></li>                             
                     </ul>
                 </li>
             </ul>
