@@ -9,6 +9,7 @@ return [
 	'submit'=>'Submit',
 	'cancel'=>'Cancel',
 	'success'=>'Added succesfully',
+	'create_category'=>'Create New Category',
 ];
 
 ?>

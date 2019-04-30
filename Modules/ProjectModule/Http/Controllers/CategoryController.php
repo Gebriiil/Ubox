@@ -5,16 +5,25 @@ namespace Modules\ProjectModule\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
-
+use  Modules\ProjectModule\Entities\Project_Category;
+use  Modules\ProjectModule\Entities\Project_CategoryTranslation;
+use Modules\ProjectModule\Repository\Project_CategoryRepository;
+use App\DataTables\Project_CategoryDataTable;
 class CategoryController extends Controller
 {
+    private  $projectCategoryRepo;
+
+    public function __construct(Project_CategoryRepository $project_categoryRepository)
+    {
+        $this->projectCategoryRepo=$project_categoryRepository;
+    }
     /**
      * Display a listing of the resource.
      * @return Response
      */
-    public function index()
+    public function index(Project_CategoryDataTable $project_categoryDataTable)
     {
-        return view('projectmodule::index');
+        return $project_categoryDataTable->render('projectmodule::categories.index');
     }
 
     /**
@@ -23,7 +32,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('projectmodule::create');
+        return view('projectmodule::categories.create');
     }
 
     /**
@@ -33,7 +42,15 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rules=[];
+        foreach(config('translatable.locales') as $locale){
+            $rules+=[$locale . '.*'=>'required'];
+        }
+        $request->validate($rules);
+        $data=$request->all();
+        $this->projectCategoryRepo->save($data);
+        session()->flash('success' , __('projectmodule::project.success'));
+        return redirect(route('project.index'));
     }
 
     /**
@@ -53,7 +70,8 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        return view('projectmodule::edit');
+        $category=$this->projectCategoryRepo->findById($id);
+        return view('projectmodule::categories.edit' ,compact('category'));
     }
 
     /**
@@ -64,7 +82,15 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $rules=[];
+        foreach(config('translatable.locales') as $locale){
+            $rules+=[$locale . '.*'=>'required'];
+        }
+        $request->validate($rules);
+        $data=$request->all();
+        $this->projectCategoryRepo->update($data,$id);
+        session()->flash('success' , __('projectmodule::project.success'));
+        return redirect(route('project.index'));
     }
 
     /**
@@ -74,6 +100,7 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->projectCategoryRepo->delete($id);
+        return back();
     }
 }

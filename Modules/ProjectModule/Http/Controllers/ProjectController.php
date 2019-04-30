@@ -7,20 +7,31 @@ use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use  Modules\ProjectModule\Entities\Project;
 use  Modules\ProjectModule\Entities\ProjectTranslation;
+use  Modules\ProjectModule\Entities\Project_Category;
+use  Modules\ProjectModule\Entities\Project_CategoryTranslation;
+use  Modules\ProjectModule\Repository\ProjectRepository;
+use Modules\ProjectModule\Repository\Project_CategoryRepository;
 use App\DataTables\ProjectDatatable;
 class ProjectController extends Controller
 {
-    public function __construct()
+    private $projectRepo;
+    private $projectCategoryRepo;
+    public function __construct(
+        ProjectRepository $projectrepository,
+        Project_CategoryRepository $project_categoryRepository
+    )
     {
-        $this->middleware('auth:admin');
+        $this->projectRepo=$projectrepository;
+        $this->projectCategoryRepo=$project_categoryRepository;
     }
     /**
      * Display a listing of the resource.
      * @return Response
      */
-    public function index( ProjectDatatable $projectdatatable)
+    public function index()
     {
-        return $projectdatatable->render('projectmodule::projects.index',['title'=>'Project_page']);
+        $categories=$this->projectRepo->findAll();
+        return view('projectmodule::projects.create' , compact('categories'));
     }
 
     // public function dataTales()
@@ -47,7 +58,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('projectmodule::projects.create');
+        $categories=$this->projectCategoryRepo->findAll();
+        return view('projectmodule::projects.create' , compact('categories'));
     }
 
     /**
@@ -66,7 +78,9 @@ class ProjectController extends Controller
         $image_name= image_name($request->image);
         $data=$request->except(['image']);
         $data['image']=$image_name;
-        Project::create($data);
+
+        $this->projectRepo->save($data);
+        
         image_upload($request->image , $image_name);
         session()->flash('success' , __('projectmodule::project.success'));
         return redirect(route('project.index'));
@@ -78,8 +92,8 @@ class ProjectController extends Controller
     }
 
     public function edit($id)
-    {
-        $project=Project::find($id);
+    {      
+        $project=$this->projectRepo->findById($id);
         return view('projectmodule::projects.edit', compact('project'));
     }
 
@@ -101,8 +115,8 @@ class ProjectController extends Controller
         $data=$request->except(['image']);
         $data['image']=$image_name;
 
-        $project=Project::find($id);
-        $project->update($data);
+        $project=$this->projectRepo->findById($id);
+        $this->projectRepo->update($data,$id);
         image_upload($request->image , $image_name);
         session()->flash('success' , __('projectmodule::project.success'));
         return redirect(route('project.index'));
@@ -115,8 +129,7 @@ class ProjectController extends Controller
      */
     public function destroy($id)
     {
-        $project=Project::find($id);
-        $project->destroy();
+        $this->projectRepo->delete($id);
         return back();
     }
 }

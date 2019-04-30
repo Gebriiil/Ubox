@@ -10,10 +10,17 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(
+[
+	'prefix' => LaravelLocalization::setLocale(),
+	'middleware' => [ 'localize' ] // Route translate middleware
+],
+function() {
 
-Route::prefix('admin-panel')->group(function() {
-    Route::get('/{lang}', function($lang){
-    		App::setLocale($lang);
-    		return back();
-    } );
-});
+		Route::prefix('admin-panel')->group(function() {
+		    Route::get('/{lang}', function($lang){
+		    		App::setLocale($lang);
+		    		return back();
+		    } );
+		});
+	});
