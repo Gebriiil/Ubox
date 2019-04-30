@@ -9,7 +9,7 @@ class Project_Category extends Model
 {
 	use Translatable;
 	protected $table='project__categories';
-    protected $fillable = [];
+    protected $guarded = [];
     public $translatedAttributes=['name','desc'];
 
     public function projects()

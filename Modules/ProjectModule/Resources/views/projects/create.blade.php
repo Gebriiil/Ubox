@@ -56,6 +56,15 @@
                     <textarea id="editor{{$locale}}" name="{{$locale}}[desc]" placeholder="Write Description" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                   </div>
                 </div>
+                {{-- Insert Product Category --}}
+                <div class="form-group" style="margin-left: 10px; margin-right: 5px;">
+                          <label>Select</label>
+                          <select class="form-control" name="project_category_id" >
+                            @foreach($categories as $category)
+                            <option value="{{$category->id}}">{{$category->translate($locale)->name}}</option>
+                            @endforeach
+                          </select>
+                </div>
               </div>
               @endforeach
             </div>
@@ -70,11 +79,7 @@
           <div class="col-sm-4">
             <input data-validation="required" type="file" autocomplete="off" name="image">
           </div>
-          <input type="hidden" name="project_category_id" value=1>
         </div>
-
-        {{-- Insert Product Category --}}
- 
 
         </div>
         <!-- /.box-body -->

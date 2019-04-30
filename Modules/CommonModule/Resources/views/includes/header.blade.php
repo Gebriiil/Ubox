@@ -25,9 +25,15 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <span class="hidden-xs">{{__('main.language')}}</span>
                     </a>
+                    
                     <ul class="dropdown-menu">
-                           <li><a href="{{url('admin-panel/ar')}}"> @lang('commonmodule::sidebar.arabic')</a></li>                             
-                           <li><a href="{{url('admin-panel/en')}}"> @lang('commonmodule::sidebar.english')></a></li>                             
+                        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                            <li>
+                                <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                    {{ $properties['native'] }}
+                                </a>
+                            </li>
+                        @endforeach
                     </ul>
                 </li>
             </ul>
@@ -54,7 +60,7 @@
                         <!-- Menu Footer-->
                         <li class="user-footer">
                             <div class="pull-right">
-                                <a href="{{ url('admin-panel/logout') }}" class="btn btn-default btn-flat">Sign out</a>
+                                <a href="{{ aurl('logout') }}" class="btn btn-default btn-flat">Sign out</a>
                             </div>
                         </li>
                     </ul>

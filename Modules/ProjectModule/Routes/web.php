@@ -10,10 +10,17 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(
+[
+	'prefix' => LaravelLocalization::setLocale(),
+	'middleware' => [ 'localize' ] // Route translate middleware
+],
+function() {
+	Route::prefix('admin-panel')->group(function() {
 
-Route::prefix('admin-panel')->group(function() {
+	    Route::resource('project','ProjectController');
+	    Route::resource('category','CategoryController');
+		// Route::get('project/ajax','ProjectController@dataTales');
 
-    Route::resource('project','ProjectController');
-	// Route::get('project/ajax','ProjectController@dataTales');
-
+	});
 });
