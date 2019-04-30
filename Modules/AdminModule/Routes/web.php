@@ -17,9 +17,14 @@ Route::group(
 ],
 function() {
 	Route::prefix('admin-panel')->group(function() {
-	    Route::get('/', 'AdminModuleController@index');
 	    Route::get('/login-page','AdminLoginController@login_page')->name('login');
 	    Route::post('/login','AdminLoginController@dologin');
-	    Route::resource('/admins','AdminModuleController');
+	    
+	    Route::group(['middleware'=>'auth:admin'] , function(){
+	    	Route::resource('/admins','AdminModuleController');
+	    	Route::get('/', 'AdminModuleController@index');
+
+	    });
+
 	});
 });

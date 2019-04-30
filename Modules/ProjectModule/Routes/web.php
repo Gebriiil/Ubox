@@ -1,5 +1,5 @@
 <?php
-
+use Modules\ProjectModule\Entities\Project_Category;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,10 +16,14 @@ Route::group(
 	'middleware' => [ 'localize' ] // Route translate middleware
 ],
 function() {
-	Route::prefix('admin-panel')->group(function() {
+	Route::group(['prefix'=>'admin-panel' , 'middleware'=>'auth:admin'] , function() {
 
 	    Route::resource('project','ProjectController');
-	    Route::resource('category','CategoryController');
+	    Route::resource('project_categories','CategoryController');
+	    Route::get('project-categories',function(){
+	    	$projects=Project_Category::all();
+	    	return view('projectmodule::categories.index',compact('projects'));
+	    });
 		// Route::get('project/ajax','ProjectController@dataTales');
 
 	});

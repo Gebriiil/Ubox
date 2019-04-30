@@ -1,7 +1,7 @@
 @extends('commonmodule::layouts.master')
 
 @section('title')
-    {{ trans('adminmodule::admin.admins') }}
+    {{ trans('blogmodule::blog.blogs') }}
 @endsection
 
 @section('css')
@@ -11,7 +11,7 @@
 
 @section('content-header')
     <section class="content-header">
-        <h1> {{ trans('adminmodule::admin.admins') }} </h1>
+        <h1> {{ trans('blogmodule::blog.blogs') }} </h1>
     </section>
 @endsection
 
@@ -21,10 +21,10 @@
             <div class="col-xs-12">
                 <div class="box box-info">
                     <div class="box-header with-border">
-                        <h3 class="box-title">{{ trans('adminmodule::admin.admins') }}</h3>
+                        <h3 class="box-title">{{ trans('blogmodule::blog.blogs') }}</h3>
                         {{-- Add New--}}
-                        <a href="{{url('admin-panel/blog/create')}}" type="button" class="btn btn-success pull-right">
-                            <i class="fa fa-plus" aria-hidden="true"></i> &nbsp; {{ trans('adminmodule::admin.add_new') }}
+                        <a href="{{aurl('blog/create')}}" type="button" class="btn btn-success pull-right">
+                            <i class="fa fa-plus" aria-hidden="true"></i> &nbsp; {{ trans('blogmodule::blog.add_new') }}
                         </a>
                     </div>
                     <!-- /.box-header -->
@@ -32,10 +32,11 @@
                         <table id="adminsTable" class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>{{ trans('adminmodule::admin.name') }}</th>
-                                <th>{{ trans('adminmodule::admin.email') }}</th>
-                                <th>{{ trans('adminmodule::admin.op') }}</th>
+                                <th>{{ trans('blogmodule::blog.id') }}</th>
+                                <th>{{ trans('blogmodule::blog.title') }}</th>
+                                <th>{{ trans('blogmodule::blog.desc') }}</th>
+                                <th>{{ trans('blogmodule::blog.image') }}</th>
+                                <th>{{ trans('blogmodule::blog.op') }}</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -46,16 +47,17 @@
                                     <td> {{$blog->title}} </td>
 
                                     <td> {{$blog->desc}} </td>
+                                    <td> <img src="{{asset('upload/' . $blog->image1)}}" style="width: 100px;height: 65px;"> </td>
 
                                     <td>
                                         {{-- Edit --}}
-                                        <a title="Edit" href="{{url('admin-panel/blog/' . $blog->id . '/edit')}}" type="button" class="btn btn-primary">
+                                        <a title="Edit" href="{{aurl('blog/' . $blog->id . '/edit')}}" type="button" class="btn btn-primary">
                                             <i class="fa fa-pencil" aria-hidden="true"></i>
                                         </a>
                                         {{-- Delete --}}
-                                        <form class="inline" action="{{url('admin-panel/blog/' . $blog->id)}}" method="POST">
+                                        <form class="inline" action="{{aurl('blog/' . $blog->id)}}" method="POST">
                                             {{ method_field('DELETE') }} {!! csrf_field() !!}
-                                            <button title="Delete" type="submit" onclick="return confirm('Are you sure, You want to delete Admin Data?')" type="button"
+                                            <button title="Delete" type="submit" onclick="return confirm('{{trans("blogmodule::blog.delete_confirm")}}')" type="button"
                                                     class="btn btn-danger">
                                                 <i class="fa fa-trash" aria-hidden="true"></i>
                                             </button>
@@ -79,23 +81,23 @@
 
 @section('javascript') {{-- sweet alert --}}
 
-@include('commonmodule::includes.swal')
+  @include('commonmodule::includes.swal')
 
-<!-- DataTables -->
-<script src="{{asset('assets/admin/bower_components/datatables.net/js/jquery.dataTables.min.js')}}"></script>
-<script src="{{asset('assets/admin/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
+  <!-- DataTables -->
+  <script src="{{asset('assets/admin/bower_components/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+  <script src="{{asset('assets/admin/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
 
-<script>
-    $(document).ready(function () {
-        $('#adminsTable').DataTable({
-            'paging'      : true,
-            'lengthChange': true,
-            'searching'   : true,
-            'ordering'    : true,
-            'info'        : true,
-            'autoWidth'   : false
-        });
-    })
+  <script>
+      $(document).ready(function () {
+          $('#adminsTable').DataTable({
+              'paging'      : true,
+              'lengthChange': true,
+              'searching'   : true,
+              'ordering'    : true,
+              'info'        : true,
+              'autoWidth'   : false
+          });
+      })
 
-</script>
+  </script>
 @endsection

@@ -70,6 +70,22 @@
                 </ul>
             </li>
 
+            <li class="treeview {{ active_menu('project') }} ">
+                <a href="#">
+                    <i class="fa fa-qrcode" aria-hidden="true"></i> <span>{{__('commonmodule::sidebar.projects')}}</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <!-- Current -->
+                    <li><a href="{{ aurl('project_categories') }}"><i 
+                                    class="fa fa-circle-o"></i>{{__('commonmodule::sidebar.project_categories')}}</a></li>
+                    <li><a href="{{ aurl('project') }}"><i
+                                    class="fa fa-circle-o"></i>{{__('commonmodule::sidebar.projects')}}</a></li>
+                </ul>
+            </li>
+
             
 
             {{--Area--}}
@@ -97,30 +113,7 @@
                 </ul>
             </li>
 
-            <li class="treeview {{ active_menu(['country' , 'government' , 'city' , 'zone']) }} ">
-                <a href="#">
-                    <i class="fa fa-globe" aria-hidden="true"></i> <span>{{__('commonmodule::sidebar.area')}}</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <!-- Country -->
-                    <li><a href="{{ aurl('admin-panel/country') }}"><i
-                                    class="fa fa-circle-o"></i>{{__('commonmodule::sidebar.country')}}</a></li>
-
-                    <!-- Government -->
-                    <li><a href="{{ aurl('admin-panel/government') }}"><i
-                                    class="fa fa-circle-o"></i> {{__('commonmodule::sidebar.government')}}</a></li>
-
-                    <!-- city -->
-                    <li><a href="{{ aurl('admin-panel/city') }}"><i
-                                    class="fa fa-circle-o"></i> {{__('commonmodule::sidebar.city')}}</a></li>
-                    <!-- zone -->
-                    <li><a href="{{ aurl('admin-panel/zone') }}"><i
-                                    class="fa fa-circle-o"></i> {{__('commonmodule::sidebar.zone')}}</a></li>
-                </ul>
-            </li>
+            
 
 
             <li>

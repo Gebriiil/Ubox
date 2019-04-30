@@ -21,7 +21,7 @@
       @endforeach
     @endif
     <!-- /.box-header -->
-    <form class="form-horizontal" action="{{url('/admin-panel/blog')}}" method="POST" enctype="multipart/form-data">
+    <form class="form-horizontal" action="{{aurl('blog')}}" method="POST" enctype="multipart/form-data">
       {{ csrf_field() }}
 
       <div class="box-body">
@@ -45,7 +45,7 @@
                   <label class="control-label col-sm-2" for="title">{{__('blogmodule::blog.title')}} ({{ my_lang($locale) }}):</label>
                   <div class="col-sm-8">
                     <input type="text" autocomplete="off" class="form-control"
-                      placeholder="Write Title" name="{{ $locale }}[title]" required>
+                      placeholder="{{__('blogmodule::blog.Write Title')}}" name="{{ $locale }}[title]" required>
                   </div>
                 </div>
 
@@ -53,7 +53,7 @@
                   {{-- Description --}}
                   <label class="control-label col-sm-2" for="title">{{__('blogmodule::blog.desc')}} ({{ my_lang($locale) }}):</label>
                   <div class="col-sm-8">
-                    <textarea id="editor{{$locale}}" name="{{$locale}}[desc]" placeholder="Write Description" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                    <textarea id="editor{{$locale}}" name="{{$locale}}[desc]" placeholder="{{__('blogmodule::blog.Write Description')}}" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                   </div>
                 </div>
               </div>

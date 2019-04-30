@@ -54,6 +54,8 @@ return array(
     'edit-product' => 'Edit product price',
     'product-report' => 'Product Report',
     'order_status' => 'Order Status Types',
-    'suppliers' => 'Suppliers'
+    'suppliers' => 'Suppliers',
+    'project_categories'=>'Project Categories',
+    'projects'=>'Projects',
 
 );

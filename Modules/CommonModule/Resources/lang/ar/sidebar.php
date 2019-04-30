@@ -57,7 +57,9 @@ return array(
     'edit-product' => 'تعديل أسعار المنتجات',
     'product-report' => 'عدد المنتجات فى الاوردر',
     'order_status' => 'حالات الاوردرات',
-    'suppliers' => 'المورديين'
+    'suppliers' => 'المورديين',
+    'project_categories'=>'اقسام المشاريع',
+    'projects'=>'المشاريع',
 
 );
 
