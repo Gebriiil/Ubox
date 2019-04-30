@@ -13,6 +13,8 @@ return array(
     'blog' =>"Blog ",
     'blogs' =>"Blogs",
     'blogcateg'=>"Blog Categories" ,
+    'training' => 'Training',
+    'training_category' => 'Training Category',
     "widgets"=>"Widgets" ,
     'slider' => 'Slider',
     'partner' => 'Partner',

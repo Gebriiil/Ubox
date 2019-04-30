@@ -1,11 +1,10 @@
 <?php
 
 namespace App\DataTables;
-
-use  Modules\ProjectModule\Entities\Training;
+use  Modules\ProjectModule\Entities\TrainingCategory;
 use Yajra\DataTables\Services\DataTable;
 
-class ProjectDatatable extends DataTable
+class TrainingCategoryDataTable extends DataTable
 {
     /**
      * Build DataTable class.
@@ -16,18 +15,19 @@ class ProjectDatatable extends DataTable
     public function dataTable($query)
     {
         return datatables($query)
-            ->addColumn('action', 'projectdatatable.action');
+            ->addColumn('action', 'training_category.action');
     }
 
     /**
      * Get query source of dataTable.
-     * 
+     *
      * @param \App\User $model
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function query(Training $model)
+    public function query(User $model)
     {
-        return Training::query();
+        dd(TrainingCategory::query());
+        return TrainingCategory::query();
     }
 
     /**
@@ -40,15 +40,7 @@ class ProjectDatatable extends DataTable
         return $this->builder()
                     ->columns($this->getColumns())
                     ->minifiedAjax()
-                    ->addAction(['width' => '80px'])
-                    ->parameters([
-                        'dom'=>'Blfrtip',
-                        'lengthMenu'=>[ [10,25,50,100] , [10,25,50,'All Records'] ],
-                        'buttons'=>[
-                            ['extend'=>'csv' , 'className'=>'btn btn-primary'  , 'text'=>'csv'],
-                            ['extend'=>'print' , 'className'=>'btn btn-info'  , 'text'=>'print'],
-                        ]
-                    ]);
+                    ->parameters($this->getBuilderParameters());
     }
 
     /**
@@ -74,6 +66,6 @@ class ProjectDatatable extends DataTable
      */
     protected function filename()
     {
-        return 'Project_' . date('YmdHis');
+        return 'TrainingCategory_' . date('YmdHis');
     }
 }

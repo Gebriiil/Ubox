@@ -10,6 +10,8 @@ return array(
   'category' => 'الأقسام',
   'car' => 'السيارات',
   'config' => 'الإعدادات' ,
+  'training' => 'التدريبات',
+    'training_category' => 'اقسام التدريبات',
     'blog' =>"المدونه ",
     'blogs' =>"المدونات",
     'blogcateg'=>"أقسام المدونه",

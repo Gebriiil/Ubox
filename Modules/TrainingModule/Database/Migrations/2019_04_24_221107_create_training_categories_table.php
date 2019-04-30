@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProjectCategoriesTable extends Migration
+class CreateTrainingCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,21 +13,21 @@ class CreateProjectCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('project__categories', function (Blueprint $table) {
+        Schema::create('training_cat', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
         });
 
-        Schema::create('project__category_translations', function(Blueprint $table)
+        Schema::create('training_cat_translations', function(Blueprint $table)
             {
                 $table->increments('id');
-                $table->bigInteger('category_id')->unsigned();
+                $table->bigInteger('training_category_id')->unsigned();
                 $table->string('name');
                 $table->text('desc');
                 $table->string('locale')->index();
 
-                $table->unique(['category_id','locale']);
-                $table->foreign('category_id')->references('id')->on('project__categories')->onDelete('cascade');
+                $table->unique(['training_category_id','locale']);
+                $table->foreign('training_category_id')->references('id')->on('training__cat')->onDelete('cascade');
             });
     }
 
@@ -38,6 +38,6 @@ class CreateProjectCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('project__categories');
+        Schema::dropIfExists('training__categories');
     }
 }

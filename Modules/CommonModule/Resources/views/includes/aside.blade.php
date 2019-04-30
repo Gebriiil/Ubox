@@ -130,6 +130,34 @@
                 </span>
                 </a>
             </li>
+
+            <li class="treeview {{ active_menu('training') }} ">
+                <a href="#">
+                    <i class="fa fa-qrcode" aria-hidden="true"></i> <span>{{__('commonmodule::sidebar.training')}}</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <!-- Current -->
+
+                    <li>
+                        <a href="{{ aurl('training-category/index') }}">
+                            <i class="fa fa-circle-o"></i>{{__('commonmodule::sidebar.training_category')}}
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ aurl('training/index') }}">
+                            <i class="fa fa-circle-o"></i>{{__('commonmodule::sidebar.training')}}
+                        </a>
+                    </li>
+
+
+                </ul>
+            </li>
+
+
         </ul>
     </section>
     <!-- /.sidebar -->

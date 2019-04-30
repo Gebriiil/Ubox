@@ -1,14 +1,14 @@
 <?php
 
-namespace Modules\ProjectModule\Entities;
+namespace Modules\TrainingModule\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 use Dimsav\Translatable\Translatable;
 use Modules\ProjectModule\Entities\Training;
-class Project_Category extends Model
+class TrainingCategory extends Model
 {
 	use Translatable;
-	protected $table='project__categories';
+	protected $table='training_cat';
     protected $guarded = [];
     public $translatedAttributes=['name','desc'];
 

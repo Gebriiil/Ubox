@@ -2,10 +2,10 @@
 
 namespace App\DataTables;
 
-use  Modules\ProjectModule\Entities\Training;
+use  Modules\TrainingModule\Entities\Training;
 use Yajra\DataTables\Services\DataTable;
 
-class ProjectDatatable extends DataTable
+class TrainingDatatable extends DataTable
 {
     /**
      * Build DataTable class.
@@ -60,7 +60,7 @@ class ProjectDatatable extends DataTable
     {
         return [
             'id',
-            'name',
+            'title',
             'desc',
             'created_at',
             'updated_at'
@@ -74,6 +74,6 @@ class ProjectDatatable extends DataTable
      */
     protected function filename()
     {
-        return 'Project_' . date('YmdHis');
+        return 'Training_' . date('YmdHis');
     }
 }

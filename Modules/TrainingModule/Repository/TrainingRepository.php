@@ -1,10 +1,10 @@
 <?php
 
-namespace Modules\ProjectModule\Repository;
+namespace Modules\TrainingModule\Repository;
 
-use Modules\ProjectModule\Entities\Training;
+use Modules\TrainingModule\Entities\Training;
 
-class ProjectRepository{
+class TrainingRepository{
 
     function findAll()
     {
