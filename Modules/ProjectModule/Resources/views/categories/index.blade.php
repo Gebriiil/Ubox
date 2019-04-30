@@ -17,65 +17,86 @@
 @endsection
 
 @section('content')
-<!-- Main content -->
-<section class="content">
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="box box-info">
-        <div class="box-header with-border">
-          <h3 class="box-title">{{__('projectmodule::project.pagetitle')}}</h3>
-          {{-- Add New --}}
-          <a href="{{url('admin-panel/product/create')}}" type="button" class="btn btn-success pull-right"><i class="fa fa-plus" aria-hidden="true"></i> &nbsp; {{__('projectmodule::project.addnew')}}</a>
-        </div>
-        <!-- /.box-header -->
-        <div class="box-header">
-              <h3 class="box-title">{{__('projectmodule::project.pagetitle')}}</h3>
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box box-info">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">{{ trans('projectmodule::project.projects') }}</h3>
+                        {{-- Add New--}}
+                        <a href="{{aurl('project_categories/create')}}" type="button" class="btn btn-success pull-right">
+                            <i class="fa fa-plus" aria-hidden="true"></i> &nbsp; {{ trans('projectmodule::project.add_new') }}
+                        </a>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <table id="adminsTable" class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>{{ trans('projectmodule::project.id') }}</th>
+                                <th>{{ trans('projectmodule::project.title') }}</th>
+                                <th>{{ trans('projectmodule::project.desc') }}</th>
+                                <th>{{ trans('projectmodule::project.op') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach ($projects as $project)
+                                <tr>
+                                    <td> {{$project->id}} </td>
+
+                                    <td> {{$project->title}} </td>
+
+                                    <td> {{$project->desc}} </td>
+
+                                    <td>
+                                        {{-- Edit --}}
+                                        <a title="Edit" href="{{aurl('project_categories/' . $project->id . '/edit')}}" type="button" class="btn btn-primary">
+                                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                                        </a>
+                                        {{-- Delete --}}
+                                        <form class="inline" action="{{aurl('project/' . $project->id)}}" method="POST">
+                                            {{ method_field('DELETE') }} {!! csrf_field() !!}
+                                            <button title="Delete" type="submit" onclick="return confirm('{{trans("projectmodule::project.delete_confirm")}}')" type="button"
+                                                    class="btn btn-danger">
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
             </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              
-            <!-- /.box-body -->
-      {!! $dataTable->table([
-        'class'=>'dataTable table table-bordered table-hover'
-        ]) !!}
-          </div>
-          <!-- /.box -->
-        <!-- /.box-body -->
-      </div>
-      <!-- /.box -->
-    </div>
-    <!-- /.col -->
-  </div>
-  <!-- /.row -->
-</section>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
 @endsection
 
-@section('javascript')
-
+@section('javascript') {{-- sweet alert --}}
 
   @include('commonmodule::includes.swal')
 
+  <!-- DataTables -->
+  <script src="{{asset('assets/admin/bower_components/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+  <script src="{{asset('assets/admin/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
 
+  <script>
+      $(document).ready(function () {
+          $('#adminsTable').DataTable({
+              'paging'      : true,
+              'lengthChange': true,
+              'searching'   : true,
+              'ordering'    : true,
+              'info'        : true,
+              'autoWidth'   : false
+          });
+      })
 
-  @push('js')
-
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/colreorder/1.5.1/css/colReorder.dataTables.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jvectormap/2.0.4/jquery-jvectormap.min.css">
-<script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.colVis.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.flash.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script>
-<script src="https://cdn.datatables.net/colreorder/1.5.1/js/dataTables.colReorder.min.js"></script>
-
-{!! $dataTable->scripts() !!}
-@endpush
-
-  
-
-
-
-
-
+  </script>
 @endsection

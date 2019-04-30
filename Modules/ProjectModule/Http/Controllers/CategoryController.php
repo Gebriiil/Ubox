@@ -23,7 +23,16 @@ class CategoryController extends Controller
      */
     public function index(Project_CategoryDataTable $project_categoryDataTable)
     {
-        return $project_categoryDataTable->render('projectmodule::categories.index');
+        $projects$this->projectCategoryRepo->findAll()
+        return view('projectmodule::categories.index')
+        //return $project_categoryDataTable->render('projectmodule::categories.index');
+    }
+    public function my_index()
+    {
+
+        $projects=$this->projectCategoryRepo->findAll();
+        return view('projectmodule::categories.index',compact('projects'));
+        //return $project_categoryDataTable->render('projectmodule::categories.index');
     }
 
     /**

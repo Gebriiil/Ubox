@@ -30,8 +30,8 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $categories=$this->projectRepo->findAll();
-        return view('projectmodule::projects.create' , compact('categories'));
+        $projects=$this->projectRepo->findAll();
+        return view('projectmodule::projects.create' , compact('projects'));
     }
 
     // public function dataTales()

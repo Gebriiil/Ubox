@@ -42,7 +42,7 @@ class Project_CategoryRepository{
     function delete($id){
         $project_category = Project_Category::find($id);
         $project_category->destroy();
-        return 'success';
+        
     }
 
 }

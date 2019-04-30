@@ -21,7 +21,7 @@
       @endforeach
     @endif
     <!-- /.box-header -->
-    <form class="form-horizontal" action="{{url('/admin-panel/category')}}" method="POST" enctype="multipart/form-data">
+    <form class="form-horizontal" action="{{aurl('project_categories')}}" method="POST" enctype="multipart/form-data">
       {{ csrf_field() }}
 
       <div class="box-body">
@@ -69,7 +69,7 @@
         </div>
         <!-- /.box-body -->
       <div class="box-footer">
-        <a href="{{url('/admin-panel/project')}}" type="button" class="btn btn-default">{{__('projectmodule::project.cancel')}} &nbsp; <i class="fa fa-remove" aria-hidden="true"></i> </a>
+        <a href="{{aurl('project')}}" type="button" class="btn btn-default">{{__('projectmodule::project.cancel')}} &nbsp; <i class="fa fa-remove" aria-hidden="true"></i> </a>
 
         <button type="submit" class="btn btn-primary pull-right">{{__('projectmodule::project.submit')}} &nbsp; <i class="fa fa-save"></i></button>
       </div>

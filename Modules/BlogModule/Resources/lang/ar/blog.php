@@ -1,7 +1,7 @@
 <?php
 
 return [
-
+	'blogs'=>'المدونات ',
 	'create_blog'=>'اضافة مدونه ',
 	'title'=>'العنوان',
 	'desc'=>'الوصف',
@@ -11,6 +11,14 @@ return [
 	'success'=>'تم الاضافه بنجاح ',
 	'create_category'=>'اضافة قسم ',
 	'edit_category'=>'تعديل القسم ',
+	'delete_confirm'=>'هل انت متأكد من مسح هذه البيانات',
+	'op'=>'اختيارات',
+	'id'=>'الترتيب',
+	'add_new'=>'اضافة جديد',
+	'create_blog'=>'اضافة مدونه',
+	'Write Title'=>'أكتب العنوان ',
+	'Write Description'=>'أكتب الوصف ',
+	'image'=>'صوره',
 
 ];
 

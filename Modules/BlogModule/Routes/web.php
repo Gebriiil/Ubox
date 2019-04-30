@@ -17,7 +17,7 @@ Route::group(
 	'middleware' => [ 'localize' ] // Route translate middleware
 ],
 function() {
-	Route::prefix('admin-panel')->group(function() {
+	Route::group(['prefix'=>'admin-panel' , 'middleware'=>'auth:admin'] , function() {
 
 	    Route::resource('blog','BlogModuleController');
 	    Route::get('blog/ajax','BlogModuleController@datatables');
