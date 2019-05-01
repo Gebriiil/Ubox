@@ -150,6 +150,15 @@
                 </ul>
             </li>
 
+            <li>
+                <a href="{{ aurl('user/index') }}">
+                    <i class="fa fa-user" aria-hidden="true"></i><span>{{__('commonmodule::sidebar.users')}} </span>
+                    <span class="pull-right-container">
+                </span>
+                </a>
+            </li>
+
+
 
         </ul>
     </section>

@@ -80,6 +80,7 @@ class ProjectController extends Controller
         }
         $rules+=['image'=>'required|image|mimes:jpg,png,jpeg,JPG,PNG,JPEG'];
         $request->validate($rules);
+
         $image_name= image_name($request->image);
         $data=$request->except(['image']);
         $data['image']=$image_name;

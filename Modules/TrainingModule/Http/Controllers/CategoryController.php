@@ -22,9 +22,13 @@ class CategoryController extends Controller
      * @return Response
      */
 
-    public function taining_category_index(TrainingCategoryDataTable $training_categoryDataTable)
+    public function taining_category_index()
     {
-        return $training_categoryDataTable->render('trainingmodule::categories.index');
+
+        $categories = $this->trainingCategoryRepo->findAll();
+        $title = 'Training';
+
+        return view('trainingmodule::categories.index' , compact('categories' , 'title'));
     }
 
     /**
@@ -48,7 +52,14 @@ class CategoryController extends Controller
             $rules+=[$locale . '.*'=>'required'];
         }
         $request->validate($rules);
-        $data=$request->all();
+
+        $image_name= image_name($request->image);
+        $data=$request->except(['image']);
+
+        $data['image']=$image_name;
+
+        image_upload($request->image , $image_name);
+
 
         $this->trainingCategoryRepo->save($data);
         session()->flash('success' , __('trainingmodule::training.success'));
@@ -89,7 +100,15 @@ class CategoryController extends Controller
             $rules+=[$locale . '.*'=>'required'];
         }
         $request->validate($rules);
-        $data=$request->all();
+
+
+        $image_name= image_name($request->image);
+        $data=$request->except(['image']);
+
+        $data['image']=$image_name;
+
+        image_upload($request->image , $image_name);
+
         $this->trainingCategoryRepo->update($data,$id);
         session()->flash('success' , __('trainingmodule::training.success'));
         return redirect(route('training_category_index'));
@@ -103,6 +122,7 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         $this->trainingCategoryRepo->delete($id);
+
         return back();
     }
 }

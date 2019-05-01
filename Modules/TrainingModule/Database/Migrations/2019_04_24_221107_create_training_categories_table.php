@@ -15,6 +15,7 @@ class CreateTrainingCategoriesTable extends Migration
     {
         Schema::create('training_cat', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('image');
             $table->timestamps();
         });
 

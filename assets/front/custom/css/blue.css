@@ -1,0 +1,149 @@
+.fables-second-text-color{
+    color: #3498db ;
+}
+.fables-second-border-color {
+    border-color: #3498db !important;
+}
+#search .close {
+    background-color: #3498db;
+    border-color: #3498db;
+}
+.fables-btn-link::after {
+    background-color: #3498db;
+    border: 2px solid #3498db;
+}
+.store-single-slider #sync2 .owl-item.current img{
+    border: 2px solid #3498db;
+}
+.fables-view-btn.active{
+    color: #3498db;
+    border-color: #3498db;
+}
+.fables-hover-btn-color::after {
+    background-color: #3498db;
+}
+.fables-product-btn:hover {
+    color: #3498db;
+}
+.fables-contact-hover-input:focus ~ label{
+    color: #3498db; 
+}
+.fables-blog-cat-list a::before {
+    border-left: 10px solid #3498db;
+}
+.fables-text-overlay::before {
+    color: #3498db;
+}
+.nav-slider .owl-nav [class*=owl-]:hover {
+    color: #3498db ;
+}
+.range-slider [type=range]::-webkit-slider-thumb { 
+    background: #3498db; 
+}
+.range-slider .track--included {
+    background: #3498db; 
+}
+.fables-history-carousel #sync2 .current .item {
+  background: #3498db;
+}
+.fables-history-carousel #sync1.owl-theme .owl-dot.active span, .owl-theme .owl-dot:hover span {
+    background: #3498db;
+}
+.fables-background-link:hover{
+    color:#3498db;
+}
+.fables-background-link::after{
+    background-color: #3498db;
+    border: 2px solid #3498db;
+}
+.default-carousel-nav .owl-nav [class*=owl-]{
+    color:#3498db;
+}
+.default-carousel-nav .owl-nav [class*=owl-]:hover{
+    color:  #3498db;
+}
+.gallery-timeline .cd-timeline-img { 
+    background-color: #3498db;
+}
+.gallery-filter a.current {
+    color: #3498db;
+}
+.comming-soon-counter{
+    color:#3498db;
+}
+.fables-sqr-nav .owl-nav [class*=owl-]{  
+    color: #3498db; 
+}
+.table-block:hover {
+    border-bottom: 3px solid #3498db;
+}
+.circle-nav .owl-nav [class*=owl-]:hover {
+    background-color: #3498db;
+}
+.half-width-testimonial .owl-nav [class*=owl-]:hover {
+    color: #3498db;
+}
+.fables-second-background-color ,.fables-second-before::before , .fables-second-before::after ,.fables-second-hover-background-color:hover ,.fables-second-active.active , .fables-second-dots .owl-dot.active span{
+    background-color:#3498db !important;
+}
+ .fables-second-hover-color:hover , .fables-second-hover-color-link a:hover{
+    color: #3498db  ;
+}
+
+.fables-second-hover-text-color:hover .fables-main-text-color ,.fables-second-hover-color:hover .fables-third-text-color
+,.fables-second-hover-text-color:hover .fables-fifth-border-color{
+    color: #3498db !important;
+}
+.fables-second-hover-text-color:hover .fables-forth-text-color{
+    border-color: #3498db;
+}
+.search-input:focus {
+    border-bottom: 1px solid #3498db !important;
+}
+.service .section-content .icon-block {
+    color:#3498db;
+}
+.navbar>.show>a,  .navbar>.show>a:focus,  .navbar>.show>a:hover{
+    color: #3498db;
+}
+.fables-nav .nav-link:hover {
+    color: #3498db!important;
+}
+.btco-hover-menu .active a{
+	color:  #3498db;
+}
+.btco-hover-menu .collapse ul > li:hover > a{background: transparent; color: #3498db;}
+.btco-hover-menu .collapse ul > li:hover > a{background: transparent;color: #3498db;}
+.sidebar .single-rated .btns {
+  background-color: #3498db;
+}
+
+.sidebar .single-rated .btns:hover {
+  border-color: #3498db;
+  color: #3498db;
+}
+.post-list .single-post .btns li:hover {
+  background-color: #3498db;
+}
+.post-list .single-post .thumb .tags li:hover {
+  background-color:#3498db;
+}
+
+.post-list .loadmore-btn {
+  background-color:#3498db;
+}
+.post-list .cat-list li:hover {
+  background-color: #3498db;
+}
+.bg-blue{
+	  background-color: #3498db;
+}
+.color-start{
+	color:#3498db;
+}
+.post-list .single-post .btns li:hover {
+  background-color: #3498db;
+}
+ .sk-double-bounce .sk-child {
+    background-color: #3498db;
+}

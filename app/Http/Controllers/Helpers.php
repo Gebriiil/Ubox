@@ -48,16 +48,20 @@ if (!function_exists('lang')) {
 
 	function lang() {
 
-		if (!session()->has('lang')) {
-
-			session()->put('lang', 'ar');
-
-		}
-
-		return session('lang');
+	    return app()->getLocale();
 
 	}
 }
+
+if (!function_exists('assets')) {
+
+    function assets($url) {
+
+        return asset('../' . $url);
+
+    }
+}
+
 
 if (!function_exists('checkInWishlist')) {
 
