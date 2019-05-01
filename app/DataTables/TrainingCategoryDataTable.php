@@ -26,7 +26,6 @@ class TrainingCategoryDataTable extends DataTable
      */
     public function query(User $model)
     {
-        dd(TrainingCategory::query());
         return TrainingCategory::query();
     }
 

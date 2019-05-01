@@ -33,7 +33,7 @@ class TrainingController extends Controller
         $training= $this->trainingRepo->findAll();
         $title = 'Training';
 
-        return $trainingDataTable->render('trainingmodule::training.index' , compact('training' , 'title'));
+        return view('trainingmodule::training.index' , compact('training' , 'title'));
     }
 
     public function dataTales()
@@ -85,7 +85,7 @@ class TrainingController extends Controller
 
         image_upload($request->image , $image_name);
         session()->flash('success' , __('trainingmodule::training.success'));
-        return redirect(route('training.index'));
+        return redirect(route('training_index'));
     }
 
     public function show($id)
@@ -121,7 +121,7 @@ class TrainingController extends Controller
         $this->trainingRepo->update($data,$id);
         image_upload($request->image , $image_name);
         session()->flash('success' , __('trainingmodule::training.success'));
-        return redirect(route('training.index'));
+        return redirect(route('training_index'));
     }
 
     /**

@@ -3,6 +3,7 @@
 namespace Modules\TrainingModule\Repository;
 
 use Modules\TrainingModule\Entities\Training;
+use File;
 
 class TrainingRepository{
 
@@ -41,7 +42,10 @@ class TrainingRepository{
 
     function delete($id){
         $project = Training::find($id);
-        $project->destroy();
+
+        File::delete( asset('uploads' , $project->image) );
+
+        $project->delete();
         return 'success';
     }
 

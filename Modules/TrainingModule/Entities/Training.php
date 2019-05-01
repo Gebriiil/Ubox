@@ -9,7 +9,7 @@ class Training extends Model
 {
 	use Translatable;
 	protected $table='training';
-    protected $fillable = ['image'];
+    protected $guarded = [];
     protected $translatedAttributes=['name','desc'];
 
     public function project_category()

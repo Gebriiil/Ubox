@@ -1,0 +1,158 @@
+@import url(https://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+body{
+	font-family: 'Droid Arabic Kufi', serif;
+}
+.fables-top-header-signin{
+   direction: rtl;	
+}
+.lang-dropdown .dropdown-item{
+	text-align: right;
+}
+.fl-right{
+	float: right;
+}
+.fl-left{
+	float: left;
+}
+.dir-right{
+	direction: rtl;
+}
+.fables-top-header-signin .fables-iconphone , .fables-top-header-signin .fables-iconemail{
+	line-height: 3;
+	padding-left: 10px;
+}
+.fables-navigation{
+	direction: rtl;
+}
+.navbar-expand-md .navbar-nav{
+	position: relative;
+	right: 3rem;
+}
+.fables-header-icons{
+	float: left;
+}
+.index-traingle::before{
+	border-left: 98.5vw solid transparent;
+}
+.caption-owl {
+	float: right;
+	text-align: right;
+}
+.owl-carousel .owl-item{
+	float: right!important;
+    right: 0;
+}
+.index-carousel{
+	margin-left: 32rem;
+}
+.btn{
+	margin-left: 1rem;
+}
+.fables-lus-icon{
+	right: 0;
+	margin-left: 1rem;
+}
+.pl-6{
+	padding-right: 4rem;
+}
+.gallery-filter .portfolioFilter a{
+	margin-right: 2rem;
+}
+.gallery-filter .portfolioFilter a::after {
+   right: -1rem;	
+}
+.owl-carousel .owl-item img{
+	position: relative;
+	left: 35rem;
+}
+.fables-subscribe-btn{
+	left: -1rem;
+}
+.fables-footer-image .fables-iconmap-icon , .fables-footer-image .fables-iconemail , .fables-footer-image .fables-iconphone{
+	float: right;
+	line-height: 0;
+	padding-left: 1rem;
+}
+.fables-page-title{
+	border-right-width: 9px;
+	border-left-width: 0;
+	    border-right-style: solid;
+}
+.fables-breadcrumb{
+	text-align: right;
+	direction: rtl;
+}
+.blog-timeline{
+	text-align: right;
+}
+.dir-left{
+	direction: ltr!important;
+}
+.fables-comments h2{
+	text-align: right;
+}
+.fables-comments p{
+	direction: rtl;
+	text-align: right;
+}
+.fables-comments .float-right{
+	float: left!important;
+}
+.fables-comments .ml-1, .fables-comments .mx-1 {
+    margin-left: 3.25rem!important;
+}
+.fables-blog-form{
+	text-align: right;
+}
+.fables-blog-category-head::after{
+	right: 0;
+}
+.pl-3, .px-3{
+	padding-right: 1rem;
+}
+.fables-blog-cat-list a::before{
+	right: 0;
+}
+.fables-blog-cat-list li{
+	text-align: right;
+}
+.fables-blog-cat-list a{
+	padding-right: 1rem;
+}
+.text-rtl{
+	text-align: right;
+}
+.fables-history-carousel .owl-carousel .owl-item img {
+     left:0!important; 
+}
+.fables-testimonial-block:after{
+	right: 27rem;
+}
+.details{
+	text-align: right;
+}
+.sidebar .single-slidebar h4{
+	text-align: right;
+}
+.post-list .single-post{
+	text-align: right;
+}
+.bg-blue{
+	left: 1rem;
+}
+.single-rated{
+	text-align: right;
+}
+.inner-apply{
+	text-align: right;
+}
+.btn-apply{
+	margin-left: 0;
+	margin: 0 auto!important;
+}
+.inner-apply .form-check{
+	margin-right: 0;
+}
+.form-check-inline .form-check-input{
+	    margin-left: .3125rem;
+}

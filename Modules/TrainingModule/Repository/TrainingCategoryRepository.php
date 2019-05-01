@@ -3,6 +3,7 @@
 namespace Modules\TrainingModule\Repository;
 
 use Modules\TrainingModule\Entities\TrainingCategory;
+use File;
 
 class TrainingCategoryRepository{
 
@@ -32,16 +33,19 @@ class TrainingCategoryRepository{
 
 
 
-    function update($ProjectData,$id)
+    function update($trainingData,$id)
     {
         $training_category = TrainingCategory::find($id);
-        $training_category = $Project->update($ProjectData);
+        $training_category = $training_category->update($trainingData);
         return $training_category;
     }
 
     function delete($id){
         $training_category = TrainingCategory::find($id);
-        $training_category->destroy();
+
+        File::delete( asset('uploads' , $training_category->image) );
+
+        $training_category->delete();
         return 'success';
     }
 
