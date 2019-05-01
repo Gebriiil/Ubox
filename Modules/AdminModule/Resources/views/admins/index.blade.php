@@ -23,7 +23,7 @@
                     <div class="box-header with-border">
                         <h3 class="box-title">{{ trans('adminmodule::admin.admins') }}</h3>
                         {{-- Add New--}}
-                        <a href="{{url('admin-panel/admins/create')}}" type="button" class="btn btn-success pull-right">
+                        <a href="{{aurl('admins/create')}}" type="button" class="btn btn-success pull-right">
                             <i class="fa fa-plus" aria-hidden="true"></i> &nbsp; {{ trans('adminmodule::admin.add_new') }}
                         </a>
                     </div>
@@ -49,11 +49,11 @@
 
                                     <td>
                                         {{-- Edit --}}
-                                        <a title="Edit" href="{{url('admin-panel/admins/' . $admin->id . '/edit')}}" type="button" class="btn btn-primary">
+                                        <a title="Edit" href="{{aurl('admins/' . $admin->id . '/edit')}}" type="button" class="btn btn-primary">
                                             <i class="fa fa-pencil" aria-hidden="true"></i>
                                         </a>
                                         {{-- Delete --}}
-                                        <form class="inline" action="{{url('admin-panel/admins/' . $admin->id)}}" method="POST">
+                                        <form class="inline" action="{{aurl('admins/' . $admin->id)}}" method="POST">
                                             {{ method_field('DELETE') }} {!! csrf_field() !!}
                                             <button title="Delete" type="submit" onclick="return confirm('Are you sure, You want to delete Admin Data?')" type="button"
                                                     class="btn btn-danger">

@@ -7,6 +7,9 @@ return array (
   'edited' => 'Data Updated Successfully!',
     'deleted' => 'Deleted Done Successfully',
     'login' => 'You must login first before continue',
-    "address" => "You must Complete Your Address"
+    "address" => "You must Complete Your Address",
+    'Admin'=>'Admin',
+    'language'=>'language',
+    'Admin Panel'=>'Admin Panel',
 
 );

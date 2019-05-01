@@ -1,7 +1,7 @@
 @extends('commonmodule::layouts.master')
 
 @section('title')
-  {{__('projectmodule::project.pagetitle')}}
+  {{__('projectmodule::project.projects')}}
 @endsection
 
 @section('css')
@@ -11,7 +11,7 @@
 @section('content-header')
   <section class="content-header">
     <h1>
-      {{__('projectmodule::project.pagetitle')}}
+      {{__('projectmodule::project.projects')}}
     </h1>
   </section>
 @endsection
@@ -47,6 +47,7 @@
                                     <td> {{$project->title}} </td>
 
                                     <td> {{$project->desc}} </td>
+                                    <td> <img src="{{asset('upload/' . $project->image)}}" style="width: 100px;height: 65px;"> </td>
 
                                     <td>
                                         {{-- Edit --}}

@@ -27,7 +27,7 @@ class CreateTrainingCategoriesTable extends Migration
                 $table->string('locale')->index();
 
                 $table->unique(['training_category_id','locale']);
-                $table->foreign('training_category_id')->references('id')->on('training__cat')->onDelete('cascade');
+                $table->foreign('training_category_id')->references('id')->on('training_cat')->onDelete('cascade');
             });
     }
 

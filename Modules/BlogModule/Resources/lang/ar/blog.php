@@ -9,6 +9,7 @@ return [
 	'submit'=>'اضف',
 	'cancel'=>'الغاء',
 	'success'=>'تم الاضافه بنجاح ',
+	'edit_blog'=>'تعديل المدونه ',
 	'create_category'=>'اضافة قسم ',
 	'edit_category'=>'تعديل القسم ',
 	'delete_confirm'=>'هل انت متأكد من مسح هذه البيانات',

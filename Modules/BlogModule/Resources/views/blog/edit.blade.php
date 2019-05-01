@@ -1,7 +1,7 @@
 @extends('commonmodule::layouts.master')
 
 @section('title')
-  @lang('blogmodule::blog.adit_blog')
+  @lang('blogmodule::blog.edit_blog')
 @endsection
 
 @section('css')
@@ -13,7 +13,7 @@
   <!-- Horizontal Form -->
   <div class="box box-info">
     <div class="box-header with-border">
-      <h3 class="box-title">{{__('blogmodule::blog.adit_blog')}}</h3>
+      <h3 class="box-title">{{__('blogmodule::blog.edit_blog')}}</h3>
     </div>
     @if (count($errors) > 0)
       @foreach ($errors->all() as $item)

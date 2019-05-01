@@ -20,10 +20,12 @@ function() {
 
 	    Route::resource('project','ProjectController');
 	    Route::resource('project_categories','CategoryController');
-	    Route::get('project-categories',function(){
-	    	$projects=Project_Category::all();
-	    	return view('projectmodule::categories.index',compact('projects'));
-	    });
+	    Route::get('project-categories/index','CategoryController@Category_index');
+	    Route::get('our-project/index','ProjectController@project_index');
+	    // Route::get('project-categories/index',function(){
+	    // 	$projects=Project_Category::all();
+	    // 	return view('projectmodule::categories.index',compact('projects'));
+	    // });
 		// Route::get('project/ajax','ProjectController@dataTales');
 
 	});

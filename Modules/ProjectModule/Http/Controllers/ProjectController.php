@@ -33,6 +33,11 @@ class ProjectController extends Controller
         $projects=$this->projectRepo->findAll();
         return view('projectmodule::projects.create' , compact('projects'));
     }
+    public function project_index()
+    {
+        $projects=$this->projectRepo->findAll();
+        return view('projectmodule::projects.index' , compact('projects'));
+    }
 
     // public function dataTales()
     // {
@@ -130,6 +135,7 @@ class ProjectController extends Controller
     public function destroy($id)
     {
         $this->projectRepo->delete($id);
+        session()->flash('success' , __('projectmodule::project.success'));
         return back();
     }
 }

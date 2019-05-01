@@ -46,7 +46,7 @@ if (!function_exists('image_upload')){
 if (!function_exists('aurl')) {
 	function aurl($link)
 	{
-		return url( lang() . '/admin-panel/' . $link);
+		return url( app()->getLocale() . '/admin-panel/' . $link);
 	}
 }
 

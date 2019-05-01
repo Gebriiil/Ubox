@@ -1,7 +1,7 @@
 @extends('commonmodule::layouts.master')
 
 @section('title')
-  {{__('projectmodule::project.pagetitle')}}
+  {{__('projectmodule::project.categories')}}
 @endsection
 
 @section('css')
@@ -11,7 +11,7 @@
 @section('content-header')
   <section class="content-header">
     <h1>
-      {{__('projectmodule::project.pagetitle')}}
+      {{__('projectmodule::project.categories')}}
     </h1>
   </section>
 @endsection
@@ -22,7 +22,7 @@
             <div class="col-xs-12">
                 <div class="box box-info">
                     <div class="box-header with-border">
-                        <h3 class="box-title">{{ trans('projectmodule::project.projects') }}</h3>
+                        <h3 class="box-title">{{ trans('projectmodule::project.categories') }}</h3>
                         {{-- Add New--}}
                         <a href="{{aurl('project_categories/create')}}" type="button" class="btn btn-success pull-right">
                             <i class="fa fa-plus" aria-hidden="true"></i> &nbsp; {{ trans('projectmodule::project.add_new') }}

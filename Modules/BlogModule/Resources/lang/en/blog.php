@@ -7,6 +7,7 @@ return [
 	'desc'=>'Description',
 	'photo'=>'Photos',
 	'submit'=>'Submit',
+	'edit_blog'=>'Edit Blog',
 	'cancel'=>'Cancel',
 	'success'=>'Added succesfully',
 	'create_category'=>'Create New Category',

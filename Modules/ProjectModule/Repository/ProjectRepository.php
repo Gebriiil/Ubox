@@ -2,31 +2,31 @@
 
 namespace Modules\ProjectModule\Repository;
 
-use Modules\ProjectModule\Entities\Training;
+use Modules\ProjectModule\Entities\Project;
 
 class ProjectRepository{
 
     function findAll()
     {
-        $project = Training::all();
+        $project = Project::all();
         return $project;
     }
 
 
     function save($project)
     {
-        $project = Training::create($project);
+        $project = Project::create($project);
         return $project;
     }
 
     function findById($id)
     {
-        $project = Training::find($id);
+        $project = Project::find($id);
         return $project;
     }
 
     function findBy($key,$value){
-        $project = Training::where($key,$value)->get();
+        $project = Project::where($key,$value)->get();
         return $project;
     }
 
@@ -34,15 +34,14 @@ class ProjectRepository{
 
     function update($ProjectData,$id)
     {
-        $Project = Training::find($id);
+        $Project = Project::find($id);
         $Project = $Project->update($ProjectData);
         return $Project;
     }
 
     function delete($id){
-        $project = Training::find($id);
-        $project->destroy();
-        return 'success';
+        Project::destroy($id);
+        
     }
 
 }

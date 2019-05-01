@@ -74,14 +74,14 @@
                 <a href="#">
                     <i class="fa fa-qrcode" aria-hidden="true"></i> <span>{{__('commonmodule::sidebar.projects')}}</span>
                     <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
+                        <i class="fa fa-angle-left pull-right"></i> 
                     </span>
                 </a>
                 <ul class="treeview-menu">
                     <!-- Current -->
-                    <li><a href="{{ aurl('project_categories') }}"><i 
+                    <li><a href="{{ aurl('project-categories/index') }}"><i 
                                     class="fa fa-circle-o"></i>{{__('commonmodule::sidebar.project_categories')}}</a></li>
-                    <li><a href="{{ aurl('project') }}"><i
+                    <li><a href="{{ aurl('our-project/index') }}"><i
                                     class="fa fa-circle-o"></i>{{__('commonmodule::sidebar.projects')}}</a></li>
                 </ul>
             </li>

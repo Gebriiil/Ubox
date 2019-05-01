@@ -27,7 +27,7 @@
       @endforeach 
     @endif
     <!-- /.box-header -->
-    <form class="form-horizontal" action="{{url('admin-panel/admins')}}" method="POST" >
+    <form class="form-horizontal" action="{{aurl('admins')}}" method="POST" >
       {{ csrf_field() }}
 
       <div class="box-body">
@@ -66,7 +66,7 @@
       </div>
       <!-- /.box-body -->
       <div class="box-footer">
-        <a href="{{url('/admin-panel/admins/')}}" type="button" class="btn btn-default">{{ trans('adminmodule::admin.cancel') }} &nbsp;
+        <a href="{{aurl('admins/')}}" type="button" class="btn btn-default">{{ trans('adminmodule::admin.cancel') }} &nbsp;
           <i class="fa fa-remove" aria-hidden="true"></i>
         </a>
 

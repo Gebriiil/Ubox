@@ -21,7 +21,7 @@ class Project_CategoryRepository{
 
     function findById($id)
     {
-        $projproject_categoryect = Project_Category::find($id);
+        $project_category = Project_Category::find($id);
         return $project_category;
     }
 
@@ -35,7 +35,7 @@ class Project_CategoryRepository{
     function update($ProjectData,$id)
     {
         $project_category = Project_Category::find($id);
-        $project_category = $Project->update($ProjectData);
+        $project_category = $project_category->update($ProjectData);
         return $project_category;
     }
 
