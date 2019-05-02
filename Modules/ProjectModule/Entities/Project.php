@@ -16,4 +16,8 @@ class Project extends Model
     {
     	$this->belongsTo(Project_Category::class);
     }
+
+    public function image_path(){
+        return asset('public/upload/' . $this->image);
+    }
 }

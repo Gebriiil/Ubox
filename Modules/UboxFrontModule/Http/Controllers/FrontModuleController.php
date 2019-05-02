@@ -64,6 +64,12 @@ class FrontModuleController extends Controller
         return view('Ajax.projects',compact('category','name'));
     }
 
+    public function projects()
+    {
+        $categories=$this->categoryRepo->findAll();
+        return view('uboxfrontmodule::pages.projects',compact('categories','name'));
+    }
+
     public function language($lang)
     {
         session()->put('lang' , $lang);

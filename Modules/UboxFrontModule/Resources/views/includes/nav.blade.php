@@ -81,7 +81,7 @@
                                 <a class="nav-link " href="{{route('services')}}">@lang('uboxfrontmodule::front.services')</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="#">@lang('uboxfrontmodule::front.projects')</a>
+                                <a class="nav-link " href="{{route('projects')}}">@lang('uboxfrontmodule::front.projects')</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link " href="{{route('blog')}}">@lang('uboxfrontmodule::front.blog')</a>
