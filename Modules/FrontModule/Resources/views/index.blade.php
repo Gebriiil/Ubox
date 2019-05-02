@@ -2,7 +2,6 @@
 
 @section('content')
 
-
     <!-- Start page content -->
     <div class="container dir-right">
         <div class="row my-3 my-md-5 overflow-hidden">

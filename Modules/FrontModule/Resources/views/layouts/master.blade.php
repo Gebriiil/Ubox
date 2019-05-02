@@ -17,7 +17,7 @@
 
 <body>
 
-@include('frontmodule::includes.nav')
+@include('frontmodule::includes.navbar')
 
 @include('frontmodule::includes.header')
 

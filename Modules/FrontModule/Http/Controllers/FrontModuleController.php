@@ -52,6 +52,7 @@ class FrontModuleController extends Controller
     }
     public function index()
     {
+
         $categories=$this->categoryRepo->findAll();
 
         $page_name='index';
@@ -73,6 +74,7 @@ class FrontModuleController extends Controller
         $page_name='videos';
         return view('frontmodule::pages.videos',compact('videos','page_name'));
     }
+
     public function services()
     {
         $page_name='services';
