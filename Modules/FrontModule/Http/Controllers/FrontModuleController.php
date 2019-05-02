@@ -56,7 +56,10 @@ class FrontModuleController extends Controller
         $categories=$this->categoryRepo->findAll();
 
         $page_name='index';
-        return view('frontmodule::index',compact('categories'));
+
+        return view('frontmodule::index');
+
+        //return view('frontmodule::index',compact('categories'));
     }
 
     public function language($lang)
