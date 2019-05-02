@@ -187,7 +187,7 @@
                 @foreach($categories as $category)
                     <a href="" data-filter=".webDesign" onclick="andd()" class="fables-forth-text-color web{{$i}}" id="">{{$category->name}}</a>
                     <script type="text/javascript">
-                function andd(){
+                
                      $(document).on('click','.web{{$i}}',function(){
                                     $.ajax({
                                             url: '{{aurl("projectonly")}}',
@@ -202,7 +202,7 @@
                                             }
                                         });
                                   });
-                 }
+                 
                     </script>
                     <?php $i++; ?>
                 @endforeach
