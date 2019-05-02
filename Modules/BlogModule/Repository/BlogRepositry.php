@@ -9,6 +9,11 @@ class BlogRepositry{
 		$blogs=Blog::all();
 		return $blogs;
 	}
+	public function findAllByLimit()
+	{
+		$blogs=Blog::limit(4);
+		return $blogs;
+	}
 	public function findById($id)
 	{
 		$blog=Blog::find($id);

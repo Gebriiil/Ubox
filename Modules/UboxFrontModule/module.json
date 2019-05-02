@@ -1,0 +1,14 @@
+{
+    "name": "UboxFrontModule",
+    "alias": "uboxfrontmodule",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\UboxFrontModule\\Providers\\UboxFrontModuleServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
