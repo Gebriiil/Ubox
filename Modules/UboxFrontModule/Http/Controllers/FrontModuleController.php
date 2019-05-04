@@ -55,7 +55,7 @@ class FrontModuleController extends Controller
     public function index()
     {
         $categories= $this->categoryRepo->findAll();
-        $news =  $this->blogrepository->findAll();
+        $news =  $this->blogrepository->findAllByLimit(3);
 
         return view('uboxfrontmodule::index',compact('categories' , 'news'));
     }
@@ -80,8 +80,9 @@ class FrontModuleController extends Controller
     {
         $new = $this->blogrepository->findById($id);
         $page_name= $new->title;
+        $recent_news = $this->blogrepository->findAllByLimit(3 , $id);
 
-        return view('uboxfrontmodule::pages.new',compact('new','name'));
+        return view('uboxfrontmodule::pages.new',compact('new','name' , 'recent_news'));
 
     }
 
