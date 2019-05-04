@@ -33,7 +33,7 @@ if (!function_exists('my_lang')){
 if (!function_exists('image_name')){
 	function image_name($file)
 	{
-		return time() . '.' . $file->getClientOriginalExtension();
+		return md5 (microtime()) . '.' . $file->getClientOriginalExtension();
 	}
 }
 if (!function_exists('image_upload')){

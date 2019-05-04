@@ -20,7 +20,7 @@ class CreateTrainingTable extends Migration
                 $table->date('start_at');
                 $table->date('end_at');
                 $table->bigInteger('training_cat_id')->unsigned();
-                $table->foreign('training_cat_id')->references('id')->on('training_categories')->onDelete('cascade');
+                $table->foreign('training_cat_id')->references('id')->on('training_cat')->onDelete('cascade');
                 $table->timestamps();
             });
 
