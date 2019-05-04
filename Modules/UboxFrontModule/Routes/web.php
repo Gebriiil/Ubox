@@ -9,10 +9,8 @@ Route::group(
 
 
     Route::get('/projectonly','FrontModuleController@projects_only');
-	Route::get('/category/{id}', 'ProductsFrontController@category')->name('only_category');
-	Route::get('/product/{id}', 'ProductsFrontController@product')->name('only_product');
-	Route::get('/search', 'ProductsFrontController@product_search')->name('product_search');
-
+    
+	Route::get('/news/{id}', 'FrontModuleController@new')->name('only_new');
 
 	Route::get('/', 'FrontModuleController@index')->name('home');
 

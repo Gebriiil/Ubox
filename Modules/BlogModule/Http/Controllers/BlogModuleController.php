@@ -79,9 +79,14 @@ class BlogModuleController extends Controller
         $data=$request->except(['photos']);
         foreach($photos as $photo){
             $i++;
-            $data['image' . $i ]= image_name($photo);
-            image_upload($photo , image_name($photo));
+            $photo_name = image_name($photo);
+            
+            
+            $data['image' . $i ] = $photo_name;
+
+            image_upload($photo , $photo_name) ;
         }
+
         $this->blogRepo->save($data);
         return redirect(aurl('blog'));
     }

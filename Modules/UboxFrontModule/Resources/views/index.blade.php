@@ -264,7 +264,7 @@
                 <p class="fables-fifth-text-color font-13 my-1 text-rtl">{{ $new->created_at }}</p>
                 <p class="fables-forth-text-color font-14 text-rtl">{{$new->desc}}
                 </p>
-                <a href="" class="btn fables-main-text-color fables-second-hover-color p-0 underline mt-2 fl-right">Read More</a>
+                <a href="{{ route('only_new' , $new->id) }}" class="btn fables-main-text-color fables-second-hover-color p-0 underline mt-2 fl-right">Read More</a>
 
             </div>
             @endforeach

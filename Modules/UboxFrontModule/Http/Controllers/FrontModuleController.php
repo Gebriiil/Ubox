@@ -71,14 +71,18 @@ class FrontModuleController extends Controller
     public function projects()
     {
         $categories=$this->categoryRepo->findAll();
+        $page_name='Projects';
+
         return view('uboxfrontmodule::pages.projects',compact('categories','name'));
     }
 
-    public function language($lang)
+    public function new($id)
     {
-        session()->put('lang' , $lang);
+        $new = $this->blogrepository->findById($id);
+        $page_name= $new->title;
 
-        return back();
+        return view('uboxfrontmodule::pages.new',compact('new','name'));
+
     }
 
     
