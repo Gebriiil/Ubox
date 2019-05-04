@@ -54,8 +54,10 @@ class FrontModuleController extends Controller
     }
     public function index()
     {
-        $categories=$this->categoryRepo->findAll();
-        return view('uboxfrontmodule::index',compact('categories'));
+        $categories= $this->categoryRepo->findAll();
+        $news =  $this->blogrepository->findAll();
+
+        return view('uboxfrontmodule::index',compact('categories' , 'news'));
     }
     public function projects_only()
     {

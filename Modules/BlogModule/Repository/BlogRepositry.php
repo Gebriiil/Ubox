@@ -9,9 +9,9 @@ class BlogRepositry{
 		$blogs=Blog::all();
 		return $blogs;
 	}
-	public function findAllByLimit()
+	public function findAllByLimit($num = 4)
 	{
-		$blogs=Blog::limit(4);
+		$blogs=Blog::limit($num)->get();
 		return $blogs;
 	}
 	public function findById($id)

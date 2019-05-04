@@ -255,42 +255,19 @@
             <div class="col-12">
                 <h2 class="font-35 font-weight-bold text-center fables-main-text-color my-4 my-lg-5">Latest News</h2>
             </div>
-            <div class="col-12 col-md-4 mb-4 mb-lg-5 wow bounceInLeft" data-wow-delay=".4s" data-wow-duration="1.5s">
-                <div class="image-container translate-effect-right">
-                    <a href="#"><img src="{{assets('assets/front/custom/images/cat-larg4.jpg')}}" alt=""></a>
-                </div>
-                <h2 class="font-18 semi-font font-18  mt-3"><a href="#" class="fables-main-text-color fables-second-hover-color text-rtl">Getting to Another Level of Design</a></h2>
-                <p class="fables-fifth-text-color font-13 my-1 text-rtl">09 November, 2018</p>
-                <p class="fables-forth-text-color font-14 text-rtl">
-                    When you need your company to have a new  website or if you venture on updating your old webpage with a new look and functionality. the choices are versatile Assuming that you will goWhen you need your company to have a new  website or if you venture on updating your old webpage with a new look and functionality.
-                </p>
-                <a href="" class="btn fables-main-text-color fables-second-hover-color p-0 underline mt-2 fl-right">Read More</a>
-
-            </div>
-            <div class="col-12 col-md-4 mb-4 mb-lg-5 wow bounceInLeft" data-wow-delay=".8s" data-wow-duration="1.5s">
-                <div class="image-container translate-effect-right">
-                    <a href="#"><img src="{{assets('assets/front/custom/images/cat-larg5.jpg')}}" alt=""></a>
-                </div>
-                <h2 class="font-18 semi-font font-18  mt-3 text-rtl"><a href="#" class="fables-main-text-color fables-second-hover-color">Getting to Another Level of Design</a></h2>
-                <p class="fables-fifth-text-color font-13 my-1 text-rtl">09 November, 2018</p>
-                <p class="fables-forth-text-color font-14 text-rtl">
-                    When you need your company to have a new  website or if you venture on updating your old webpage with a new look and functionality. the choices are versatile Assuming that you will goWhen you need your company to have a new  website or if you venture on updating your old webpage with a new look and functionality.
-                </p>
-                <a href="" class="btn fables-main-text-color fables-second-hover-color p-0 underline mt-2 fl-right">Read More</a>
-
-            </div>
+            @foreach($news as $new)
             <div class="col-12 col-md-4 mb-4 mb-lg-5 wow bounceInLeft" data-wow-delay="1.2s" data-wow-duration="1.5s">
                 <div class="image-container translate-effect-right">
                     <a href="#"><img src="{{assets('assets/front/custom/images/cat-larg6.jpg')}}" alt=""></a>
                 </div>
-                <h2 class="font-18 semi-font font-18  mt-3 text-rtl"><a href="#" class="fables-main-text-color fables-second-hover-color">Getting to Another Level of Design</a></h2>
-                <p class="fables-fifth-text-color font-13 my-1 text-rtl">09 November, 2018</p>
-                <p class="fables-forth-text-color font-14 text-rtl">
-                    When you need your company to have a new  website or if you venture on updating your old webpage with a new look and functionality. the choices are versatile Assuming that you will goWhen you need your company to have a new  website or if you venture on updating your old webpage with a new look and functionality.
+                <h2 class="font-18 semi-font font-18  mt-3 text-rtl"><a href="#" class="fables-main-text-color fables-second-hover-color">{{$new->title}}</a></h2>
+                <p class="fables-fifth-text-color font-13 my-1 text-rtl">{{ $new->created_at }}</p>
+                <p class="fables-forth-text-color font-14 text-rtl">{{$new->desc}}
                 </p>
                 <a href="" class="btn fables-main-text-color fables-second-hover-color p-0 underline mt-2 fl-right">Read More</a>
 
             </div>
+            @endforeach
         </div>
     </div>
     <div class="fables-testimonial fables-after-overlay py-4 py-lg-5 bg-rules">
