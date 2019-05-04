@@ -2,7 +2,7 @@
 
 namespace App\DataTables;
 
-use  Modules\ProjectModule\Entities\Training;
+use  Modules\TrainingModule\Entities\Training;
 use Yajra\DataTables\Services\DataTable;
 
 class ProjectDatatable extends DataTable

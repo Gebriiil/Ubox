@@ -9,6 +9,7 @@ use Illuminate\View\View;
 use Modules\BlogModule\Repository\BlogRepositry;
 use Modules\ProjectModule\Repository\Project_CategoryRepository;
 use Modules\ProjectModule\Repository\ProjectRepository;
+use Modules\ProjectModule\Entities\Project;
 
 class FrontModuleController extends Controller
 {
@@ -60,8 +61,9 @@ class FrontModuleController extends Controller
     {
         $name="customer";
         $id=request('name'); 
-        $category=$this->categoryRepo->findById();
-        return view('Ajax.projects',compact('category','name'));
+        //$category=$this->categoryRepo->findById($id);
+        $projects=Project::with(['translations'])->where('project_category_id',$id)->get();
+        return view('uboxfrontmodule::Ajax.projects',compact('projects','name'));
     }
 
     public function language($lang)

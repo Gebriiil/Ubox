@@ -1,7 +1,7 @@
 <?php
 
 namespace App\DataTables;
-use  Modules\ProjectModule\Entities\TrainingCategory;
+use  Modules\TrainingModule\Entities\TrainingCategory;
 use Yajra\DataTables\Services\DataTable;
 
 class TrainingCategoryDataTable extends DataTable

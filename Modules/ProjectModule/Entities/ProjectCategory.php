@@ -4,7 +4,7 @@ namespace Modules\ProjectModule\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 use Dimsav\Translatable\Translatable;
-use Modules\ProjectModule\Entities\Training;
+use Modules\TrainingModule\Entities\Training;
 class Project_Category extends Model
 {
 	use Translatable;

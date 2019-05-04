@@ -2,7 +2,30 @@
 
 @section('content')
 
+@push('javascript')
+<script type="text/javascript">
+                $(document).ready(function(){
+                     $(".web").click(function(e){
 
+                                e.preventDefault();
+                                var id=$(this).attr('id');
+                                    $.ajax({
+                                            url: '{{ url( lang() . "/projectonly")}}',
+                                            type:'get',
+                                            dataType:'html',
+                                            data:{
+                                                name:id,
+                                            },
+                                            success:function(data)
+                                            {
+                                                $('#text').html(data);
+                                            }
+                                        });
+                                  });
+                 });
+                 
+                    </script>
+@endpush
     <!-- Start page content -->
     <div class="container dir-right">
         <div class="row my-3 my-md-5 overflow-hidden">
@@ -183,28 +206,11 @@
         <div class="gallery-filter">
             <div class="portfolioFilter my-3 clearfix">
                 <a href="#" data-filter="*" class="current">ALL</a>
-                <?php $i=0; ?>
-                @foreach($categories as $category)
-                    <a href="" data-filter=".webDesign" onclick="andd()" class="fables-forth-text-color web{{$i}}" id="">{{$category->name}}</a>
-                    <script type="text/javascript">
                 
-                     $(document).on('click','.web{{$i}}',function(){
-                                    $.ajax({
-                                            url: '{{aurl("projectonly")}}',
-                                            type:'get',
-                                            dataType:'html',
-                                            data:{
-                                                name:<?php echo $category->id; ?>,
-                                            },
-                                            success:function(data)
-                                            {
-                                                $('#text').html(data);
-                                            }
-                                        });
-                                  });
-                 
-                    </script>
-                    <?php $i++; ?>
+                @foreach($categories as $category)
+                    <a href="" data-filter=".webDesign"  class="fables-forth-text-color web" id="{{$category->id}}">{{$category->name}}</a>
+                    
+                    
                 @endforeach
             </div>
             <div class="portfolioContainer row filter-masonry" id="text">
