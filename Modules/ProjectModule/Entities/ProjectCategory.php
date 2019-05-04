@@ -5,6 +5,7 @@ namespace Modules\ProjectModule\Entities;
 use Illuminate\Database\Eloquent\Model;
 use Dimsav\Translatable\Translatable;
 use Modules\TrainingModule\Entities\Training;
+use Modules\ProjectModule\Entities\Project;
 class Project_Category extends Model
 {
 	use Translatable;
@@ -12,8 +13,8 @@ class Project_Category extends Model
     protected $guarded = [];
     public $translatedAttributes=['name','desc'];
 
-    public function projects()
+    public  function projects()
     {
-    	$this->hasMany(Training::class);
+    	return $this->hasMany(Project::class);
     }
 }
