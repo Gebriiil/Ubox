@@ -71,7 +71,7 @@
           <div class="col-sm-4">
             <input data-validation="required" type="file" autocomplete="off" name="image">
           </div>
-          <input type="hidden" name="project_category_id" value=1>
+          <input type="hidden" name="project_cat_id" value=1>
         </div>
 
         {{-- Insert Product Category --}}

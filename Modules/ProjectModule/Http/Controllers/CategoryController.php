@@ -5,8 +5,8 @@ namespace Modules\ProjectModule\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
-use  Modules\ProjectModule\Entities\Project_Category;
-use  Modules\ProjectModule\Entities\Project_CategoryTranslation;
+use  Modules\ProjectModule\Entities\Project_Cat;
+use  Modules\ProjectModule\Entities\Project_CatTranslation;
 use Modules\ProjectModule\Repository\Project_CategoryRepository;
 use App\DataTables\Project_CategoryDataTable;
 class CategoryController extends Controller

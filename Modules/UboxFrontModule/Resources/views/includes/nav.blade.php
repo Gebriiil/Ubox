@@ -36,7 +36,7 @@
 
                         @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
 
-                            <a class="dropdown-item white-color font-13 fables-second-hover-color" href="{{ route('lang' , $localeCode)}}">
+                            <a class="dropdown-item white-color font-13 fables-second-hover-color" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
                                 {{ $properties['native'] }}
                             </a>
 
@@ -87,10 +87,10 @@
                                 <a class="nav-link " href="{{route('blog')}}">@lang('uboxfrontmodule::front.blog')</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about.html">@lang('uboxfrontmodule::front.about_us')</a>
+                                <a class="nav-link" href="{{route('about_us')}}">@lang('uboxfrontmodule::front.about_us')</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">@lang('uboxfrontmodule::front.contact_us')</a>
+                                <a class="nav-link" href="{{route('contact_us')}}">@lang('uboxfrontmodule::front.contact_us')</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="job.html">@lang('uboxfrontmodule::front.jobs')</a>

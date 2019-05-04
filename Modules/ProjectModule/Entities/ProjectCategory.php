@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 use Dimsav\Translatable\Translatable;
 use Modules\TrainingModule\Entities\Training;
 use Modules\ProjectModule\Entities\Project;
-class Project_Category extends Model
+class Project_Cat extends Model
 {
 	use Translatable;
-	protected $table='project__categories';
+	protected $table='project__cat';
     protected $guarded = [];
     public $translatedAttributes=['name','desc'];
 

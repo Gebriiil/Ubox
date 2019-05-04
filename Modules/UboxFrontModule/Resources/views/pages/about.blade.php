@@ -15,7 +15,7 @@
 	
 	<div class="content-about">
 		<div class="row bottom">
-			<div class="col-md-12 col-sm-12 col-xs-12"><img src="{{asset('public/img/slide1.png')}}"></div>
+			<div class="col-md-12 col-sm-12 col-xs-12"><img src="{{asset('img/slide1.png')}}"></div>
 			<h4>@lang('uboxfrontmodule::front.description_us')</h4>
 			<p>@lang('uboxfrontmodule::front.description_us2')</p>
 			</div>
@@ -23,26 +23,26 @@
             <div class="row">
                 <div class="col-lg-3 col-sm-6 service-block">
                     <div class="service-space">
-                       <img src="{{asset('public/img/truck.png')}}">
+                       <img src="{{asset('img/truck.png')}}">
                         <h4>@lang('uboxfrontmodule::front.Free Shipping')</h4>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-3 service-block">
                     <div class="service-space">
                   
-                       <img src="{{asset('public/img/support.png')}}">
+                       <img src="{{asset('img/support.png')}}">
                         <h4>@lang('uboxfrontmodule::front.Online Service')</h4>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-3 service-block">
                     <div class="service-space">
-                      <img src="{{asset('public/img/24-hours-phone-service.png')}}">
+                      <img src="{{asset('img/24-hours-phone-service.png')}}">
                         <h4> @lang('uboxfrontmodule::front.Service') 24 </h4>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-3 service-block">
                     <div class="service-space">
-                   <img src="{{asset('public/img/credit.png')}}">
+                   <img src="{{asset('../assets/front/custom/images/choose-img.jpg')}}">
                         <h4>@lang('uboxfrontmodule::front.Online Payment')</h4>
                     </div>
                 </div>

@@ -13,21 +13,21 @@ class CreateProjectCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('project__categories', function (Blueprint $table) {
+        Schema::create('project__cat', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
         });
 
-        Schema::create('project__category_translations', function(Blueprint $table)
+        Schema::create('project__cat_translations', function(Blueprint $table)
             {
                 $table->increments('id');
-                $table->bigInteger('category_id')->unsigned();
+                $table->bigInteger('project__cat_id')->unsigned();
                 $table->string('name');
                 $table->text('desc');
                 $table->string('locale')->index();
 
-                $table->unique(['category_id','locale']);
-                $table->foreign('category_id')->references('id')->on('project__categories')->onDelete('cascade');
+                $table->unique(['project__cat_id','locale']);
+                $table->foreign('project__cat_id')->references('id')->on('project__cat')->onDelete('cascade');
             });
     }
 
@@ -38,6 +38,6 @@ class CreateProjectCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('project__categories');
+        Schema::dropIfExists('project__cat');
     }
 }

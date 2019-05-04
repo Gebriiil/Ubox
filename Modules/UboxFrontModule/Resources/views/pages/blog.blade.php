@@ -55,9 +55,9 @@
     @endforeach  
 
    </div>
-   <div class="text-center my-5">
+   <!-- <div class="text-center my-5">
         <a href="blogdetails.html" class="btn fables-second-background-color white-color fables-main-hover-background-color px-5 py-2 white-color-hover">Load More</a>
-   </div> 
+   </div> --> 
 </div>
 <!-- /End page content -->
 

@@ -64,7 +64,7 @@ class FrontModuleController extends Controller
         $name="customer";
         $id=request('name'); 
         //$category=$this->categoryRepo->findById($id);
-        $projects=Project::with(['translations'])->where('project_category_id',$id)->get();
+        $projects=Project::with(['translations'])->where('project_cat_id',$id)->get();
         return view('uboxfrontmodule::Ajax.projects',compact('projects','name'));
     }
 
