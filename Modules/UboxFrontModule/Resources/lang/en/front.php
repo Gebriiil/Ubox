@@ -192,6 +192,7 @@ return [
 	'SATISFIED CLIENTS'=>'SATISFIED CLIENTS',
 	'Latest Works'=>'Latest Works',
 	'ALL'=>'ALL',
+	'en' => 'English',
 	'Show All Projects'=>'Show All Projects',
 	'Your Visison Is Our Mission'=>'Your Visison Is Our Mission',
 	'Contact us'=>'Contact us',

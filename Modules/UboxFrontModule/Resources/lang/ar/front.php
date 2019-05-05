@@ -138,6 +138,7 @@ return [
 	'COMPANY MEMBERS'=>'أعضاء الشركة',
 	'Latest Works'=>'اخر الاعمال ',
 	'ALL'=>'جميع الاعمال ',
+	'ar' => 'العربية',
 	'Show All Projects'=>'اظهار جميع المشاريع ',
 	'Your Visison Is Our Mission'=>'رؤيتك هي مهمتنا',
 	'Contact us'=>'تواصل معنا ',

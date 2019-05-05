@@ -30,7 +30,7 @@
             <div class="col-12 col-sm-2 col-lg-5 text-rtl">
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle border-0 bg-transparent font-13 lang-dropdown-btn pl-0" type="button" id="dropdownLangButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        @lang('uboxfrontmodule::front.language')
+                        @lang('uboxfrontmodule::front.'. lang() )
                     </button>
                     <div class="dropdown-menu p-0 fables-forth-background-color rounded-0 m-0 border-0 lang-dropdown" aria-labelledby="dropdownLangButton">
 
