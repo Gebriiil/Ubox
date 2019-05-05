@@ -192,6 +192,6 @@ return [
 	'SATISFIED CLIENTS'=>'SATISFIED CLIENTS',
 	'Latest Works'=>'Latest Works',
 	'ALL'=>'ALL',
-
+	'en' => 'English',
 
 ];
