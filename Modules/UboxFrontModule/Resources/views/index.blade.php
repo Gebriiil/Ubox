@@ -276,7 +276,7 @@
             <div class="owl-carousel owl-theme" id="fables-testimonial-carousel">
                 <div class="row text-center fables-testimonial-carousel-item rounded py-4">
                     <div class="col-12 col-md-3">
-                        <img src="{{assets('assets/front/custom/images/testimonial-img.png')}}" alt="Fables Template" class="fables-testimonial-carousel-img">
+                        
                         <h3 class="font-14 semi-font text-white">Billy Richards</h3>
                         <h3 class="font-14 font-italic text-white mt-2">Chief Manager, Simba Co</h3>
                     </div>
