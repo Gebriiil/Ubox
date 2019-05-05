@@ -202,5 +202,10 @@ return [
 	'Mail & Phone number'=>'Mail & Phone number',
 	'Stay In Touch'=>'Stay In Touch',
 	'Provide you the great Services'=>'Provide you the great Services',
+	'We are working to bring all of your'=>'We are working to bring all of your business to your mobile with simple usability and professional simple steps.',
+	'Development'=>'Development',
+	'Web application development is'=>'Web application development is an important and esay way to convert your daily bussiness requirements into a web applications for clients.',
+	'Our business experties'=>'Our business experties Provide you the great value',
+	'Being the best'=>'“Being the best in class Software application Development Company in the different domain of Knowledge”',
 
 ];
