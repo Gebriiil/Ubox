@@ -2,28 +2,7 @@
 
 @section('content')
 
-    @push('javascript')
 
-    <link rel="stylesheet" type="text/css" href="{{asset('/assets/front/css/notifIt.css')}}">
-
-    <script src="{{ asset('/assets/front/js/notifIt.js') }}"></script>
-
-
-
-    @if( session('success'))
-        <script>
-
-            notif({
-                msg: "<b>{{session('success')}}</b>",
-                type: "success"
-            });
-
-
-        </script>
-    @endif
-
-@endpush
-    
 <div class="fables-light-background-color">
     <div class="container"> 
         <nav aria-label="breadcrumb">
@@ -36,7 +15,7 @@
     </div>
 </div>
 
-    <div class="container dir-right">
+    <div class="container dir-right fables-counter">
         <div class="row my-4 my-lg-5">
              <div class="col-12 col-lg-8">  
                          <div class="owl-carousel owl-theme default-carousel nav-0 blog-single-slider fables-second-dots dir-left"> 
@@ -56,18 +35,17 @@
                                  </a>
                              </div>   
                          </div>
-                         <h2 class="font-23 semi-font my-3 text-rtl"><a href="#" class="fables-main-text-color fables-second-hover-color">{{ $new->title }}</a></h2>
+                         <h2 class="font-23 semi-font my-3 text-rtl" style="{{ lang() == 'en' ? 'text-align: left' : '' }}"><a href="#" class="fables-main-text-color fables-second-hover-color">{{ $new->title }}</a></h2>
                  <div class="fables-forth-text-color fables-blog-date">                                  
                      <div class="row">
-                         <div class="col-12 col-sm-10 pt-2">
+                         <div class="col-12 col-sm-10 pt-2 text-rtl" style="{{ lang() == 'en' ? 'text-align: left' : '' }}"  >
                                  <span class="fables-icondata fables-second-text-color mr-1"></span> 
-                                 <span class="mr-3"> {{ $new->created_at }} </span>
-
+                                 <span class="mr-3"> {{ $new->created_at->diffForHumans() }} </span>
                          </div> 
                      </div>
 
                  </div>
-                 <p class="fables-forth-text-color fables-single-blog font-14 my-3 text-rtl">
+                 <p class="fables-forth-text-color font-14 my-3 text-rtl" style="{{ lang() == 'en' ? 'text-align: left' : '' }}">
                      {{ $new->desc }}
                  </p>
                  
@@ -75,7 +53,7 @@
                  <hr>
                  <div class="row text-rtl">
                      <div class="col-2">
-                         <img src="assets/custom/images/avatar.jpg" alt="" class="img-fluid">
+                         <img src="{{ assets('assets/front/custom/images/avatar.jpg') }}" alt="" class="img-fluid">
                      </div>
                      <div class="col-10">
                          <p>
@@ -84,22 +62,52 @@
                      </div>
                  </div>
 
+
+                 <div class="fables-comments" style="{{ lang() == 'en' ? 'text-align:left' : '' }}">
+                    <h2 class="fables-main-text-color fables-light-background-color my-3 my-lg-4 font-15 bold-font py-3 px-4">@lang('uboxfrontmodule::front.comments')</h2>
+                    
+                    @forelse($comments as $comment)
+                        
+                        <div class="fables-comments">
+                            <p>
+                                <span class="fables-fifth-text-color font-14 fl-right">@lang('uboxfrontmodule::front.posted_by') </span>
+                                <a href="" class="fables-forth-text-color fables-second-hover-color font-15 bold-font ml-1 fl-right">{{ $comment->name }}</a>
+                                <span class="fables-forth-text-color float-right font-14 fl-left">{{ $comment->created_at->diffForHumans() }}</span>
+                            </p>
+                            <p class="font-14 fables-fifth-text-color">
+                                    {{ $comment->comment }}  
+                            </p>
+                        </div>
+
+                        <hr>
+                    @empty
+                    
+                        <div class="text-danger text-center"> @lang('uboxfrontmodule::front.is_empty') </div>
+
+                    @endforelse
+
+                    
+                </div>    
+
              <div class="fables-blog-form">
                  <h2 class="fables-main-text-color fables-light-background-color my-3 my-lg-4 font-15 bold-font py-3 px-4">@lang('uboxfrontmodule::front.leave_comment') ...</h2>
-                 <form class="fables-contact-form mb-0">
+                 <form action="{{ route('comment' , $new->id) }}" method="POST" class="fables-contact-form mb-0">
                  <div class="form-row">
                      <div class="form-group col-md-6">
-                         <input type="text" class="form-control form-control rounded-0 p-3"  placeholder="@lang('uboxfrontmodule::front.name')">   
+                         <input type="text" class="form-control form-control rounded-0 p-3" name="name" placeholder="@lang('uboxfrontmodule::front.name')">   
                      </div>
                      <div class="form-group col-md-6">
-                         <input type="email" class="form-control form-control rounded-0 p-3" placeholder="@lang('uboxfrontmodule::front.email')"> 
+                         <input type="email" class="form-control form-control rounded-0 p-3" name="email" placeholder="@lang('uboxfrontmodule::front.email')"> 
                      </div>
                  </div>                            
                  <div class="form-row"> 
                       <div class="form-group col-md-12">
-                          <textarea class="form-control form-control rounded-0 p-3" placeholder="@lang('uboxfrontmodule::front.comment')" rows="4"></textarea>
+                          <textarea class="form-control form-control rounded-0 p-3" name="comment" placeholder="@lang('uboxfrontmodule::front.comment')" rows="4"></textarea>
                      </div> 
                  </div>
+
+                 <input type="hidden" name="blog_id"="{{ $new->id }}">
+
                  <div class="form-row">
                    <div class="form-group col-md-12">
                        <button type="submit" class="btn fables-second-background-color rounded-0 text-white font-15 px-4 py-2">@lang('uboxfrontmodule::front.post_comment')</button>

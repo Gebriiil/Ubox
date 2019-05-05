@@ -68,6 +68,11 @@ return [
 	'customers satisfaction'=>'Kundenzufriedenheit',
 	'customers satisfaction desc'=>'Kundenzufriedenheit ist unser Motto. Wir bemühen uns, unsere Kreativität an die Anforderungen unserer Kunden vor, während und nach dem Service anzupassen.',
 	'we are creative agency'=>'Wir sind eine Kreativagentur',
+	'We always strive to'=>'Wir sind stets bemüht, die Erwartungen unserer Kunden zu erfüllen und qualitativ hochwertige Websites und mobile Anwendungen bereitzustellen, die auf einzigartige und attraktive Weise gestaltet sind. Wir freuen uns auch darauf, unseren Kunden dabei zu helfen, ein konstantes Wachstum zu erzielen, indem wir ihnen die besten Marketingpläne für ihr Unternehmen anbieten. UBoxPLus freut sich darauf, das führende Unternehmen nicht nur in Ägypten, sondern auch in MENA zu sein.',
+	'SATISFIED CLIENTS'=>'ZUFRIEDENE KUNDEN',
+	'COMPANY MEMBERS'=>'FIRMENMITGLIEDER',
+	'Latest Works'=>'Neueste Werke',
+	'ALL'=>'Neueste Werke',
 	
 	
 

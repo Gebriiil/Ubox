@@ -10,7 +10,12 @@ use Modules\BlogModule\Repository\BlogRepositry;
 use Modules\ProjectModule\Repository\Project_CategoryRepository;
 use Modules\ProjectModule\Repository\ProjectRepository;
 use Modules\ProjectModule\Entities\Project;
+
 use Modules\UboxFrontModule\Entities\Newsletter;
+
+use Modules\BlogModule\Repository\CommentRepository;
+
+
 class FrontModuleController extends Controller
 {
 
@@ -21,12 +26,14 @@ class FrontModuleController extends Controller
     public function __construct(
         Project_CategoryRepository $categoryRepo,
         ProjectRepository $projectRepo,
-        BlogRepositry $blogrepository
+        BlogRepositry $blogrepository,
+        CommentRepository $commentRepository
     )
     {
         $this->categoryRepo = $categoryRepo;
         $this->blogrepository = $blogrepository;
         $this->projectRepo = $projectRepo;
+        $this->commentRepository = $commentRepository;
 
     }
     /**
@@ -81,8 +88,17 @@ class FrontModuleController extends Controller
         $new = $this->blogrepository->findById($id);
         $page_name= $new->title;
         $recent_news = $this->blogrepository->findAllByLimit(3 , $id);
+        $comments = $this->commentRepository->findAllByPagination( $id);
+        
+        return view('uboxfrontmodule::pages.new',compact('new','name' , 'recent_news', 'comments'));
 
-        return view('uboxfrontmodule::pages.new',compact('new','name' , 'recent_news'));
+    }
+
+    public function comment($id)
+    {
+        $comments = $this->commentRepository->save(request()>all());
+        
+        return view('uboxfrontmodule::pages.new',compact('new','name' , 'recent_news', 'comments'));
 
     }
 

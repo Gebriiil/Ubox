@@ -11,6 +11,7 @@ Route::group(
     Route::get('/projectonly','FrontModuleController@projects_only');
     
 	Route::get('/news/{id}', 'FrontModuleController@new')->name('only_new');
+    Route::post('/news/{id}/add-comment', 'FrontModuleController@comment')->name('comment');
 
 	Route::get('/', 'FrontModuleController@index')->name('home');
 

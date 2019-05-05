@@ -24,7 +24,7 @@
 <!-- /End Breadcrumbs -->
      
 <!-- Start page content --> 
-<div class="container">   
+<div class="container  fables-counter">   
     <div id="cd-timeline" class="blog-timeline">
     @foreach($blogs as $blog)
        <span class="fables-second-background-color line"></span>

@@ -177,9 +177,20 @@ return [
 	'address' => 'Address Information',
 	'call_now' => 'Call Now',
 	'mail' => 'Mail',
+
 	'Innovation1'=>'Innovation',
 	'The challenge with innovation'=>'The challenge with innovation is creating new products and services that are friendly used, easier to maintain and more appealing to customers.',
 	'customers satisfaction'=>'customers satisfaction',
 	'customers satisfaction desc'=>'Customer satisfaction is our motto, we strive to customize our creativity to serve our customer\'s requirements before, during and after service.',
 	'we are creative agency'=>'we are creative agency',
+
+	'comments' => 'Comments',
+	'posted_by' => 'posted by :name',
+
+	'We always strive to'=>'We always strive to be up to our customers’ expectations and to deliver high standard websites and mobile applications designed in a very unique and attractive way. We also look forward to help our customer achieve constant growth by offering them the best marketing plans for their businesses. UBoxPLus is looking forward to be the leading company not only in Egypt, but in MENA.',
+	'SATISFIED CLIENTS'=>'SATISFIED CLIENTS',
+	'Latest Works'=>'Latest Works',
+	'ALL'=>'ALL',
+
+
 ];

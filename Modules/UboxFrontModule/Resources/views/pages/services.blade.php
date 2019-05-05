@@ -26,7 +26,7 @@
 			</div>
 		</div>
 		<!-- SERVICE  -->
-		<section class="service section-block">
+		<section class="service section-block  fables-counter">
 			<div class="container">
 				<div class="row section-content">
 

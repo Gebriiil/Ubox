@@ -165,7 +165,8 @@
                 @lang('uboxfrontmodule::front.we are creative agency')
                 </h2>
                 <p class="fables-forth-text-color">
-                    We always strive to be up to our customers’ expectations and to deliver high standard websites and mobile applications designed in a very unique and attractive way. We also look forward to help our customer achieve constant growth by offering them the best marketing plans for their businesses. UBoxPLus is looking forward to be the leading company not only in Egypt, but in MENA.
+                    @lang('uboxfrontmodule::front.We always strive to')
+                    
                 </p>
             </div>
         </div>
@@ -173,25 +174,25 @@
             <div class="col-6 col-md-3">
                 <div class="fables-counter">
                     <h2 class="fables-counter-value font-40 font-weight-bold mb-3 fables-main-text-color border fables-second-border-color d-inline-block px-4 py-2 mb-4" data-count="307">0</h2>
-                    <h3 class="font-14 semi-font fables-forth-text-color">SATISFIED CLIENTS</h3>
+                    <h3 class="font-14 semi-font fables-forth-text-color">@lang('uboxfrontmodule::front.SATISFIED CLIENTS')</h3>
                 </div>
             </div>
             <div class="col-6 col-md-3">
                 <div class="fables-counter">
                     <h2 class="fables-counter-value font-40 font-weight-bold mb-3 fables-main-text-color border fables-second-border-color d-inline-block px-4 py-2 mb-4" data-count="95">0</h2>
-                    <h3 class="font-14 semi-font fables-forth-text-color">COMPANY MEMBERS</h3>
+                    <h3 class="font-14 semi-font fables-forth-text-color">@lang('uboxfrontmodule::front.COMPANY MEMBERS')</h3>
                 </div>
             </div>
             <div class="col-6 col-md-3">
                 <div class="fables-counter">
                     <h2 class="fables-counter-value font-40 font-weight-bold mb-3 fables-main-text-color border fables-second-border-color d-inline-block px-4 py-2 mb-4" data-count="55">0</h2>
-                    <h3 class="font-14 semi-font fables-forth-text-color">AWWARDS WIN</h3>
+                    <h3 class="font-14 semi-font fables-forth-text-color">@lang('uboxfrontmodule::front.COMPANY MEMBERS')AWWARDS WIN</h3>
                 </div>
             </div>
             <div class="col-6 col-md-3">
                 <div class="fables-counter">
                     <h2 class="fables-counter-value font-40 font-weight-bold mb-3 fables-main-text-color border fables-second-border-color d-inline-block px-4 py-2 mb-4" data-count="16">0</h2>
-                    <h3 class="font-14 semi-font fables-forth-text-color">YEARS EXPIRIENCE</h3>
+                    <h3 class="font-14 semi-font fables-forth-text-color">@lang('uboxfrontmodule::front.COMPANY MEMBERS')YEARS EXPIRIENCE</h3>
                 </div>
             </div>
         </div>
@@ -202,11 +203,11 @@
         <div class="row">
             <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
                 <div class="text-center">
-                    <h2 class="fables-main-text-color font-35 font-weight-bold mb-4">Latest Works</h2>
-                    <p class="fables-forth-text-color">
+                    <h2 class="fables-main-text-color font-35 font-weight-bold mb-4">@lang('uboxfrontmodule::front.Latest Works')</h2>
+                    <!-- <p class="fables-forth-text-color">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos reiciendis cum aliquid quam, consequatur. quisquam consectetur culpa commodi maxime in harum sunt nam.
 
-                    </p>
+                    </p> -->
                 </div>
             </div>
         </div>
@@ -214,7 +215,7 @@
     
         <div class="gallery-filter">
             <div class="portfolioFilter my-3 clearfix">
-                <a href="#" data-filter="*" class="current">ALL</a>
+                <a href="#" data-filter="*" class="current">@lang('uboxfrontmodule::front.ALL')</a>
                 
                 @foreach($categories as $category)
                     <a href="" data-filter=".webDesign"  class="fables-forth-text-color web" id="{{$category->id}}">{{$category->name}}</a>
@@ -238,7 +239,7 @@
             @endforeach
             </div>
             <div class="text-center">
-                <a href="#" class="btn fables-main-border-color fables-main-text-color mt-md-4 px-5 py-2 fables-btn-rounded fables-main-hover-background-color white-color-hover">Show All Projects</a>
+                <a href="#" class="btn fables-main-border-color fables-main-text-color mt-md-4 px-5 py-2 fables-btn-rounded fables-main-hover-background-color white-color-hover">Show @lang('uboxfrontmodule::front.COMPANY MEMBERS')All Projects</a>
             </div>
         </div>
     </div>
@@ -247,13 +248,13 @@
             <div class="row">
                 <div class="col-12 col-md-8">
                     <div class="fables-contact-caption-txt">
-                        <h3 class="font-25 font-weight-bold white-color mb-3 position-relative z-index">Your Visison Is Our Mission</h3>
+                        <h3 class="font-25 font-weight-bold white-color mb-3 position-relative z-index">@lang('uboxfrontmodule::front.COMPANY MEMBERS')Your Visison Is Our Mission</h3>
                         <!--                           <p class="fables-third-text-color position-relative z-index font-weight-light"></p>-->
 
                     </div>
                 </div>
                 <div class="col-12 col-md-4 offset-xl-2 col-xl-2 text-center">
-                    <a href="contact.html" class="btn fables-second-background-color fables-btn-rounded white-color mt-3 position-relative z-index font-19 px-5 py-2 white-color-hover">Contact us</a>
+                    <a href="contact.html" class="btn fables-second-background-color fables-btn-rounded white-color mt-3 position-relative z-index font-19 px-5 py-2 white-color-hover">@lang('uboxfrontmodule::front.COMPANY MEMBERS')Contact us</a>
                 </div>
             </div>
 
@@ -269,7 +270,7 @@
             @foreach($news as $new)
             <div class="col-12 col-md-4 mb-4 mb-lg-5 wow bounceInLeft" data-wow-delay="1.2s" data-wow-duration="1.5s">
                 <div class="image-container translate-effect-right">
-                    <a href="#"><img src="{{assets('assets/front/custom/images/cat-larg6.jpg')}}" alt=""></a>
+                    <a href="#"><img src="{{asset('upload/' . $new->image1)}}" alt=""></a>
                 </div>
                 <h2 class="font-18 semi-font font-18  mt-3 text-rtl"><a href="#" class="fables-main-text-color fables-second-hover-color">{{$new->title}}</a></h2>
                 <p class="fables-fifth-text-color font-13 my-1 text-rtl">{{ $new->created_at }}</p>
@@ -283,7 +284,7 @@
     </div>
     <div class="fables-testimonial fables-after-overlay py-4 py-lg-5 bg-rules">
         <div class="container">
-            <h2 class="position-relative z-index white-color font-35 font-weight-bold text-center mb-4">Testimonial</h2>
+            <h2 class="position-relative z-index white-color font-35 font-weight-bold text-center mb-4">@lang('uboxfrontmodule::front.COMPANY MEMBERS')Testimonial</h2>
             <div class="owl-carousel owl-theme" id="fables-testimonial-carousel">
                 <div class="row text-center fables-testimonial-carousel-item rounded py-4">
                     <div class="col-12 col-md-3">
@@ -293,7 +294,7 @@
                     </div>
                     <div class="col-12 col-md-9 p-0 p-md-2">
                         <div class="fables-testimonial-detail font-15 font-italic text-white p-4 position-relative">
-                            No matter what issue or questions pops up, you are always there to
+                            @lang('uboxfrontmodule::front.COMPANY MEMBERS')No matter what issue or questions pops up, you are always there to
                             assist me. Thank you so much for your excellent assistance and great
                             customer support through years.
                         </div>
@@ -307,7 +308,7 @@
                     </div>
                     <div class="col-12 col-md-9 p-0 p-md-2">
                         <div class="fables-testimonial-detail font-15 font-italic text-white p-4 position-relative">
-                            No matter what issue or questions pops up, you are always there to
+                            @lang('uboxfrontmodule::front.COMPANY MEMBERS')No matter what issue or questions pops up, you are always there to
                             assist me. Thank you so much for your excellent assistance and great
                             customer support through years.
                         </div>
@@ -319,7 +320,7 @@
         </div>
     </div>
     <div class="container">
-        <h2 class="font-35 font-weight-bold text-center fables-main-text-color my-3 my-lg-5">Team</h2>
+        <h2 class="font-35 font-weight-bold text-center fables-main-text-color my-3 my-lg-5">@lang('uboxfrontmodule::front.COMPANY MEMBERS')Team</h2>
         <div class="row overflow-hidden">
             <div class="col-6 col-md-3 mb-4 wow bounceInDown" data-wow-delay=".4s" data-wow-duration="1.5s">
                 <div class="card fables-team-block fables-second-hover-text-color fables-team-border fables-second-border-color">
