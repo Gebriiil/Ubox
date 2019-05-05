@@ -84,13 +84,14 @@ return [
 	'Collection' => 'مجموعه',
 	'english' => 'الانجليزية',
 	'arabic' => 'العربية',
-	'posted_by_admin' => 'تم نشرها بواسطةالمشرف',
+	'posted_by_admin' => 'تم نشرها بواسطة المشرف',
 	'name' => 'الاسم',
 	'comment' => 'التعليق',
 	'post_comment' => 'نشر',
 	'leave_comment' => 'اترك تعليق',
 	'search' => 'بحث',
-	'recent_posts' => 'اخر الاخبار',	'latest_news' => 'اخر الاخبار',
+	'recent_posts' => 'اخر الاخبار',	
+	'latest_news' => 'اخر الاخبار',
 	'jobs' => 'الوظائف',
 	'language' => 'اللغة',
 	'read_more' => 'تكملة القراءة',
@@ -103,7 +104,8 @@ return [
 	'address' => 'تفاصيل العنوان',
 	'call_now' => 'اتصل الان',
 	'mail' => 'الميل',
-
+	'comments' => 'التعليقات',
+	'posted_by' => 'تم النشر بواسطة :name'
 
 
 

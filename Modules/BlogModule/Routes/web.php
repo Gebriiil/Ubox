@@ -22,6 +22,5 @@ function() {
 	    Route::resource('blog','BlogModuleController');
 	    Route::get('blog/ajax','BlogModuleController@datatables');
 		// Route::get('project/ajax','ProjectController@dataTales');
-
 	});
 });

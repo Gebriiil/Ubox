@@ -260,7 +260,7 @@
             @foreach($news as $new)
             <div class="col-12 col-md-4 mb-4 mb-lg-5 wow bounceInLeft" data-wow-delay="1.2s" data-wow-duration="1.5s">
                 <div class="image-container translate-effect-right">
-                    <a href="#"><img src="{{assets('assets/front/custom/images/cat-larg6.jpg')}}" alt=""></a>
+                    <a href="#"><img src="{{asset('upload/' . $new->image1)}}" alt=""></a>
                 </div>
                 <h2 class="font-18 semi-font font-18  mt-3 text-rtl"><a href="#" class="fables-main-text-color fables-second-hover-color">{{$new->title}}</a></h2>
                 <p class="fables-fifth-text-color font-13 my-1 text-rtl">{{ $new->created_at }}</p>

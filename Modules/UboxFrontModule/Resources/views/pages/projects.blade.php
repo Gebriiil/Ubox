@@ -16,7 +16,7 @@
 	<!-- /End Breadcrumbs -->
 
 	<!-- Start page content -->
-	<div class="container">
+	<div class="container  fables-counter">
 		<div class="row mt-3 mt-lg-5 mb-2">
 			<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
 				<div class="text-center">
