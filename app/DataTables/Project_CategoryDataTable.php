@@ -1,7 +1,7 @@
 <?php
 
 namespace App\DataTables;
-use  Modules\ProjectModule\Entities\Project_Category;
+use  Modules\ProjectModule\Entities\Project_Cat;
 use Yajra\DataTables\Services\DataTable;
 
 class Project_CategoryDataTable extends DataTable
@@ -26,7 +26,7 @@ class Project_CategoryDataTable extends DataTable
      */
     public function query(User $model)
     {
-        return Project_Category::query();
+        return Project_Cat::query();
     }
 
     /**
@@ -66,6 +66,6 @@ class Project_CategoryDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'Project_Category_' . date('YmdHis');
+        return 'Project_Cat' . date('YmdHis');
     }
 }

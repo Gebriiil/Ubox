@@ -1,4 +1,8 @@
 <script src="{{assets('assets/front/vendor/jquery/jquery-3.3.1.min.js')}}"></script>
+<!-- <script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script> -->
 <script src="{{assets('assets/front/vendor/loadscreen/js/ju-loading-screen.js')}}"></script>
 <script src="{{assets('assets/front/vendor/jquery-circle-progress/circle-progress.min.js')}}"></script>
 <script src="{{assets('assets/front/vendor/popper/popper.min.js')}}"></script>
@@ -14,5 +18,7 @@
 <script src="{{assets('assets/front/vendor/portfolio-filter-gallery/portfolio-filter-gallery.js')}}"></script>
 <script src="{{assets('assets/front/vendor/fancybox-master/jquery.fancybox.min.js')}}"></script>
 <script src="{{assets('assets/front/custom/js/custom.js')}}"></script>
+<script src="{{assets('assets/front/custom/js/noty.js')}}"></script>
+<link rel="stylesheet" href="{{assets('assets/front/custom/css/notify.css')}}">
 
 @stack('javascript')

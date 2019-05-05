@@ -17,8 +17,8 @@ class CreateProjectsTable extends Migration
             {
                 $table->increments('id');
                 $table->string('image');
-                $table->bigInteger('category_id')->unsigned();
-                $table->foreign('category_id')->references('id')->on('project__categories')->onDelete('cascade');
+                $table->bigInteger('project__cat_id')->unsigned();
+                $table->foreign('project__cat_id')->references('id')->on('project__cat')->onDelete('cascade');
                 $table->timestamps();
             });
 

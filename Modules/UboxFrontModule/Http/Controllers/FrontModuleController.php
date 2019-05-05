@@ -10,7 +10,11 @@ use Modules\BlogModule\Repository\BlogRepositry;
 use Modules\ProjectModule\Repository\Project_CategoryRepository;
 use Modules\ProjectModule\Repository\ProjectRepository;
 use Modules\ProjectModule\Entities\Project;
+
+use Modules\UboxFrontModule\Entities\Newsletter;
+
 use Modules\BlogModule\Repository\CommentRepository;
+
 
 class FrontModuleController extends Controller
 {
@@ -67,7 +71,7 @@ class FrontModuleController extends Controller
         $name="customer";
         $id=request('name'); 
         //$category=$this->categoryRepo->findById($id);
-        $projects=Project::with(['translations'])->where('project_category_id',$id)->get();
+        $projects=Project::with(['translations'])->where('project_cat_id',$id)->get();
         return view('uboxfrontmodule::Ajax.projects',compact('projects','name'));
     }
 
@@ -110,5 +114,15 @@ class FrontModuleController extends Controller
     {
         $page_name='services';
         return view('uboxfrontmodule::pages.services',compact('page_name'));
+    }
+    public function add_to_newsletters(Request $request)
+    {
+        $data=$request->validate([
+            'email'=>'required|email|unique:newsletters',
+        ]);
+
+        Newsletter::create($data);
+        session()->flash('success','Added Successfully');
+        return back();   
     }
 }

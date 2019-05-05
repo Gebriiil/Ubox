@@ -1,16 +1,35 @@
-
+@push('javascript')
+<script>
+		$("#newsletters").click(function(){
+			  var email=$('#mailnews').val();
+			  $.post("{{route('newsletters')}}",
+			  {
+			    email: email,
+			    _token:"{{ csrf_token() }}"
+			  },
+			  function(data){
+			  	$('#mailnews').val('');
+			    notif({
+                        msg: "<b>Added Successfully</b>",
+                        type: "success",
+                    });
+			  });
+		});
+</script>
+@endpush
 <!-- Start Footer 2 Background Image  -->
 <div class="fables-footer-image fables-after-overlay white-color py-4 py-lg-5 bg-rules text-rtl">
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 mt-2 mb-5 text-center">
 				<h2 class="font-30 semi-font mb-5">Newsletter</h2>
-				<form class="form-inline position-relative">
+				<div class="form-inline position-relative">
+					@csrf
 					<div class="form-group fables-subscribe-formgroup">
-						<input type="email" class="form-control fables-subscribe-input fables-btn-rouned text-rtl" placeholder="@lang('uboxfrontmodule::front.email')">
+						<input type="email" class="form-control fables-subscribe-input fables-btn-rouned text-rtl" id="mailnews" placeholder="@lang('uboxfrontmodule::front.email')">
 					</div>
-					<button type="submit" class="btn fables-second-background-color fables-btn-rouned fables-subscribe-btn">@lang('uboxfrontmodule::front.subscribe')</button>
-				</form>
+					<button  class="btn fables-second-background-color fables-btn-rouned fables-subscribe-btn" id="newsletters">@lang('uboxfrontmodule::front.subscribe')</button>
+				</div>
 
 			</div>
 			<div class="col-12 col-lg-4 mb-4 mb-lg-0">

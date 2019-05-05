@@ -3,6 +3,20 @@
 @section('content')
 
 
+@push('javascript')
+@if(session('success'))
+    <script>
+
+        notif({
+            msg: "{{ session('success') }}",
+            type: "success",
+        });
+                
+        
+    </script>
+@endif
+@endpush
+
 <div class="fables-light-background-color">
     <div class="container"> 
         <nav aria-label="breadcrumb">

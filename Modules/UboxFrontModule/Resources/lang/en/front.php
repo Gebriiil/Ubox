@@ -3,6 +3,12 @@
 return [
 
 	'account_details' => 'Account Details',
+	'WHY CHOOSE US'=>'WHY CHOOSE US',
+	'Innovating the technology'=>'Innovating the technology that makes tomorrow better, is always our passion.',
+	'Integrity'=>'Integrity',
+	'Honest Business'=>'Honest Business practices build foundations of trust and respect with colleagues, competitors, staff, customers and every other individual and organization.',
+	'Excellence'=>'Excellence',
+	'We perform to provide'=>'We perform to provide our customers with the most skillful execution using the best intelligent directions and methods.',
 	'is_empty' => 'There is no Any Data',
 	'register' => 'Register',
 	'register_form' => 'Create Account',
@@ -47,6 +53,16 @@ return [
 	'blog' => 'BLOG',
 	'contact_us' => 'CONTACT US',
     'services' => 'Services',
+    'Our Service'=>'Our Service',
+    'Our Service desc'=>'include various departments to serve the business sector and individuals in different fields through applications aimed at the happiness and satisfaction of customers.Applications for individuals include free service programs that save time and effort. As for the business sector, companies and factories, they have the largest share in terms of business departments and start to provide studies comprehensive feasibility studies and internal and international marketing services. Programming websites in all programming languages as well as mobile applications.',
+    'Web Development'=>'Web Development',
+    'Web Development desc'=>'Our experienced team use latest technology methods to develop magnificent websites. We depend on a professional life cycle in the development process to make sure the websites are highly functional and very secure.',
+    'Mobile Application'=>'Mobile Application',
+    'Mobile Application desc'=>'Our specialized Mobile app developers, are well experienced in developing top-notch Apps using different coding languages and dependent on a professional experience in listing the features that create memorable experiences for your users and customized to your business.',
+    'E-Marketing'=>'E-Marketing',
+    'E-Marketing desc'=>'E-marketing is the process of marketing a product or service using the Internet. E-markerting not only includes marketing on the Internet, but also includes marketing done via e-mail and wireless media. It uses a range of technologies to help connect businesses to their customers.',
+    'Business Innovation Solution'=>'Business Innovation Solution',
+    'Business Innovation Solution desc'=>'Our mission is as clear as it is simple: we deliver the wants and needs of our clients based on professionally set expectations.',
     'jobs' => 'Jobs',
 
 	'add_to_cart' => 'Add To Cart',
@@ -161,7 +177,21 @@ return [
 	'address' => 'Address Information',
 	'call_now' => 'Call Now',
 	'mail' => 'Mail',
+
+	'Innovation1'=>'Innovation',
+	'The challenge with innovation'=>'The challenge with innovation is creating new products and services that are friendly used, easier to maintain and more appealing to customers.',
+	'customers satisfaction'=>'customers satisfaction',
+	'customers satisfaction desc'=>'Customer satisfaction is our motto, we strive to customize our creativity to serve our customer\'s requirements before, during and after service.',
+	'we are creative agency'=>'we are creative agency',
+
 	'comments' => 'Comments',
-	'posted_by' => 'posted by'
+
+	'posted_by' => 'posted by',
+
+	'We always strive to'=>'We always strive to be up to our customers’ expectations and to deliver high standard websites and mobile applications designed in a very unique and attractive way. We also look forward to help our customer achieve constant growth by offering them the best marketing plans for their businesses. UBoxPLus is looking forward to be the leading company not only in Egypt, but in MENA.',
+	'SATISFIED CLIENTS'=>'SATISFIED CLIENTS',
+	'Latest Works'=>'Latest Works',
+	'ALL'=>'ALL',
+
 
 ];

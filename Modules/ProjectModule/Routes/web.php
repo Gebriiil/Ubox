@@ -1,5 +1,5 @@
 <?php
-use Modules\ProjectModule\Entities\Project_Category;
+use Modules\ProjectModule\Entities\Project_Cat;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,7 +23,7 @@ function() {
 	    Route::get('project-categories/index','CategoryController@Category_index');
 	    Route::get('our-project/index','ProjectController@project_index');
 	    // Route::get('project-categories/index',function(){
-	    // 	$projects=Project_Category::all();
+	    // 	$projects=Project_Cat::all();
 	    // 	return view('projectmodule::categories.index',compact('projects'));
 	    // });
 		// Route::get('project/ajax','ProjectController@dataTales');

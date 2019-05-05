@@ -4,7 +4,7 @@ namespace Modules\TrainingModule\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 use Dimsav\Translatable\Translatable;
-use Modules\ProjectModule\Entities\Project_Category;
+use Modules\ProjectModule\Entities\Project_Cat;
 class Training extends Model
 {
 	use Translatable;
@@ -14,6 +14,6 @@ class Training extends Model
 
     public function project_category()
     {
-    	$this->belongsTo(Project_Category::class);
+    	$this->belongsTo(Project_Cat::class);
     }
 }

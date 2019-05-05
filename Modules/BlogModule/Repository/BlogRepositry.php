@@ -39,9 +39,7 @@ class BlogRepositry{
 	}
 	public function delete($id)
 	{
-		$blog=Blog::find($id);
-		Blog::destroy($blog);
-
+		Blog::destroy($id);
 	}
 
 }

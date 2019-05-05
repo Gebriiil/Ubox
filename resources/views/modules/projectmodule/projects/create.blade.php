@@ -59,7 +59,7 @@
                 {{-- Insert Product Category --}}
                 <div class="form-group" style="margin-left: 10px; margin-right: 5px;">
                           <label>Select</label>
-                          <select class="form-control" name="project_category_id" >
+                          <select class="form-control" name="project_cat_id" >
                             @foreach($categories as $category)
                             <option value="{{$category->id}}">{{$category->translate($locale)->name}}</option>
                             @endforeach
