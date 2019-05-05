@@ -12,7 +12,7 @@ class CommentRepository{
     
     public function findAllByPagination($id)
 	{
-        $Comments=Comment::where('blog_id' , $id)->paginate();
+        $Comments=Comment::where('blog_id' , $id)->paginate(2);
 
         return $Comments;
         
@@ -27,6 +27,8 @@ class CommentRepository{
     
     public function save($data)
 	{
+        
+       // dd( $data );
 		$Comment=Comment::create($data);
 		return $Comment;
 	}

@@ -162,6 +162,6 @@ return [
 	'call_now' => 'Call Now',
 	'mail' => 'Mail',
 	'comments' => 'Comments',
-	'posted_by' => 'posted by :name'
+	'posted_by' => 'posted by'
 
 ];
