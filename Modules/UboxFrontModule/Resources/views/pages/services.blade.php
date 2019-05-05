@@ -7,7 +7,7 @@
 		<div class="container">
 			<nav aria-label="breadcrumb">
 				<ol class="fables-breadcrumb breadcrumb px-0 py-3">
-					<li class="breadcrumb-item"><a href="index.html" class="fables-second-text-color">@lang('uboxfrontmodule::front.home')</a></li>
+					<li class="breadcrumb-item"><a href="index.html" class="fables-second-text-color" >@lang('uboxfrontmodule::front.home')</a></li>
 					<li class="breadcrumb-item active" aria-current="page">@lang('uboxfrontmodule::front.services')</li>
 				</ol>
 			</nav>
@@ -33,7 +33,7 @@
 
 					<div class="col-md-4 col-sm-6">
 						<div class="icon-block"><i class="fa fa-cogs"></i></div>
-						<h3>@lang('uboxfrontmodule::front.Web Development')</h3>
+						<h3 style="color: black;">@lang('uboxfrontmodule::front.Web Development')</h3>
 						<p>
 							@lang('uboxfrontmodule::front.Web Development desc')
 							
@@ -42,7 +42,7 @@
 
 					<div class="col-md-4 col-sm-6">
 						<div class="icon-block"><i class="fa fa-mobile" aria-hidden="true"></i></div>
-						<h3>@lang('uboxfrontmodule::front.Mobile Application')</h3>
+						<h3 style="color: black;">@lang('uboxfrontmodule::front.Mobile Application')</h3>
 						<p>
 							@lang('uboxfrontmodule::front.Mobile Application desc')
 							
@@ -51,7 +51,7 @@
 
 					<div class="col-md-4 col-sm-6">
 						<div class="icon-block"><i class="fa fa-shopping-cart"></i></div>
-						<h3>@lang('uboxfrontmodule::front.E-Marketing')</h3>
+						<h3 style="color: black;">@lang('uboxfrontmodule::front.E-Marketing')</h3>
 						<p>
 							@lang('uboxfrontmodule::front.E-Marketing desc')
 							
@@ -60,7 +60,7 @@
 
 					<div class="col-md-4 col-sm-6">
 						<div class="icon-block"><i class="fa fa-lightbulb"></i></div>
-						<h3>@lang('uboxfrontmodule::front.Business Innovation Solution')</h3>
+						<h3 style="color: black;">@lang('uboxfrontmodule::front.Business Innovation Solution')</h3>
 						<p>
 							@lang('uboxfrontmodule::front.Business Innovation Solution desc')
 							

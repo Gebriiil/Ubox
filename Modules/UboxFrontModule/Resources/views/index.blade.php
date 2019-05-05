@@ -239,7 +239,7 @@
             @endforeach
             </div>
             <div class="text-center">
-                <a href="#" class="btn fables-main-border-color fables-main-text-color mt-md-4 px-5 py-2 fables-btn-rounded fables-main-hover-background-color white-color-hover">Show @lang('uboxfrontmodule::front.COMPANY MEMBERS')All Projects</a>
+                <a href="#" class="btn fables-main-border-color fables-main-text-color mt-md-4 px-5 py-2 fables-btn-rounded fables-main-hover-background-color white-color-hover"> @lang('uboxfrontmodule::front.Show All Projects')</a>
             </div>
         </div>
     </div>
@@ -248,13 +248,13 @@
             <div class="row">
                 <div class="col-12 col-md-8">
                     <div class="fables-contact-caption-txt">
-                        <h3 class="font-25 font-weight-bold white-color mb-3 position-relative z-index">@lang('uboxfrontmodule::front.COMPANY MEMBERS')Your Visison Is Our Mission</h3>
+                        <h3 class="font-25 font-weight-bold white-color mb-3 position-relative z-index">@lang('uboxfrontmodule::front.Your Visison Is Our Mission')</h3>
                         <!--                           <p class="fables-third-text-color position-relative z-index font-weight-light"></p>-->
 
                     </div>
                 </div>
                 <div class="col-12 col-md-4 offset-xl-2 col-xl-2 text-center">
-                    <a href="contact.html" class="btn fables-second-background-color fables-btn-rounded white-color mt-3 position-relative z-index font-19 px-5 py-2 white-color-hover">@lang('uboxfrontmodule::front.COMPANY MEMBERS')Contact us</a>
+                    <a href="contact.html" class="btn fables-second-background-color fables-btn-rounded white-color mt-3 position-relative z-index font-19 px-5 py-2 white-color-hover">@lang('uboxfrontmodule::front.Contact us')</a>
                 </div>
             </div>
 
@@ -284,7 +284,7 @@
     </div>
     <div class="fables-testimonial fables-after-overlay py-4 py-lg-5 bg-rules">
         <div class="container">
-            <h2 class="position-relative z-index white-color font-35 font-weight-bold text-center mb-4">@lang('uboxfrontmodule::front.COMPANY MEMBERS')Testimonial</h2>
+            <h2 class="position-relative z-index white-color font-35 font-weight-bold text-center mb-4">@lang('uboxfrontmodule::front.Testimonial')</h2>
             <div class="owl-carousel owl-theme" id="fables-testimonial-carousel">
                 <div class="row text-center fables-testimonial-carousel-item rounded py-4">
                     <div class="col-12 col-md-3">
@@ -294,7 +294,7 @@
                     </div>
                     <div class="col-12 col-md-9 p-0 p-md-2">
                         <div class="fables-testimonial-detail font-15 font-italic text-white p-4 position-relative">
-                            @lang('uboxfrontmodule::front.COMPANY MEMBERS')No matter what issue or questions pops up, you are always there to
+                            No matter what issue or questions pops up, you are always there to
                             assist me. Thank you so much for your excellent assistance and great
                             customer support through years.
                         </div>
@@ -308,7 +308,7 @@
                     </div>
                     <div class="col-12 col-md-9 p-0 p-md-2">
                         <div class="fables-testimonial-detail font-15 font-italic text-white p-4 position-relative">
-                            @lang('uboxfrontmodule::front.COMPANY MEMBERS')No matter what issue or questions pops up, you are always there to
+                            No matter what issue or questions pops up, you are always there to
                             assist me. Thank you so much for your excellent assistance and great
                             customer support through years.
                         </div>
@@ -320,76 +320,17 @@
         </div>
     </div>
     <div class="container">
-        <h2 class="font-35 font-weight-bold text-center fables-main-text-color my-3 my-lg-5">@lang('uboxfrontmodule::front.COMPANY MEMBERS')Team</h2>
+        <h2 class="font-35 font-weight-bold text-center fables-main-text-color my-3 my-lg-5">@lang('uboxfrontmodule::front.Team')</h2>
         <div class="row overflow-hidden">
-            <div class="col-6 col-md-3 mb-4 wow bounceInDown" data-wow-delay=".4s" data-wow-duration="1.5s">
+            <div class="col-12 col-md-12 mb-12 wow bounceInDown" data-wow-delay=".4s" data-wow-duration="1.5s">
                 <div class="card fables-team-block fables-second-hover-text-color fables-team-border fables-second-border-color">
-                    <div class="image-container shine-effect">
-                        <a href="#"><img class="w-100" src="{{assets('assets/front/custom/images/team3-1.jpg')}}" alt="Card image cap"></a>
-                    </div>
-                    <div class="card-body">
-                        <h5><a href="#" class="font-20 semi-font fables-forth-text-color fables-second-hover-color team-name">JOHN MARTIN</a></h5>
-                        <p class="font-13 fables-forth-text-color my-1">Programmer</p>
-                        <ul class="nav fables-team-social-links">
-                            <li><a href="#" target="_blank"><span class="fables-icongoogle-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-iconwhatapp-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-icontwitter-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-iconinstagram-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                        </ul>
-                    </div>
+                  <div class="image-container shine-effect">
+                      <a href="#"><img class="w-100" src="{{assets('assets/front/custom/images/happy-employees.jpg')}}" style="height: 414px; width: 400px;" alt="Card image cap"></a> 
+                  </div>
+                  
                 </div>
             </div>
-            <div class="col-6 col-md-3 mb-4 wow bounceInDown" data-wow-delay=".8s" data-wow-duration="1.5s">
-                <div class="card fables-team-block fables-second-hover-text-color fables-team-border fables-second-border-color">
-                    <div class="image-container shine-effect">
-                        <a href="#"><img class="w-100" src="{{assets('assets/front/custom/images/team3-2.jpg')}}" alt="Card image cap"></a>
-                    </div>
-                    <div class="card-body">
-                        <h5><a href="#" class="font-20 semi-font fables-forth-text-color fables-second-hover-color team-name">JOHN MARTIN</a></h5>
-                        <p class="font-13 fables-forth-text-color my-1">Programmer</p>
-                        <ul class="nav fables-team-social-links">
-                            <li><a href="#" target="_blank"><span class="fables-icongoogle-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-iconwhatapp-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-icontwitter-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-iconinstagram-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3 mb-4 wow bounceInDown" data-wow-delay="1.2s" data-wow-duration="1.5s">
-                <div class="card fables-team-block fables-second-hover-text-color fables-team-border fables-second-border-color">
-                    <div class="image-container shine-effect">
-                        <a href="#"><img class="w-100" src="{{assets('assets/front/custom/images/team3-1.jpg')}}" alt="Card image cap"></a>
-                    </div>
-                    <div class="card-body">
-                        <h5><a href="#" class="font-20 semi-font fables-forth-text-color fables-second-hover-color team-name">JOHN MARTIN</a></h5>
-                        <p class="font-13 fables-forth-text-color my-1">Programmer</p>
-                        <ul class="nav fables-team-social-links">
-                            <li><a href="#" target="_blank"><span class="fables-icongoogle-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-iconwhatapp-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-icontwitter-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-iconinstagram-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3 mb-4 wow bounceInDown" data-wow-delay="1.6s" data-wow-duration="1.5s">
-                <div class="card fables-team-block fables-second-hover-text-color fables-team-border fables-second-border-color">
-                    <div class="image-container shine-effect">
-                        <a href="#"><img class="w-100" src="{{assets('assets/front/custom/images/team3-2.jpg')}}" alt="Card image cap"></a>
-                    </div>
-                    <div class="card-body">
-                        <h5><a href="#" class="font-20 semi-font fables-forth-text-color fables-second-hover-color team-name">JOHN MARTIN</a></h5>
-                        <p class="font-13 fables-forth-text-color my-1">Programmer</p>
-                        <ul class="nav fables-team-social-links">
-                            <li><a href="#" target="_blank"><span class="fables-icongoogle-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-iconwhatapp-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-icontwitter-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-iconinstagram-icon fables-forth-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            
         </div>
 
     </div>
