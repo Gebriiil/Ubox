@@ -5,7 +5,7 @@
 	<!-- Start Header -->
 <div class="fables-header fables-after-overlay bg-rules">
     <div class="container"> 
-         <h2 class="fables-page-title fables-second-border-color text-rtl">Blog Timeline</h2>
+         <h2 class="fables-page-title fables-second-border-color text-rtl">@lang('uboxfrontmodule::front.timeline')</h2>
     </div>
 </div>  
 <!-- /End Header -->
@@ -15,8 +15,8 @@
     <div class="container"> 
         <nav aria-label="breadcrumb">
           <ol class="fables-breadcrumb breadcrumb px-0 py-3">
-            <li class="breadcrumb-item"><a href="index.html" class="fables-second-text-color">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Blog</li>
+            <li class="breadcrumb-item"><a href="{{ route('home') }}" class="fables-second-text-color">@lang('uboxfrontmodule::front.home')</a></li>
+            <li class="breadcrumb-item active" aria-current="page">@lang('commonmodule::sidebar.blog')</li>
           </ol>
         </nav> 
     </div>
@@ -47,14 +47,15 @@
                           
                       		
                       </p>
-                      <a href="blogdetails.html" class="fables-main-text-color p-0 underline fables-second-hover-color font-15">Read More</a> 
-                  </div>
+                      <a href="{{ route('only_new' , $blog->id) }}" class="btn fables-main-text-color fables-second-hover-color p-0 underline mt-2 fl-right">@lang('uboxfrontmodule::front.read_more')</a>
+                    </div>
               </div> 
             </div>   
         </div> 
     @endforeach  
 
    </div>
+
    <!-- <div class="text-center my-5">
         <a href="blogdetails.html" class="btn fables-second-background-color white-color fables-main-hover-background-color px-5 py-2 white-color-hover">Load More</a>
    </div> --> 

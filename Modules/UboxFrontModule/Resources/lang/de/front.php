@@ -3,6 +3,12 @@
 return [
 
 	'account_details' => 'Kontodetails',
+	'WHY CHOOSE US'=>'WARUM UNS WÄHLEN',
+	'Innovating the technology'=>'Die Innovation der Technologie, die morgen besser macht, ist immer unsere Leidenschaft.',
+	'Integrity'=>'Integrität',
+	'Honest Business'=>'Ehrliche Geschäftspraktiken schaffen Vertrauen und Respekt gegenüber Kollegen, Mitbewerbern, Mitarbeitern, Kunden und jeder anderen Person und Organisation.',
+	'Excellence'=>'Excellence',
+	'We perform to provide'=>'Wir bieten unseren Kunden die geschickteste Ausführung mit den besten intelligenten Anweisungen und Methoden.',
 	'is_empty' => 'Es gibt keine Daten',
 	'register' => 'Registrieren',
 	'register_form' => 'Benutzerkonto anlegen',
@@ -57,7 +63,11 @@ return [
 	'Subject' => 'Gegenstand',
 	'Your Message' => 'Deine Nachricht',
 	'MainStreet' => 'Hauptstraße',
-	
+	'Innovation1'=>'Innovation',
+	'The challenge with innovation'=>'Die Herausforderung bei der Innovation besteht darin, neue Produkte und Dienstleistungen zu schaffen, die benutzerfreundlich eingesetzt werden, einfacher zu warten und für die Kunden attraktiver sind.',
+	'customers satisfaction'=>'Kundenzufriedenheit',
+	'customers satisfaction desc'=>'Kundenzufriedenheit ist unser Motto. Wir bemühen uns, unsere Kreativität an die Anforderungen unserer Kunden vor, während und nach dem Service anzupassen.',
+	'we are creative agency'=>'Wir sind eine Kreativagentur',
 	
 	
 

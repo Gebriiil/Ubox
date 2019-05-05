@@ -10,7 +10,7 @@ use Modules\BlogModule\Repository\BlogRepositry;
 use Modules\ProjectModule\Repository\Project_CategoryRepository;
 use Modules\ProjectModule\Repository\ProjectRepository;
 use Modules\ProjectModule\Entities\Project;
-
+use Modules\UboxFrontModule\Entities\Newsletter;
 class FrontModuleController extends Controller
 {
 
@@ -55,7 +55,7 @@ class FrontModuleController extends Controller
     public function index()
     {
         $categories= $this->categoryRepo->findAll();
-        $news =  $this->blogrepository->findAll();
+        $news =  $this->blogrepository->findAllByLimit(3);
 
         return view('uboxfrontmodule::index',compact('categories' , 'news'));
     }
@@ -80,8 +80,9 @@ class FrontModuleController extends Controller
     {
         $new = $this->blogrepository->findById($id);
         $page_name= $new->title;
+        $recent_news = $this->blogrepository->findAllByLimit(3 , $id);
 
-        return view('uboxfrontmodule::pages.new',compact('new','name'));
+        return view('uboxfrontmodule::pages.new',compact('new','name' , 'recent_news'));
 
     }
 
@@ -97,5 +98,15 @@ class FrontModuleController extends Controller
     {
         $page_name='services';
         return view('uboxfrontmodule::pages.services',compact('page_name'));
+    }
+    public function add_to_newsletters(Request $request)
+    {
+        $data=$request->validate([
+            'email'=>'required|email|unique:newsletters',
+        ]);
+
+        Newsletter::create($data);
+        session()->flash('success','Added Successfully');
+        return back();   
     }
 }

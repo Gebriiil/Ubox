@@ -21,6 +21,7 @@ Route::group(
     Route::get('/videos', 'FrontModuleController@videos')->name('videos');
     Route::get('/services', 'FrontModuleController@services')->name('services');
     Route::get('/projects', 'FrontModuleController@projects')->name('projects');
+    Route::post('/add-newsletters', 'FrontModuleController@add_to_newsletters')->name('newsletters');
 
 
 	Route::get('/language/{lang}', 'FrontModuleController@language')->name('lang');

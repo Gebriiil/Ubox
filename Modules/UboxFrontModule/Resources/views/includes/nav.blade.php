@@ -5,7 +5,7 @@
         <form method="post" action="#" class="w-50">
             <div class="row">
                 <div class="col-10">
-                    <input type="search" value="" class="form-control palce bg-transparent border-0 search-input" placeholder="Search Here ..." />
+                    <input type="search" value="" class="form-control palce bg-transparent border-0 search-input" placeholder="@lang('uboxfrontmodule::front.search') ..." />
                 </div>
                 <div class="col-2 mt-3">
                     <button type="submit" class="btn bg-transparent text-white"> <i class="fas fa-search"></i> </button>
@@ -30,18 +30,15 @@
             <div class="col-12 col-sm-2 col-lg-5 text-rtl">
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle border-0 bg-transparent font-13 lang-dropdown-btn pl-0" type="button" id="dropdownLangButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        language
+                        @lang('uboxfrontmodule::front.language')
                     </button>
                     <div class="dropdown-menu p-0 fables-forth-background-color rounded-0 m-0 border-0 lang-dropdown" aria-labelledby="dropdownLangButton">
 
                         @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-
-                            <a class="dropdown-item white-color font-13 fables-second-hover-color" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                                {{ $properties['native'] }}
-                            </a>
-
+                                <a class="dropdown-item white-color font-13 fables-second-hover-color" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                    {{ $properties['native'] }}
+                                </a>
                         @endforeach
-
                     </div>
                 </div>
 
@@ -50,7 +47,7 @@
                 <p class="fables-third-text-color font-13"><span class="fables-iconphone fl-right"></span> Phone :  (888) 6000 6000 - (888) 6000 6000</p>
             </div>
             <div class="col-12 col-sm-5 col-lg-3 text-rtl">
-                <p class="fables-third-text-color font-13"><span class="fables-iconemail fl-right"></span> Email: Design@domain.com</p>
+                <p class="fables-third-text-color font-13"><span class="fables-iconemail fl-right"></span> @lang('uboxfrontmodule::front.email'): Design@domain.com</p>
             </div>
 
         </div>
@@ -117,4 +114,5 @@
     </div>
 </div>
 <!-- /End Fables Navigation -->
+<!--  hhhhhhhhhhhhhhh  -->
 

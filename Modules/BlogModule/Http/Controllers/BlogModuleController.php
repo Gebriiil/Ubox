@@ -131,13 +131,23 @@ class BlogModuleController extends Controller
         $request->validate($rules);
         $photos=$request->photos;
         $data=$request->except(['photos']);
-        foreach($photos as $photo){
-            $i++;
-            $data['image' . $i ]= image_name($photo);
-            image_upload($photo , image_name($photo));
+
+
+        if( request()->has('photos') ){
+
+            foreach($photos as $photo){
+                $i++;
+                $photo_name = image_name($photo);
+            
+            
+                $data['image' . $i ] = $photo_name;
+
+                image_upload($photo , $photo_name) ;
+            }
         }
+
         $this->blogRepo->update($data,$id);
-        return back();
+        return redirect()->route('blog.index');
     }
 
     /**
