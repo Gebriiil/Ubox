@@ -185,7 +185,8 @@ return [
 	'we are creative agency'=>'we are creative agency',
 
 	'comments' => 'Comments',
-	'posted_by' => 'posted by :name',
+
+	'posted_by' => 'posted by',
 
 	'We always strive to'=>'We always strive to be up to our customers’ expectations and to deliver high standard websites and mobile applications designed in a very unique and attractive way. We also look forward to help our customer achieve constant growth by offering them the best marketing plans for their businesses. UBoxPLus is looking forward to be the leading company not only in Egypt, but in MENA.',
 	'SATISFIED CLIENTS'=>'SATISFIED CLIENTS',

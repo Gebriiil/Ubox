@@ -96,10 +96,10 @@ class FrontModuleController extends Controller
 
     public function comment($id)
     {
-        $comments = $this->commentRepository->save(request()>all());
-        
-        return view('uboxfrontmodule::pages.new',compact('new','name' , 'recent_news', 'comments'));
 
+        $comments = $this->commentRepository->save(request()->all());
+        
+        return back()->with('success' , trans('uboxfrontmodule::front.your_review_added'));
     }
 
     

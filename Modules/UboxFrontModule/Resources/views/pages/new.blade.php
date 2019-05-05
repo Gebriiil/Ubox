@@ -3,6 +3,20 @@
 @section('content')
 
 
+@push('javascript')
+@if(session('success'))
+    <script>
+
+        notif({
+            msg: "{{ session('success') }}",
+            type: "success",
+        });
+                
+        
+    </script>
+@endif
+@endpush
+
 <div class="fables-light-background-color">
     <div class="container"> 
         <nav aria-label="breadcrumb">
@@ -86,33 +100,37 @@
 
                     @endforelse
 
+                    {!! $comments->links() !!}
+
                     
                 </div>    
 
              <div class="fables-blog-form">
                  <h2 class="fables-main-text-color fables-light-background-color my-3 my-lg-4 font-15 bold-font py-3 px-4">@lang('uboxfrontmodule::front.leave_comment') ...</h2>
                  <form action="{{ route('comment' , $new->id) }}" method="POST" class="fables-contact-form mb-0">
-                 <div class="form-row">
-                     <div class="form-group col-md-6">
-                         <input type="text" class="form-control form-control rounded-0 p-3" name="name" placeholder="@lang('uboxfrontmodule::front.name')">   
-                     </div>
-                     <div class="form-group col-md-6">
-                         <input type="email" class="form-control form-control rounded-0 p-3" name="email" placeholder="@lang('uboxfrontmodule::front.email')"> 
-                     </div>
-                 </div>                            
-                 <div class="form-row"> 
-                      <div class="form-group col-md-12">
-                          <textarea class="form-control form-control rounded-0 p-3" name="comment" placeholder="@lang('uboxfrontmodule::front.comment')" rows="4"></textarea>
-                     </div> 
-                 </div>
+                 
+                    @csrf
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control form-control rounded-0 p-3" name="name" placeholder="@lang('uboxfrontmodule::front.name')">   
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="email" class="form-control form-control rounded-0 p-3" name="email" placeholder="@lang('uboxfrontmodule::front.email')"> 
+                        </div>
+                    </div>                            
+                    <div class="form-row"> 
+                        <div class="form-group col-md-12">
+                            <textarea class="form-control form-control rounded-0 p-3" name="comment" placeholder="@lang('uboxfrontmodule::front.comment')" rows="4"></textarea>
+                        </div> 
+                    </div>
 
-                 <input type="hidden" name="blog_id"="{{ $new->id }}">
+                    <input type="hidden" name="blog_id" value="{{ $new->id }}">
 
-                 <div class="form-row">
-                   <div class="form-group col-md-12">
-                       <button type="submit" class="btn fables-second-background-color rounded-0 text-white font-15 px-4 py-2">@lang('uboxfrontmodule::front.post_comment')</button>
-                   </div>
-                 </div>
+                    <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <button type="submit" class="btn fables-second-background-color rounded-0 text-white font-15 px-4 py-2">@lang('uboxfrontmodule::front.post_comment')</button>
+                    </div>
+                    </div>
                </form>
              </div>
        </div>              
