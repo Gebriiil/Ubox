@@ -72,8 +72,16 @@ return [
 	'SATISFIED CLIENTS'=>'ZUFRIEDENE KUNDEN',
 	'COMPANY MEMBERS'=>'FIRMENMITGLIEDER',
 	'Latest Works'=>'Neueste Werke',
-	'ALL'=>'Neueste Werke',
-	
-	
+	'ALL'=>'ALLES',
+	'Show All Projects'=>'Alle Projekte anzeigen',
+	'Your Visison Is Our Mission'=>'Ihre Vision ist unsere Mission',
+	'Contact us'=>'Kontaktiere uns',
+	'Testimonial'=>'Zeugnis',
+	'Team'=>'Mannschaft',	
+	'Newsletter'=>'Newsletter',
+	'Address Information'=>'Adresse',
+	'Mail & Phone number'=>'Mail & Telefonnummer',
+	'Stay In Touch'=>'In Kontakt bleiben',
+	'Provide you the great Services'=>'Bieten Sie die großartigen Dienstleistungen an',
 
 ];

@@ -191,6 +191,15 @@ return [
 	'SATISFIED CLIENTS'=>'SATISFIED CLIENTS',
 	'Latest Works'=>'Latest Works',
 	'ALL'=>'ALL',
-
+	'Show All Projects'=>'Show All Projects',
+	'Your Visison Is Our Mission'=>'Your Visison Is Our Mission',
+	'Contact us'=>'Contact us',
+	'Testimonial'=>'Testimonial',
+	'Team'=>'Team',
+	'Newsletter'=>'Newsletter',
+	'Address Information'=>'Address Information',
+	'Mail & Phone number'=>'Mail & Phone number',
+	'Stay In Touch'=>'Stay In Touch',
+	'Provide you the great Services'=>'Provide you the great Services',
 
 ];

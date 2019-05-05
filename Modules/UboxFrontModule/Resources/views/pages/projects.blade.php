@@ -7,8 +7,8 @@
 		<div class="container">
 			<nav aria-label="breadcrumb">
 				<ol class="fables-breadcrumb breadcrumb px-0 py-3">
-					<li class="breadcrumb-item"><a href="index.html" class="fables-second-text-color">Home</a></li>
-					<li class="breadcrumb-item active" aria-current="page">Projects</li>
+					<li class="breadcrumb-item"><a href="index.html" class="fables-second-text-color"></a>@lang('uboxfrontmodule::front.home')</li>
+					<li class="breadcrumb-item active" aria-current="page">@lang('uboxfrontmodule::front.projects')</li>
 				</ol>
 			</nav>
 		</div>
@@ -20,7 +20,7 @@
 		<div class="row mt-3 mt-lg-5 mb-2">
 			<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
 				<div class="text-center">
-					<h2 class="fables-main-text-color font-35 bold-font my-3">Latest Works</h2>
+					<h2 class="fables-main-text-color font-35 bold-font my-3">@lang('uboxfrontmodule::front.Latest Works')</h2>
 
 				</div>
 			</div>
@@ -28,7 +28,7 @@
 
 		<div class="gallery-filter">
 			<div class="portfolioFilter mb-lg-5 clearfix">
-				<a href="#" data-filter="*" class="current">ALL</a>
+				<a href="#" data-filter="*" class="current">@lang('uboxfrontmodule::front.ALL')</a>
 				@foreach($categories as $category)
 					<a href="#" data-filter=".development" class="fables-forth-text-color">{{$category->name}}</a>
 				@endforeach
