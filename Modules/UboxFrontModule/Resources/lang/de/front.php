@@ -83,5 +83,10 @@ return [
 	'Mail & Phone number'=>'Mail & Telefonnummer',
 	'Stay In Touch'=>'In Kontakt bleiben',
 	'Provide you the great Services'=>'Bieten Sie die großartigen Dienstleistungen an',
+	'We are working to bring all of your'=>'Wir arbeiten daran, Ihr gesamtes Geschäft mit einfacher Benutzerfreundlichkeit und professionellen einfachen Schritten auf Ihr Mobiltelefon zu bringen.',
+	'Development'=>'Entwicklung',
+	'Web application development is'=>'Die Entwicklung von Webanwendungen ist eine wichtige und einfache Möglichkeit, Ihre täglichen Geschäftsanforderungen in Webanwendungen für Kunden umzuwandeln.',
+	'Our business experties'=>'Unsere Geschäftskompetenz Bieten Sie den großen Wert',
+	'Being the best'=>'“Das beste Software-Entwicklungsunternehmen in der verschiedenen Wissensdomäne sein”',
 
 ];

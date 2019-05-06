@@ -31,10 +31,11 @@
                     <div class="col-12 col-md-4 mb-4 mb-md-0 wow fadeInDown" data-wow-delay=".3s">
                         <div class="fables-about-icon-style"> 
                             <span class="fables-iconmobileApp-icon fables-second-text-color fa-3x"></span>
-                            <h2 class="fables-second-text-color fables-about-icon-head mt-3 mb-2 font-18 semi-font">Mobile Apps </h2>
+                            <h2 class="fables-second-text-color fables-about-icon-head mt-3 mb-2 font-18 semi-font">@lang('uboxfrontmodule::front.Mobile Application') </h2>
                             <span class="fables-title-border fables-second-background-color"></span>
                             <div class="fables-forth-text-color mt-3 font-14">
-                              We are working to bring all of your business to your mobile with simple usability and professional simple steps.
+                                @lang('uboxfrontmodule::front.We are working to bring all of your')
+                              
                             </div>
 
                         </div>
@@ -42,20 +43,22 @@
                     <div class="col-12 col-md-4 mb-4 mb-md-0 wow fadeInDown" data-wow-delay=".6s">
                        <div class="fables-about-icon-style">
                            <span class="fables-icondevelopment-icon fables-second-text-color fa-3x"></span>
-                           <h2 class="fables-second-text-color fables-about-icon-head mt-3 mb-2 font-18 semi-font">Development</h2>
+                           <h2 class="fables-second-text-color fables-about-icon-head mt-3 mb-2 font-18 semi-font">@lang('uboxfrontmodule::front.Development')</h2>
                            <span class="fables-title-border fables-second-background-color"></span>
                            <div class="fables-forth-text-color mt-3 font-14">
-                               Web application development is an important and esay way to convert your daily bussiness requirements into a web applications for clients.
+                            @lang('uboxfrontmodule::front.Web application development is')
+                               
                             </div>
                         </div> 
                     </div>
                     <div class="col-12 col-md-4 mb-4 mb-md-0 wow fadeInDown" data-wow-delay=".9s">
                        <div class="fables-about-icon-style"> 
                             <span class="fables-iconbussiness4 fables-second-text-color fa-3x"></span>
-                           <h2 class="fables-second-text-color fables-about-icon-head mt-3 mb-2 font-18 semi-font">Business Innovation Solution</h2>
+                           <h2 class="fables-second-text-color fables-about-icon-head mt-3 mb-2 font-18 semi-font">@lang('uboxfrontmodule::front.Business Innovation Solution')</h2>
                            <span class="fables-title-border fables-second-background-color"></span>
                             <div class="fables-forth-text-color mt-3 font-14">
-                              Our mission is as clear as it is simple: we deliver the wants and needs of our clients based on professionally set expectations.
+                                @lang('uboxfrontmodule::front.Business Innovation Solution desc')
+                              
                             </div>
                         </div> 
                     </div>
@@ -79,13 +82,13 @@
                     <div class="row wow fadeInDown" data-wow-delay=".5s">
                         <div class="col-12 text-center">
                             <h3 class="fables-about-top-head fables-forth-text-color font-15 semi-font d-inline-block bg-white position-relative">
-                                <span class="mx-4">About us</span>
+                                <span class="mx-4">@lang('uboxfrontmodule::front.about_us')</span>
                             </h3>
-                            <h2 class="fables-second-text-color mt-3 font-30 font-weight-bold text-center">Our business experties Provide you the great value</h2>  
+                            <h2 class="fables-second-text-color mt-3 font-30 font-weight-bold text-center">@lang('uboxfrontmodule::front.Our business experties')</h2>  
                         </div>
                         <div class="col-12 col-md-10 offset-md-1 mt-3 mb-5">
                             <p class="fables-forth-text-color text-center">
-                                “Being the best in class Software application Development Company in the different domain of Knowledge”
+                                @lang('uboxfrontmodule::front.Being the best')
                             </p>
                         </div> 
                     </div>
