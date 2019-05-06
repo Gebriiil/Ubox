@@ -16,6 +16,22 @@
 			  });
 		});
 </script>
+
+
+<script>
+		@if(session('success'))
+    <script>
+
+        notif({
+            msg: "{{ session('success') }}",
+            type: "success",
+        });
+                
+        
+    </script>
+@endif
+</script>
+
 @endpush
 <!-- Start Footer 2 Background Image  -->
 <div class="fables-footer-image fables-after-overlay white-color py-4 py-lg-5 bg-rules text-rtl">

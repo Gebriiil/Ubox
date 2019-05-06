@@ -208,5 +208,6 @@ return [
 	'Web application development is'=>'Web application development is an important and esay way to convert your daily bussiness requirements into a web applications for clients.',
 	'Our business experties'=>'Our business experties Provide you the great value',
 	'Being the best'=>'“Being the best in class Software application Development Company in the different domain of Knowledge”',
+	'send' => 'Data Send Successfully'
 
 ];

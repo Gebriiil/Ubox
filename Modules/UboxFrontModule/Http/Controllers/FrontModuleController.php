@@ -15,6 +15,9 @@ use Modules\UboxFrontModule\Entities\Newsletter;
 
 use Modules\BlogModule\Repository\CommentRepository;
 use Modules\TrainingModule\Repository\TrainingRepository;
+use App\Mail\ContactUs;
+
+use Mail;
 
 class FrontModuleController extends Controller
 {
@@ -44,10 +47,38 @@ class FrontModuleController extends Controller
      */
     public function contact_us()
     {
-        $categories=$this->categoryRepo->findAll();
+
         $page_name='contact_us';
-        return view('uboxfrontmodule::pages.contact_us',  compact('categories','page_name'));
+        return view('uboxfrontmodule::pages.contact_us',  compact('page_name'));
     }
+
+    public function sendToContact(){
+
+        
+        $data = request()->validate([
+    
+            'subject' => 'required|string',
+            'email' => 'required|email',
+            'name' => 'required|string|max:50',
+            'message' => 'required|string',
+
+        ]);
+
+        Mail::to('widame@gmail.com')->send(new ContactUs([
+            'email' => request('email'),
+            'subject' => request('subject'),
+            'message' => request('message'),
+            'name' => request('name'),
+        ]));
+
+        return back()->with('success', @lang('uboxfrontmodule::front.send') );
+
+
+
+
+    }
+
+
     public function about_us()
         {
             $categories=$this->categoryRepo->findAll();

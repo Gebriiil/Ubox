@@ -18,6 +18,7 @@ Route::group(
 
     Route::get('/', 'FrontModuleController@index')->name('home');
     Route::get('/contact_us', 'FrontModuleController@contact_us')->name('contact_us');
+    Route::post('/send', 'FrontModuleController@sendToContact')->name('send');
     Route::get('/about_us', 'FrontModuleController@about_us')->name('about_us');
     Route::get('/blog', 'FrontModuleController@blog')->name('blog');
     Route::get('/videos', 'FrontModuleController@videos')->name('videos');
