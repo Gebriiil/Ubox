@@ -15,10 +15,9 @@ use Modules\UboxFrontModule\Entities\Newsletter;
 
 use Modules\BlogModule\Repository\CommentRepository;
 use Modules\TrainingModule\Repository\TrainingRepository;
+use DB;
 use App\Mail\ContactUs;
-
 use Mail;
-
 class FrontModuleController extends Controller
 {
 
@@ -148,13 +147,13 @@ class FrontModuleController extends Controller
     
     public function add_to_newsletters(Request $request)
     {
-        $data=$request->validate([
-            'email'=>'required|email|unique:newsletters',
-        ]);
-
+        // $mail=Newsletter::where('email',$request->email)->get();
+        // if(isset($mail)){
+        //     return response()->json(['error'=>'Already Exists']);
+        // }
+        $data=request()->all();
         Newsletter::create($data);
-        session()->flash('success','Added Successfully');
-        return back();   
+        return response()->json(['success'=>'success']); 
     }
 
 

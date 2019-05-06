@@ -25,7 +25,62 @@
 				</p>
 			</div>
 		</div>
+		<div class="row">
+			<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-center">
+				<h2 class="fables-second-text-color font-35 font-weight-bold my-3 mt-md-5 mb-md-4">@lang('uboxfrontmodule::front.Business Innovation Solution')</h2>
+				<p class="fables-forth-text-color">
+					@lang('uboxfrontmodule::front.Business Innovation Solution desc')
+				</p>
+			</div>
+		</div>
 		<!-- SERVICE  -->
+		<section class="service section-block  fables-counter">
+			<div class="container">
+				<div class="row section-content">
+
+
+					<div class="col-md-4 col-sm-6">
+						<div class="icon-block"><i class="fa fa-user"></i></div>
+						<h3 style="color: black;">@lang('uboxfrontmodule::front.For individuals')</h3>
+						<p>
+							@lang('uboxfrontmodule::front.For individuals desc')
+							
+							
+						</p>
+					</div> <!-- .col-md-4 col-sm-6 ends -->
+
+					<div class="col-md-4 col-sm-6">
+						<div class="icon-block"><i class="fa fa-building" aria-hidden="true"></i></div>
+						<h3 style="color: black;">@lang('uboxfrontmodule::front.For Companies')</h3>
+						<p>
+							@lang('uboxfrontmodule::front.For Companies_desc')
+							
+						</p>
+					</div> <!-- .col-md-4 col-sm-6 ends -->
+
+					<div class="col-md-4 col-sm-6">
+						<div class="icon-block"><i class="fa fa-users"></i></div>
+						<h3 style="color: black;">@lang('uboxfrontmodule::front.People')</h3>
+						<p>
+							@lang('uboxfrontmodule::front.People_desc')
+							
+							
+						</p>
+					</div> <!-- .col-md-4 col-sm-6 ends -->
+
+					<!-- <div class="col-md-4 col-sm-6">
+						<div class="icon-block"><i class="fa fa-lightbulb"></i></div>
+						<h3 style="color: black;">@lang('uboxfrontmodule::front.Business Innovation Solution')</h3>
+						<p>
+							@lang('uboxfrontmodule::front.Business Innovation Solution desc')
+							
+						</p>
+					</div> --> <!-- .col-md-4 col-sm-6 ends -->
+
+
+				</div> <!-- .row section-content ends -->
+			</div><!-- .container ends -->
+		</section> <!-- .service ends -->
 		<section class="service section-block  fables-counter">
 			<div class="container">
 				<div class="row section-content">
@@ -58,14 +113,7 @@
 						</p>
 					</div> <!-- .col-md-4 col-sm-6 ends -->
 
-					<div class="col-md-4 col-sm-6">
-						<div class="icon-block"><i class="fa fa-lightbulb"></i></div>
-						<h3 style="color: black;">@lang('uboxfrontmodule::front.Business Innovation Solution')</h3>
-						<p>
-							@lang('uboxfrontmodule::front.Business Innovation Solution desc')
-							
-						</p>
-					</div> <!-- .col-md-4 col-sm-6 ends -->
+					
 
 
 				</div> <!-- .row section-content ends -->

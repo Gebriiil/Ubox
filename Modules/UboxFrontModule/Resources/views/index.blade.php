@@ -186,13 +186,13 @@
             <div class="col-6 col-md-3">
                 <div class="fables-counter">
                     <h2 class="fables-counter-value font-40 font-weight-bold mb-3 fables-main-text-color border fables-second-border-color d-inline-block px-4 py-2 mb-4" data-count="55">0</h2>
-                    <h3 class="font-14 semi-font fables-forth-text-color">@lang('uboxfrontmodule::front.COMPANY MEMBERS')AWWARDS WIN</h3>
+                    <h3 class="font-14 semi-font fables-forth-text-color">@lang('uboxfrontmodule::front.COMPANY MEMBERS')</h3>
                 </div>
             </div>
             <div class="col-6 col-md-3">
                 <div class="fables-counter">
                     <h2 class="fables-counter-value font-40 font-weight-bold mb-3 fables-main-text-color border fables-second-border-color d-inline-block px-4 py-2 mb-4" data-count="16">0</h2>
-                    <h3 class="font-14 semi-font fables-forth-text-color">@lang('uboxfrontmodule::front.COMPANY MEMBERS')YEARS EXPIRIENCE</h3>
+                    <h3 class="font-14 semi-font fables-forth-text-color">@lang('uboxfrontmodule::front.YEARS EXPIRIENCE')</h3>
                 </div>
             </div>
         </div>

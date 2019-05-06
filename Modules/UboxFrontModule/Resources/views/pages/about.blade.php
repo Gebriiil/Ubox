@@ -98,25 +98,25 @@
                    <div class="col-6 col-md-3">
                        <div class="fables-counter">
                            <h2 class="fables-counter-value font-40 font-weight-bold mb-3 fables-forth-text-color" data-count="307">0</h2>
-                           <h3 class="font-14 semi-font fables-forth-text-color">SATISFIED CLIENTS</h3>
+                           <h3 class="font-14 semi-font fables-forth-text-color"> @lang('uboxfrontmodule::front.SATISFIED CLIENTS')</h3>
                        </div>
                    </div>
                    <div class="col-6 col-md-3">
                        <div class="fables-counter">
                            <h2 class="fables-counter-value font-40 font-weight-bold mb-3 fables-forth-text-color" data-count="95">0</h2>
-                           <h3 class="font-14 semi-font fables-forth-text-color">COMPANY MEMBERS</h3>
+                           <h3 class="font-14 semi-font fables-forth-text-color">@lang('uboxfrontmodule::front.COMPANY MEMBERS')</h3>
                        </div>
                    </div>
                    <div class="col-6 col-md-3">
                        <div class="fables-counter">
                            <h2 class="fables-counter-value font-40 font-weight-bold mb-3 fables-forth-text-color" data-count="55">0</h2>
-                           <h3 class="font-14 semi-font fables-forth-text-color">AWWARDS WIN</h3>
+                           <h3 class="font-14 semi-font fables-forth-text-color">@lang('uboxfrontmodule::front.AWWARDS WIN')</h3>
                        </div>
                    </div>
                    <div class="col-6 col-md-3">
                        <div class="fables-counter">
                            <h2 class="fables-counter-value font-40 font-weight-bold mb-3 fables-forth-text-color" data-count="16">0</h2>
-                           <h3 class="font-14 semi-font fables-forth-text-color">YEARS EXPIRIENCE</h3>
+                           <h3 class="font-14 semi-font fables-forth-text-color">@lang('uboxfrontmodule::front.YEARS EXPIRIENCE')</h3>
                        </div>
                    </div>
                </div>
@@ -129,12 +129,13 @@
                     <div class="row wow fadeInDown" data-wow-delay=".5s">
                         <div class="col-12 text-center">
                             <h3 class="fables-about-top-head fables-forth-text-color font-15 semi-font d-inline-block bg-white position-relative">
-                                <span class="mx-4">About us</span>
+                                <span class="mx-4">@lang('uboxfrontmodule::front.about_us')</span>
                             </h3>
-                            <h2 class="fables-second-text-color mt-3 font-30 font-weight-bold text-center">Company History</h2> 
+                            <h2 class="fables-second-text-color mt-3 font-30 font-weight-bold text-center">@lang('uboxfrontmodule::front.Company History')</h2> 
                             <div class="col-12 col-md-10 offset-md-1">
                                 <p class="fables-forth-text-color mt-3 mb-4 mb-md-5">
-                                     The company was established in 2019 to include various departments to serve the business sector and individuals in different fields through applications aimed at the happiness and satisfaction of customers.Applications for individuals include free service programs that save time and effort. As for the business sector, companies and factories, they have the largest share in terms of business departments and start to provide studies comprehensive feasibility studies and internal and international marketing services. Programming websites in all programming languages as well as mobile applications.
+                                  @lang('uboxfrontmodule::front.The company was established in')
+                                     
                                 </p>
                             </div>
                         </div> 
@@ -149,11 +150,16 @@
                     <div class="row overflow-hidden text-rtl">    
                         <div class="col-12 col-lg-6 offset-lg-6 p-lg-0">  
                             <div class="fables-vision-overlay fables-after-overlay bg-rules">
-                                <h2 class="fables-second-text-color my-0 font-30 font-weight-bold position-relative z-index wow fadeInRight" data-wow-duration="2s">We love what we do <br> & we do it with passion!</h2>
+                                <h2 class="fables-second-text-color my-0 font-30 font-weight-bold position-relative z-index wow fadeInRight" data-wow-duration="2s">@lang('uboxfrontmodule::front.We love what we do') <br> &@lang('uboxfrontmodule::front. we do it with passion!')</h2>
                                 <p class="fables-fifth-text-color position-relative z-index mt-4 mb-4 mb-md-5 wow fadeInRight" data-wow-duration="2s">
-                                 We are a Web Solutions and App Development company, focused on bringing the world to the digital. We believe that our success comes from our clients’, and their growth only adds to our success story. This is why we are committed to offer the best, most efficient, and technologically advanced solutions in the shortest time possible without compromising the quality.
+                                  @lang('uboxfrontmodule::front.We are a Web Solutions')
+                                 
                                 </p>
+<<<<<<< HEAD
+                                <a href="contact.html" class="btn fables-second-border-color white-color fables-btn-rouned fables-hover-btn-color font-19 px-5 py-2 position-relative z-index wow fadeInRight" data-wow-duration="2s"><span>@lang('uboxfrontmodule::front.contact_us')</span></a>
+=======
                                 <a href="{{ route('contact')}}" class="btn fables-second-border-color white-color fables-btn-rouned fables-hover-btn-color font-19 px-5 py-2 position-relative z-index wow fadeInRight" data-wow-duration="2s"><span>Contact Us</span></a>
+>>>>>>> b29967eb9d6308cfc2d9aeb1b861b77957427add
                             </div>
 
                         </div>
@@ -165,11 +171,15 @@
                    <div class="row overflow-hidden text-rtl"> 
                     <div class="col-12 col-lg-6 p-lg-0"> 
                         <div class="fables-vision-overlay fables-after-overlay fables-light-overlay bg-rules">
-                            <h2 class="fables-second-text-color my-0 font-30 font-weight-bold position-relative z-index wow fadeInLeft" data-wow-duration="2s">We gain the trust and loyalty of <br> our Clients</h2>
+                            <h2 class="fables-second-text-color my-0 font-30 font-weight-bold position-relative z-index wow fadeInLeft" data-wow-duration="2s">
+                              @lang('uboxfrontmodule::front.We gain the trust and loyalty of') <br>
+                              @lang('uboxfrontmodule::front.our Clients') </h2>
                             <p class="fables-forth-text-color position-relative z-index mt-4 mb-4 mb-md-5 wow fadeInLeft" data-wow-duration="2s">
-                              We always strive to be up to our customers’ expectations and to deliver high standard websites and mobile applications designed in a very unique and attractive way. We also look forward to help our customer achieve constant growth by offering them the best marketing plans for their businesses. UBoxPlus is looking forward to be the leading company not only in Egypt, but in MENA.
+                              @lang('uboxfrontmodule::front.We always strive to be up to our customers')
+                              
                             </p>
-                            <a href="{{ route('contact')}}" class="btn fables-second-border-color fables-second-text-color fables-btn-rouned fables-hover-btn-color font-19 px-5 py-2 position-relative z-index wow fadeInLeft" data-wow-duration="2s"><span>Contact Us</span></a>
+
+                            <a href="contact.html" class="btn fables-second-border-color fables-second-text-color fables-btn-rouned fables-hover-btn-color font-19 px-5 py-2 position-relative z-index wow fadeInLeft" data-wow-duration="2s"><span>@lang('uboxfrontmodule::front.contact_us')</span></a>
                         </div>                    
                     </div>
 
@@ -181,14 +191,13 @@
         <div class="row mt-4 mt-md-5">
             <div class="col-12 text-center wow fadeInDown">
                 <h3 class="fables-about-top-head fables-forth-text-color font-15 semi-font d-inline-block bg-white position-relative">
-                    <span class="mx-4">Testimonials</span>
+                    <span class="mx-4">@lang('uboxfrontmodule::front.Testimonials')</span>
                 </h3>
-                <h2 class="fables-second-text-color mt-3 font-30 font-weight-bold text-center">what people say</h2> 
+                <h2 class="fables-second-text-color mt-3 font-30 font-weight-bold text-center">@lang('uboxfrontmodule::front.what people say')</h2> 
             </div>
             <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 wow fadeInDown">
                 <p class="mt-4 mt-md-3 mb-4 mb-md-5 fables-forth-text-color text-center">
-                     We’ve been lucky enough to work with so many industrial Clients .
-                     Check out what they’re saying.
+                    @lang('uboxfrontmodule::front.We’ve been lucky') 
                 </p>
             </div>
         </div> 
@@ -280,72 +289,22 @@
             <div class="row wow fadeInDown">
                 <div class="col-12 text-center mt- mt-md-5">
                     <h3 class="fables-about-top-head fables-forth-text-color font-15 semi-font d-inline-block bg-white position-relative">
-                        <span class="mx-4">Team</span>
+                        <span class="mx-4">@lang('uboxfrontmodule::front.Team')</span>
                     </h3>
-                    <h2 class="fables-second-text-color mt-3 font-30 font-weight-bold text-center">Meet The Team</h2> 
+                    <h2 class="fables-second-text-color mt-3 font-30 font-weight-bold text-center">@lang('uboxfrontmodule::front.Meet The Team')</h2> 
                 </div>
                 <div class="col-12 col-md-8 offset-md-2">
                     <p class="mt-4 mt-md-3 mb-4 mb-md-5 fables-forth-text-color text-center">
-                    We love what we do and we do it with passion. We value the experimentation, the reformation of the message, and the smart incentives
+                      @lang('uboxfrontmodule::front.We love what we do and we do it with passion.')
+                   
                     </p>
                 </div>
             </div>
             
             <div class="row">
-                <div class="col-6 col-md-3 mb-4 mb-lg-0 wow fadeInDown" data-wow-delay=".3s">
+                <div class="col-12 col-md-12 mb-12 mb-lg-0 wow fadeInDown" data-wow-delay=".3s">
                     <div class="card fables-team-block fables-team-data-hover fables-second-border-color">
-                      <img class="img-fluid" src="assets/custom/images/team1-1.jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <h5><a href="#" class="team-name white-color white-color-hover">JOHN MARTIN</a></h5>
-                        <p class="fables-team-pos mt-2 mb-3 italic">Programmer</p> 
-                        <ul class="nav fables-team-social-links"> 
-                            <li><a href="#" target="_blank"><span class="fables-iconlinkedin-icon fables-second-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>   
-                            <li><a href="#" target="_blank"><span class="fables-icontwitter-icon fables-second-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-iconinstagram-icon fables-second-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li> 
-                        </ul>
-                      </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 mb-4 mb-lg-0 wow fadeInDown" data-wow-delay=".3s">
-                    <div class="card fables-team-block fables-team-data-hover fables-second-border-color">
-                      <img class="img-fluid" src="assets/custom/images/team1-2.jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <h5><a href="#" class="team-name white-color white-color-hover">JOHN MARTIN</a></h5>
-                        <p class="fables-team-pos mt-2 mb-3 italic">Programmer</p> 
-                        <ul class="nav fables-team-social-links"> 
-                            <li><a href="#" target="_blank"><span class="fables-iconlinkedin-icon fables-second-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>   
-                            <li><a href="#" target="_blank"><span class="fables-icontwitter-icon fables-second-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-iconinstagram-icon fables-second-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li> 
-                        </ul>
-                      </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 mb-4 mb-lg-0 wow fadeInDown" data-wow-delay=".3s">
-                    <div class="card fables-team-block fables-team-data-hover fables-second-border-color">
-                      <img class="img-fluid" src="assets/custom/images/team1-3.jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <h5><a href="#" class="team-name white-color white-color-hover">JOHN MARTIN</a></h5>
-                        <p class="fables-team-pos mt-2 mb-3 italic">Programmer</p> 
-                        <ul class="nav fables-team-social-links"> 
-                            <li><a href="#" target="_blank"><span class="fables-iconlinkedin-icon fables-second-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>   
-                            <li><a href="#" target="_blank"><span class="fables-icontwitter-icon fables-second-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-iconinstagram-icon fables-second-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li> 
-                        </ul>
-                      </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 mb-4 mb-lg-0 wow fadeInDown" data-wow-delay=".3s">
-                    <div class="card fables-team-block fables-team-data-hover fables-second-border-color">
-                      <img class="img-fluid" src="assets/custom/images/team1-4.jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <h5><a href="#" class="team-name white-color white-color-hover">JOHN MARTIN</a></h5>
-                        <p class="fables-team-pos mt-2 mb-3 italic">Programmer</p> 
-                        <ul class="nav fables-team-social-links"> 
-                            <li><a href="#" target="_blank"><span class="fables-iconlinkedin-icon fables-second-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>   
-                            <li><a href="#" target="_blank"><span class="fables-icontwitter-icon fables-second-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li>
-                            <li><a href="#" target="_blank"><span class="fables-iconinstagram-icon fables-second-text-color fables-fifth-border-color fables-team-social-icon"></span></a></li> 
-                        </ul>
-                      </div>
+                      <img class="img-fluid" src="{{assets('assets/front/custom/images/happy-employees.jpg')}}" style="height: 455px; width: 1102px;" alt="Card image cap">
                     </div>
                 </div>
             </div>  

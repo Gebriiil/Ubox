@@ -2,7 +2,6 @@
 
 @section('content')
 
-   
     <!-- Start Header -->
 <div class="fables-header fables-after-overlay">
     <div class="container"> 

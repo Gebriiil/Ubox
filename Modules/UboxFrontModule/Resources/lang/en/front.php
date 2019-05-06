@@ -208,6 +208,34 @@ return [
 	'Web application development is'=>'Web application development is an important and esay way to convert your daily bussiness requirements into a web applications for clients.',
 	'Our business experties'=>'Our business experties Provide you the great value',
 	'Being the best'=>'“Being the best in class Software application Development Company in the different domain of Knowledge”',
-	'data_send' => 'Data Send Successfully'
+	'data_send' => 'Data Send Successfully',
 
+	/*********************************/
+	'SATISFIED CLIENTS'=>'SATISFIED CLIENTS',
+	'COMPANY MEMBERS'=>'COMPANY MEMBERS',
+	'AWWARDS WIN'=>'AWWARDS WIN',
+	'YEARS EXPIRIENCE'=>'YEARS EXPIRIENCE',
+	'Company History'=>'Company History',
+	'The company was established in'=>'The company was established in 2019 to include various departments to serve the business sector and individuals in different fields through applications aimed at the happiness and satisfaction of customers.Applications for individuals include free service programs that save time and effort. As for the business sector, companies and factories, they have the largest share in terms of business departments and start to provide studies comprehensive feasibility studies and internal and international marketing services. Programming websites in all programming languages as well as mobile applications.',
+	'We love what we do'=>'We love what we do',
+	' we do it with passion!'=>' we do it with passion!',
+	'We are a Web Solutions'=>'We are a Web Solutions and App Development company, focused on bringing the world to the digital. We believe that our success comes from our clients’, and their growth only adds to our success story. This is why we are committed to offer the best, most efficient, and technologically advanced solutions in the shortest time possible without compromising the quality.',
+	'We gain the trust and loyalty of'=>'We gain the trust and loyalty of ',
+	'our Clients'=>'our Clients',
+	'We always strive to be up to our customers'=>'We always strive to be up to our customers’ expectations and to deliver high standard websites and mobile applications designed in a very unique and attractive way. We also look forward to help our customer achieve constant growth by offering them the best marketing plans for their businesses. UBoxPlus is looking forward to be the leading company not only in Egypt, but in MENA.',
+	'Testimonials'=>'Testimonials',
+	'what people say'=>'what people say',
+	'We’ve been lucky'=>'We’ve been lucky enough to work with so many industrial Clients .
+                     Check out what they’re saying.',
+     'Meet The Team'=>'Meet The Team',
+     'We love what we do and we do it with passion.'=>' We love what we do and we do it with passion. We value the experimentation, the reformation of the message, and the smart incentives',
+     'For individuals'=>'For individuals',
+     'For individuals desc'=>'Do you have money? but you don\'t have idea!
+							Are you expert? but you don\'t have money
+						     Your Investment & Money in your hand',
+	 'For Companies'=>'For Companies',
+	 'For Companies_desc'=>'Innovation solution for your business to growth
+							care about your growth',
+	 'People'=>'People',
+	 'People_desc'=>'Makes your life easy and simple',
 ];

@@ -30,10 +30,10 @@
 			<div class="portfolioFilter mb-lg-5 clearfix">
 				<a href="#" data-filter="*" class="current">@lang('uboxfrontmodule::front.ALL')</a>
 				@foreach($categories as $category)
-					<a href="#" data-filter=".development" class="fables-forth-text-color">{{$category->name}}</a>
+					<a href="#" data-filter=".development" class="fables-forth-text-color"id="{{$category->id}}" >{{$category->name}}</a>
 				@endforeach
 			</div>
-			<div class="portfolioContainer mt-4 my-lg-5 row">
+			<div class="portfolioContainer mt-4 my-lg-5 row" id="text">
 				@foreach($categories as $category)
 					@foreach($category->projects as $project)
 						<div class="webDesign objects col-sm-6 col-md-3 mb-4">
