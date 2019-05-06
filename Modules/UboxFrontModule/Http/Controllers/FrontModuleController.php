@@ -73,9 +73,6 @@ class FrontModuleController extends Controller
 
         return back()->with('success', trans('uboxfrontmodule::front.data_send') );
 
-
-
-
     }
 
 

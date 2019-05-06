@@ -28,7 +28,7 @@ class CommentRepository{
     public function save($data)
 	{
         
-       // dd( $data );
+       //    dd( $data );
 		$Comment=Comment::create($data);
 		return $Comment;
 	}
