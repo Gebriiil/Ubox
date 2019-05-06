@@ -12,6 +12,12 @@ class JobModuleController extends Controller {
 	 * Display a listing of the resource.
 	 * @return Response
 	 */
+
+	function __construct()
+	{
+		
+	}
+
 	public function index() {
 		$jobs = Job::all();
 
@@ -33,7 +39,28 @@ class JobModuleController extends Controller {
 	 * @return Response
 	 */
 	public function store(Request $request) {
-		//
+		
+
+        $rules=[];
+        foreach(config('translatable.locales') as $locale){
+            $rules+=[$locale . '.*'=>'required'];
+        }
+		$rules+=['image'=>'required|image|mimes:jpg,png,jpeg,JPG,PNG,JPEG'];
+		$rules+=['skills'=>'required|string'];
+		
+        $request->validate($rules);
+		$image_name= image_name($request->image);
+		
+		$skills = request('skills');
+		$data=$request->except(['image' , 'skills']);
+        $data['image']=$image_name;
+
+        $this->jobRepository->save($data , $skills);
+
+        image_upload($request->image , $image_name);
+        session()->flash('success' , __('trainingmodule::training.success'));
+        return redirect(route('jobs_index'));
+
 	}
 
 	/**

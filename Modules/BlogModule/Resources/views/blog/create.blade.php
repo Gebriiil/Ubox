@@ -77,7 +77,7 @@
       <div class="box-footer">
         <a href="{{url('/admin-panel/blog')}}" type="button" class="btn btn-default">{{__('blogmodule::blog.cancel')}} &nbsp; <i class="fa fa-remove" aria-hidden="true"></i> </a>
 
-        <button type="submit" class="btn btn-primary pull-right">{{__('blogmodule::blog.submit')}} &nbsp; <i class="fa fa-save"></i></button>
+        <button type="submit" class="btn btn-primary pull-right">{{ __('blogmodule::blog.submit')}} &nbsp; <i class="fa fa-save"></i></button>
       </div>
       <!-- /.box-footer -->
     </form>

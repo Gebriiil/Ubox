@@ -20,6 +20,10 @@ return [
 	'Write Title'=>'أكتب العنوان ',
 	'Write Description'=>'أكتب الوصف ',
 	'image'=>'صوره',
+	'status' => 'الحالة',
+	'active' => 'نشط',
+	'notactive' => 'نشط',
+	'skills' => 'المهارات'
 
 ];
 

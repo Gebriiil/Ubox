@@ -4,6 +4,7 @@ return [
 
 	'jobs' => 'الوظائف',
 	'title' => 'العنوان',
-	'description' => 'الوصف',
+	'desc' => 'الوصف',
 	'image' => 'الصورة',
+	'pagetitle' => 'الوظائف',
 ];

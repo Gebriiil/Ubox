@@ -60,6 +60,8 @@ return array(
     'suppliers' => 'المورديين',
     'project_categories'=>'اقسام المشاريع',
     'projects'=>'المشاريع',
+    'add_new' => 'أضف',
+    'jobs' => 'وظائف',
 
 );
 

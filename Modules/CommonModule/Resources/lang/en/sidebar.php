@@ -57,5 +57,7 @@ return array(
     'suppliers' => 'Suppliers',
     'project_categories'=>'Project Categories',
     'projects'=>'Projects',
+    'add_new' => 'Add New',
+    'jobs' => 'Jobs',
 
 );

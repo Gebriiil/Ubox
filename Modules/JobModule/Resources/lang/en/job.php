@@ -4,7 +4,8 @@ return [
 
 	'jobs' => 'Jobs',
 	'title' => 'Title',
-	'description' => 'Description',
+	'desc' => 'Description',
 	'image' => 'Image',
+	'pagetitle' => 'Jobs',
 
 ];

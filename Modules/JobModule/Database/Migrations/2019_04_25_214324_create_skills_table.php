@@ -13,6 +13,8 @@ class CreateSkillsTable extends Migration {
 	public function up() {
 		Schema::create('skills', function (Blueprint $table) {
 			$table->bigIncrements('id');
+			$table->bigInteger('job_id')->unsigned();
+			$table->foreign('job_id')->references('id')->on('jobs')->onDelete('cascade');
 			$table->string('name');
 			$table->timestamps();
 		});

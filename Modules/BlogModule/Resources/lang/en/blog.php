@@ -19,6 +19,10 @@ return [
 	'Write Title'=>'Write Title',
 	'Write Description'=>'Write Description',
 	'image'=>'Image',
+	'status' => 'Status',
+	'active' => 'Active',
+	'notactive' => 'Not Active',
+	'skills' => 'Skills'
 ];
 
 ?>

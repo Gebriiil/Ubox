@@ -159,7 +159,7 @@
             </li>
 
             <li>
-                <a href="{{ aurl('job/index') }}">
+                <a href="{{ route('jobs_index') }}">
                     <i class="fa fa-user" aria-hidden="true"></i><span>{{__('commonmodule::sidebar.jobs')}} </span>
                     <span class="pull-right-container">
                 </span>
