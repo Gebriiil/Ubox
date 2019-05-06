@@ -17,7 +17,7 @@
                                 @lang('uboxfrontmodule::front.services')
                         </a>
 
-                        <a href="contact.html" class="btn fables-second-border-color fables-second-text-color rounded-0 px-3 px-md-4 py-2 fables-second-hover-background-color">
+                        <a href="{{route('contact')}}" class="btn fables-second-border-color fables-second-text-color rounded-0 px-3 px-md-4 py-2 fables-second-hover-background-color">
                                 @lang('uboxfrontmodule::front.contact_us')
                         </a>
 

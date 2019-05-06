@@ -87,10 +87,10 @@
                                 <a class="nav-link " href="blog.html">@lang('frontmodule::front.blog')</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about.html">@lang('frontmodule::front.about_us')</a>
+                                <a class="nav-link" href="{{ route('about_us') }}">@lang('frontmodule::front.about_us')</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">@lang('frontmodule::front.contact_us')</a>
+                                <a class="nav-link" href="{{ route('contact')}}">@lang('frontmodule::front.contact_us')</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="job.html">@lang('frontmodule::front.jobs')</a>

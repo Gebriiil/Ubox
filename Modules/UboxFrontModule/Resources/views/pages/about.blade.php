@@ -153,7 +153,7 @@
                                 <p class="fables-fifth-text-color position-relative z-index mt-4 mb-4 mb-md-5 wow fadeInRight" data-wow-duration="2s">
                                  We are a Web Solutions and App Development company, focused on bringing the world to the digital. We believe that our success comes from our clients’, and their growth only adds to our success story. This is why we are committed to offer the best, most efficient, and technologically advanced solutions in the shortest time possible without compromising the quality.
                                 </p>
-                                <a href="contact.html" class="btn fables-second-border-color white-color fables-btn-rouned fables-hover-btn-color font-19 px-5 py-2 position-relative z-index wow fadeInRight" data-wow-duration="2s"><span>Contact Us</span></a>
+                                <a href="{{ route('contact')}}" class="btn fables-second-border-color white-color fables-btn-rouned fables-hover-btn-color font-19 px-5 py-2 position-relative z-index wow fadeInRight" data-wow-duration="2s"><span>Contact Us</span></a>
                             </div>
 
                         </div>
@@ -169,7 +169,7 @@
                             <p class="fables-forth-text-color position-relative z-index mt-4 mb-4 mb-md-5 wow fadeInLeft" data-wow-duration="2s">
                               We always strive to be up to our customers’ expectations and to deliver high standard websites and mobile applications designed in a very unique and attractive way. We also look forward to help our customer achieve constant growth by offering them the best marketing plans for their businesses. UBoxPlus is looking forward to be the leading company not only in Egypt, but in MENA.
                             </p>
-                            <a href="contact.html" class="btn fables-second-border-color fables-second-text-color fables-btn-rouned fables-hover-btn-color font-19 px-5 py-2 position-relative z-index wow fadeInLeft" data-wow-duration="2s"><span>Contact Us</span></a>
+                            <a href="{{ route('contact')}}" class="btn fables-second-border-color fables-second-text-color fables-btn-rouned fables-hover-btn-color font-19 px-5 py-2 position-relative z-index wow fadeInLeft" data-wow-duration="2s"><span>Contact Us</span></a>
                         </div>                    
                     </div>
 
