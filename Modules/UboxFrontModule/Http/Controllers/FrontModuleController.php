@@ -145,6 +145,7 @@ class FrontModuleController extends Controller
         $page_name='services';
         return view('uboxfrontmodule::pages.services',compact('page_name'));
     }
+    
     public function add_to_newsletters(Request $request)
     {
         $data=$request->validate([
