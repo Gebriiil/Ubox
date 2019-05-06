@@ -14,8 +14,8 @@ use Modules\ProjectModule\Entities\Project;
 use Modules\UboxFrontModule\Entities\Newsletter;
 
 use Modules\BlogModule\Repository\CommentRepository;
-
-
+use Modules\TrainingModule\Repository\TrainingRepository;
+use DB;
 class FrontModuleController extends Controller
 {
 
@@ -27,13 +27,15 @@ class FrontModuleController extends Controller
         Project_CategoryRepository $categoryRepo,
         ProjectRepository $projectRepo,
         BlogRepositry $blogrepository,
-        CommentRepository $commentRepository
+        CommentRepository $commentRepository,
+        TrainingRepository $trainingRepository
     )
     {
         $this->categoryRepo = $categoryRepo;
         $this->blogrepository = $blogrepository;
         $this->projectRepo = $projectRepo;
         $this->commentRepository = $commentRepository;
+        $this->trainingRepository = $trainingRepository;
 
     }
     /**
@@ -117,12 +119,23 @@ class FrontModuleController extends Controller
     }
     public function add_to_newsletters(Request $request)
     {
-        $data=$request->validate([
-            'email'=>'required|email|unique:newsletters',
-        ]);
-
+        // $mail=Newsletter::where('email',$request->email)->get();
+        // if(isset($mail)){
+        //     return response()->json(['error'=>'Already Exists']);
+        // }
+        $data=request()->all();
         Newsletter::create($data);
-        session()->flash('success','Added Successfully');
-        return back();   
+        return response()->json(['success'=>'success']); 
     }
+
+
+    public function training(){
+
+        $training = $this->trainingRepository->findAllByPagination();
+        $page_name= trans('commonmodule::sidebar.training');
+        
+        return view('uboxfrontmodule::pages.training',compact('training','name'));
+
+    }
+
 }

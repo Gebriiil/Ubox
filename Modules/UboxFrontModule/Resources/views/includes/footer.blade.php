@@ -8,11 +8,12 @@
 			    _token:"{{ csrf_token() }}"
 			  },
 			  function(data){
-			  	$('#mailnews').val('');
-			    notif({
-                        msg: "<b>Added Successfully</b>",
-                        type: "success",
-                    });
+				  	$('#mailnews').val(''); 
+				    notif({
+	                        msg: "<b>Added Successfully</b>",
+	                        type: "success",
+	                    });
+					
 			  });
 		});
 </script>

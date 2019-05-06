@@ -1,7 +1,7 @@
 @extends('uboxfrontmodule::layouts.master')
 
 @section('content')
- 
+
     <!-- Start Header -->
 <div class="fables-header fables-after-overlay">
     <div class="container"> 
@@ -24,7 +24,7 @@
 <!-- /End Breadcrumbs -->
      
 <!-- Start page content --> 
-    <div class="container"> 
+    <div class="container  fables-counter"> 
             <div class="row overflow-hidden">
                 <div class="col-12 col-md-10 offset-md-1 mt-5">
                     <div class="row">

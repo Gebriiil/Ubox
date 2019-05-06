@@ -89,4 +89,33 @@ return [
 	'Our business experties'=>'Unsere Geschäftskompetenz Bieten Sie den großen Wert',
 	'Being the best'=>'“Das beste Software-Entwicklungsunternehmen in der verschiedenen Wissensdomäne sein”',
 
+	/*********************************/
+	'SATISFIED CLIENTS'=>'ZUFRIEDENE KUNDEN',
+	'COMPANY MEMBERS'=>'FIRMENMITGLIEDER',
+	'AWWARDS WIN'=>'AUSGEZEICHNETE PREISE',
+	'YEARS EXPIRIENCE'=>'JAHRE ERFAHRUNG',
+	'Company History'=>'Firmen Geschichte',
+	'The company was established in'=>'Das Unternehmen wurde im Jahr 2019 gegründet, um verschiedene Abteilungen für den Unternehmenssektor und Einzelpersonen in unterschiedlichen Bereichen durch Anwendungen zur Zufriedenheit und Zufriedenheit der Kunden einzubeziehen. Anwendungen für Einzelpersonen umfassen kostenlose Serviceprogramme, die Zeit und Mühe sparen. Was den Geschäftsbereich, die Unternehmen und die Fabriken anbelangt, haben sie den größten Anteil an den Geschäftsabteilungen und beginnen, umfassende Machbarkeitsstudien sowie interne und internationale Marketing-Dienstleistungen zu erstellen. Programmieren von Websites in allen Programmiersprachen sowie mobilen Anwendungen.',
+	'We love what we do'=>'Wir lieben was wir tun',
+	' we do it with passion!'=>' wir machen es mit leidenschaft!',
+	'We are a Web Solutions'=>'Wir sind ein Unternehmen für Web-Lösungen und App-Entwicklung, das darauf ausgerichtet ist, die Welt digital zu machen. Wir glauben, dass unser Erfolg von unseren Kunden ausgeht. Ihr Wachstum trägt nur zu unserer Erfolgsgeschichte bei. Deshalb sind wir bestrebt, in kürzester Zeit die besten, effizientesten und technologisch fortschrittlichsten Lösungen anzubieten, ohne die Qualität zu beeinträchtigen.',
+	'We gain the trust and loyalty of'=>'Wir gewinnen das Vertrauen und die Treue von',
+	'our Clients'=>'unsere Kunden',
+	'We always strive to be up to our customers'=>'Wir sind stets bemüht, die Erwartungen unserer Kunden zu erfüllen und qualitativ hochwertige Websites und mobile Anwendungen bereitzustellen, die auf einzigartige und attraktive Weise gestaltet sind. Wir freuen uns auch darauf, unseren Kunden dabei zu helfen, ein konstantes Wachstum zu erzielen, indem wir ihnen die besten Marketingpläne für ihr Unternehmen anbieten. UBoxPlus freut sich darauf, das führende Unternehmen nicht nur in Ägypten, sondern auch in MENA zu sein.',
+	'Testimonials'=>'Referenzen',
+	'what people say'=>'was die Leute sagen',
+	'We’ve been lucky'=>'Wir hatten das Glück, mit so vielen Industriekunden zusammenzuarbeiten.
+                      Überprüfen Sie, was sie sagen.',
+	'Meet The Team'=>'Triff das Team',
+	'We love what we do and we do it with passion.'=>'Wir lieben was wir tun und machen es mit Leidenschaft. Wir schätzen das Experimentieren, die Neugestaltung der Nachricht und die intelligenten Anreize',
+	'For individuals'=>'Für Einzelpersonen',
+     'For individuals desc'=>'Hast du Geld? aber du hast keine ahnung!
+							Bist du ein Experte? aber du hast kein geld
+							Ihre Investition & Geld in Ihrer Hand',
+	 'For Companies'=>'Für Unternehmen',
+	 'For Companies_desc'=>'Innovationslösung für Ihr Unternehmen zum Wachstum
+							Kümmern Sie sich um Ihr Wachstum',
+	 'People'=>'Menschen',
+	 'People_desc'=>'Macht dein Leben einfach und einfach',
+
 ];

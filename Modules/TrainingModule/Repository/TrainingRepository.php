@@ -9,43 +9,47 @@ class TrainingRepository{
 
     function findAll()
     {
-        $project = Training::all();
-        return $project;
+        return Training::all();
+    }
+
+    function findAllByPagination()
+    {
+        return Training::paginate(5);
     }
 
 
-    function save($project)
+    function save($trainig)
     {
-        $project = Training::create($project);
-        return $project;
+        $trainig = Training::create($trainig);
+        return $trainig;
     }
 
     function findById($id)
     {
-        $project = Training::find($id);
-        return $project;
+        $trainig = Training::find($id);
+        return $trainig;
     }
 
     function findBy($key,$value){
-        $project = Training::where($key,$value)->get();
-        return $project;
+        $trainig = Training::where($key,$value)->get();
+        return $trainig;
     }
 
 
 
-    function update($ProjectData,$id)
+    function update($trainigData,$id)
     {
-        $Project = Training::find($id);
-        $Project = $Project->update($ProjectData);
-        return $Project;
+        $trainig = Training::find($id);
+        $trainig = $trainig->update($trainigData);
+        return $trainig;
     }
 
     function delete($id){
-        $project = Training::find($id);
+        $trainig = Training::find($id);
 
-        File::delete( asset('uploads' , $project->image) );
+        File::delete( asset('uploads' , $trainig->image) );
 
-        $project->delete();
+        $trainig->delete();
         return 'success';
     }
 

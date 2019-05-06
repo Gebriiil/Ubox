@@ -226,5 +226,15 @@ return [
 	'what people say'=>'what people say',
 	'We’ve been lucky'=>'We’ve been lucky enough to work with so many industrial Clients .
                      Check out what they’re saying.',
-
+     'Meet The Team'=>'Meet The Team',
+     'We love what we do and we do it with passion.'=>' We love what we do and we do it with passion. We value the experimentation, the reformation of the message, and the smart incentives',
+     'For individuals'=>'For individuals',
+     'For individuals desc'=>'Do you have money? but you don\'t have idea!
+							Are you expert? but you don\'t have money
+						     Your Investment & Money in your hand',
+	 'For Companies'=>'For Companies',
+	 'For Companies_desc'=>'Innovation solution for your business to growth
+							care about your growth',
+	 'People'=>'People',
+	 'People_desc'=>'Makes your life easy and simple',
 ];
