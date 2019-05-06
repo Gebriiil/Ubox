@@ -14,7 +14,7 @@ use Modules\ProjectModule\Entities\Project;
 use Modules\UboxFrontModule\Entities\Newsletter;
 
 use Modules\BlogModule\Repository\CommentRepository;
-
+use Modules\TrainingModule\Repository\TrainingRepository;
 
 class FrontModuleController extends Controller
 {
@@ -27,13 +27,15 @@ class FrontModuleController extends Controller
         Project_CategoryRepository $categoryRepo,
         ProjectRepository $projectRepo,
         BlogRepositry $blogrepository,
-        CommentRepository $commentRepository
+        CommentRepository $commentRepository,
+        TrainingRepository $trainingRepository
     )
     {
         $this->categoryRepo = $categoryRepo;
         $this->blogrepository = $blogrepository;
         $this->projectRepo = $projectRepo;
         $this->commentRepository = $commentRepository;
+        $this->trainingRepository = $trainingRepository;
 
     }
     /**
@@ -125,4 +127,15 @@ class FrontModuleController extends Controller
         session()->flash('success','Added Successfully');
         return back();   
     }
+
+
+    public function training(){
+
+        $training = $this->trainingRepository->findAllByPagination();
+        $page_name= trans('commonmodule::sidebar.training');
+        
+        return view('uboxfrontmodule::pages.training',compact('training','name'));
+
+    }
+
 }

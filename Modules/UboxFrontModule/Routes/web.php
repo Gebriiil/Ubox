@@ -14,6 +14,7 @@ Route::group(
     Route::post('/news/{id}/add-comment', 'FrontModuleController@comment')->name('comment');
 
 	Route::get('/', 'FrontModuleController@index')->name('home');
+	Route::get('/training', 'FrontModuleController@training')->name('only_training');
 
     Route::get('/', 'FrontModuleController@index')->name('home');
     Route::get('/contact_us', 'FrontModuleController@contact_us')->name('contact_us');

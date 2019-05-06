@@ -28,6 +28,7 @@
 <link href="{{assets('assets/front/custom/css/blue.css')}}" rel="stylesheet">
 <!-- FABLES CUSTOM CSS RESPONSIVE FILE -->
 <link href="{{assets('assets/front/custom/css/custom-responsive.css')}}" rel="stylesheet">
+<link href="{{assets('assets/front/custom/css/job.css')}}" rel="stylesheet">
 
 @if(lang() == 'ar')
 

@@ -20,5 +20,6 @@
 <script src="{{assets('assets/front/custom/js/custom.js')}}"></script>
 <script src="{{assets('assets/front/custom/js/noty.js')}}"></script>
 <link rel="stylesheet" href="{{assets('assets/front/custom/css/notify.css')}}">
+<script src="{{assets('assets/front/vendor/timeline/modernizr.js')}}"></script>
 
 @stack('javascript')

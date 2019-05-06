@@ -70,7 +70,7 @@
                     </button>
                     <div class="collapse navbar-collapse" id="fablesNavDropdown">
 
-                        <ul class="navbar-nav mx-auto fables-nav">
+                        <ul class="navbar-nav mx-auto fables-nav" style="width: 1000px;">
                             <li class="nav-item active">
                                 <a class="nav-link " href="{{route('home')}}">@lang('uboxfrontmodule::front.home')</a>
                             </li>
@@ -80,6 +80,11 @@
                             <li class="nav-item">
                                 <a class="nav-link " href="{{route('projects')}}">@lang('uboxfrontmodule::front.projects')</a>
                             </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link " href="{{route('only_training')}}">@lang('commonmodule::sidebar.training')</a>
+                            </li>
+
                             <li class="nav-item">
                                 <a class="nav-link " href="{{route('blog')}}">@lang('uboxfrontmodule::front.blog')</a>
                             </li>
@@ -99,7 +104,7 @@
                 </nav>
             </div>
 
-            <div class="col-5 col-md-2 pr-md-0 icons-header-mobile">
+            <div class="col-5 col-md-2 pr-md-0 icons-header-mobile" style="margin-left:90px">
 
                 <div class="fables-header-icons pt-lg-4 text-rtl">
 
