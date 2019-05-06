@@ -22,4 +22,19 @@
 <link rel="stylesheet" href="{{assets('assets/front/custom/css/notify.css')}}">
 <script src="{{assets('assets/front/vendor/timeline/modernizr.js')}}"></script>
 
+
+
+@if(session('success'))
+    <script>
+
+        notif({
+            msg: "{{ session('success') }}",
+            type: "success",
+        });
+                
+        
+    </script>
+@endif
+
+
 @stack('javascript')

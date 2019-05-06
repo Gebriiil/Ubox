@@ -71,7 +71,7 @@ class FrontModuleController extends Controller
             'name' => request('name'),
         ]));
 
-        return back()->with('success', @lang('uboxfrontmodule::front.send') );
+        return back()->with('success', trans('uboxfrontmodule::front.data_send') );
 
 
 
