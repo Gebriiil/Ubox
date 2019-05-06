@@ -17,6 +17,22 @@
 			  });
 		});
 </script>
+
+
+<script>
+		@if(session('success'))
+    <script>
+
+        notif({
+            msg: "{{ session('success') }}",
+            type: "success",
+        });
+                
+        
+    </script>
+@endif
+</script>
+
 @endpush
 <!-- Start Footer 2 Background Image  -->
 <div class="fables-footer-image fables-after-overlay white-color py-4 py-lg-5 bg-rules text-rtl">
@@ -59,9 +75,9 @@
 			<div class="col-12 col-sm-6 col-lg-4">
 				<h2 class="font-20 semi-font fables-second-border-color border-bottom pb-3 mb-3 text-rtl">@lang('uboxfrontmodule::front.explore')</h2>
 				<ul class="nav fables-footer-links">
-					<li><a href="about.html">@lang('uboxfrontmodule::front.about_us')</a></li>
+					<li><a href="{{ route('about_us') }}">@lang('uboxfrontmodule::front.about_us')</a></li>
 					<li><a href="{{route('services')}}">@lang('uboxfrontmodule::front.services')</a></li>
-					<li><a href="contact.html">@lang('uboxfrontmodule::front.contact_us')</a></li>
+					<li><a href="{{ route('contact')}}">@lang('uboxfrontmodule::front.contact_us')</a></li>
 					<li><a href="{{route('blog')}}">@lang('commonmodule::sidebar.blog')</a></li>
 				</ul>
 			</div>

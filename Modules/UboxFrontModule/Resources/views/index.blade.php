@@ -254,7 +254,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-4 offset-xl-2 col-xl-2 text-center">
-                    <a href="contact.html" class="btn fables-second-background-color fables-btn-rounded white-color mt-3 position-relative z-index font-19 px-5 py-2 white-color-hover">@lang('uboxfrontmodule::front.Contact us')</a>
+                    <a href="{{ route('contact')}}" class="btn fables-second-background-color fables-btn-rounded white-color mt-3 position-relative z-index font-19 px-5 py-2 white-color-hover">@lang('uboxfrontmodule::front.Contact us')</a>
                 </div>
             </div>
 

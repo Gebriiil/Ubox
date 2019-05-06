@@ -155,7 +155,11 @@
                                   @lang('uboxfrontmodule::front.We are a Web Solutions')
                                  
                                 </p>
+<<<<<<< HEAD
                                 <a href="contact.html" class="btn fables-second-border-color white-color fables-btn-rouned fables-hover-btn-color font-19 px-5 py-2 position-relative z-index wow fadeInRight" data-wow-duration="2s"><span>@lang('uboxfrontmodule::front.contact_us')</span></a>
+=======
+                                <a href="{{ route('contact')}}" class="btn fables-second-border-color white-color fables-btn-rouned fables-hover-btn-color font-19 px-5 py-2 position-relative z-index wow fadeInRight" data-wow-duration="2s"><span>Contact Us</span></a>
+>>>>>>> b29967eb9d6308cfc2d9aeb1b861b77957427add
                             </div>
 
                         </div>
@@ -174,6 +178,7 @@
                               @lang('uboxfrontmodule::front.We always strive to be up to our customers')
                               
                             </p>
+
                             <a href="contact.html" class="btn fables-second-border-color fables-second-text-color fables-btn-rouned fables-hover-btn-color font-19 px-5 py-2 position-relative z-index wow fadeInLeft" data-wow-duration="2s"><span>@lang('uboxfrontmodule::front.contact_us')</span></a>
                         </div>                    
                     </div>

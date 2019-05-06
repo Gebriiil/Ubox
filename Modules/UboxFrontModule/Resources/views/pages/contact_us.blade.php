@@ -64,7 +64,9 @@
                
         <div class="row mb-4 mb-md-5 overflow-hidden dir-right">
                 <div class="col-12 col-sm-6 wow fadeInLeft">
-                    <form class="fables-contact-form" method="post" action="contact.php">
+                    <form class="fables-contact-form" method="post" action="{{ route('send') }}">
+                      
+                      @csrf
                       <div class="form-group"> 
                         <input type="text" class="form-control rounded-0 p-3" name="name" placeholder="{{__('uboxfrontmodule::front.Your Name')}}">   
                       </div>
