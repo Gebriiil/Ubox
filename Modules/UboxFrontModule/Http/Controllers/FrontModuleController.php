@@ -18,6 +18,10 @@ use Modules\TrainingModule\Repository\TrainingRepository;
 use DB;
 use App\Mail\ContactUs;
 use Mail;
+use Modules\TrainingModule\Repository\TrainingCategoryRepository;
+use Modules\JobModule\Repository\JobRepository;
+use Modules\JobModule\Repository\JobCategoryRepository;
+
 class FrontModuleController extends Controller
 {
 
@@ -30,14 +34,20 @@ class FrontModuleController extends Controller
         ProjectRepository $projectRepo,
         BlogRepositry $blogrepository,
         CommentRepository $commentRepository,
-        TrainingRepository $trainingRepository
+        TrainingRepository $trainingRepository,
+        TrainingCategoryRepository $trainingCategoryRepository,
+        JobRepository $jobRepository, 
+        JobCategoryRepository $jobCategoryRepository
     )
     {
         $this->categoryRepo = $categoryRepo;
         $this->blogrepository = $blogrepository;
         $this->projectRepo = $projectRepo;
         $this->commentRepository = $commentRepository;
+        $this->trainingCategoryRepository = $trainingCategoryRepository;
         $this->trainingRepository = $trainingRepository;
+        $this->jobRepository = $jobRepository;
+		$this->jobCategoryRepository = $jobCategoryRepository;
 
     }
     /**
@@ -63,7 +73,7 @@ class FrontModuleController extends Controller
 
         ]);
 
-        Mail::to('widame@gmail.com')->send(new ContactUs([
+        Mail::to('ubox@gmail.com')->send(new ContactUs([
             'email' => request('email'),
             'subject' => request('subject'),
             'message' => request('message'),
@@ -159,10 +169,47 @@ class FrontModuleController extends Controller
 
     public function training(){
 
+
         $training = $this->trainingRepository->findAllByPagination();
-        $page_name= trans('commonmodule::sidebar.training');
         
-        return view('uboxfrontmodule::pages.training',compact('training','name'));
+        if( request()->ajax() ){
+
+            return response( view('uboxfrontmodule::pages.training_of_category',compact('training'))->render() , 200 );
+        }
+        
+        $categories=$this->trainingCategoryRepository->findAll();
+
+        $page_name= trans('commonmodule::sidebar.training');
+
+        return view('uboxfrontmodule::pages.training',compact('training','name' , 'categories'));
+
+    }
+
+    public function jobs(){
+
+
+        $jobs = $this->jobRepository->findAllByPagination();
+
+        if(request()->ajax()){
+            return response( view('uboxfrontmodule::pages.job_cards',compact('jobs') )->render() );
+        }
+
+		$categories = $this->jobCategoryRepository->findAll();
+
+        $page_name= trans('commonmodule::sidebar.jobs');
+
+        return view('uboxfrontmodule::pages.jobs',compact('jobs','name' , 'categories'));
+
+    }
+
+    
+
+    public function job($id)
+    {
+        $job = $this->jobRepository->findById($id);
+        $page_name= $job->title;
+
+        return view('uboxfrontmodule::pages.only_job',compact('job','name'));
 
     }
 

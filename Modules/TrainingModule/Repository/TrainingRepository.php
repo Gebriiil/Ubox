@@ -16,10 +16,12 @@ class TrainingRepository{
     {
         return Training::where(function($query){
 
-            return $query->when( request('category_id') , function($query){
+            return $query->when( request('training_cat_id') , function($query){
+                if( request('training_cat_id') > 0 ){
 
-                return $query->where('category_id' , request('category_id'));
-
+                    return $query->where('training_cat_id' , request('category_id'));
+                }
+                return null;
             });
 
         })->paginate(5);
@@ -55,7 +57,7 @@ class TrainingRepository{
     function delete($id){
         $trainig = Training::find($id);
 
-        File::delete( asset('uploads' , $trainig->image) );
+        File::delete( asset('upload' , $trainig->image) );
 
         $trainig->delete();
         return 'success';

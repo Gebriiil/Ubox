@@ -34,7 +34,7 @@
 
                                     <td> {{$job->title}} </td>
 
-                                    <td> {{$job->image}} </td>
+                                    <td> <img src="{{ asset('upload/' . $job->image)}}" width="100px" height="100px"> </td>
 
                                     <td>
                                         {{-- Edit --}}

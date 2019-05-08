@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use Modules\JobModule\Entities\Job;
+use Modules\JobModule\Repository\JobRepository;
+use Modules\JobModule\Repository\JobCategoryRepository;
 
 class JobModuleController extends Controller {
 	/**
@@ -13,14 +15,14 @@ class JobModuleController extends Controller {
 	 * @return Response
 	 */
 
-	function __construct()
+	function __construct(JobRepository $jobRepository , JobCategoryRepository $jobCategoryRepository)
 	{
-		
+		$this->jobRepository = $jobRepository;
+		$this->jobCategoryRepository = $jobCategoryRepository;
 	}
 
 	public function index() {
 		$jobs = Job::all();
-
 		return view('jobmodule::index', compact('jobs'));
 	}
 
@@ -29,8 +31,8 @@ class JobModuleController extends Controller {
 	 * @return Response
 	 */
 	public function create() {
-
-		return view('jobmodule::create_job');
+		$categories = $this->jobCategoryRepository->findAll();
+		return view('jobmodule::create_job' , compact('categories'));
 	}
 
 	/**
@@ -53,11 +55,14 @@ class JobModuleController extends Controller {
 		
 		$skills = request('skills');
 		$data=$request->except(['image' , 'skills']);
-        $data['image']=$image_name;
+		
+		image_upload($request->image , $image_name) ;
+
+		
+		$data['image']=$image_name;
 
         $this->jobRepository->save($data , $skills);
 
-        image_upload($request->image , $image_name);
         session()->flash('success' , __('trainingmodule::training.success'));
         return redirect(route('jobs_index'));
 
@@ -78,7 +83,9 @@ class JobModuleController extends Controller {
 	 * @return Response
 	 */
 	public function edit($id) {
-		return view('jobmodule::edit');
+		$job = $this->jobRepository->findById($id);
+
+		return view('jobmodule::edit' , compact('job'));
 	}
 
 	/**
@@ -88,7 +95,41 @@ class JobModuleController extends Controller {
 	 * @return Response
 	 */
 	public function update(Request $request, $id) {
-		//
+		
+		$rules=[];
+        foreach(config('translatable.locales') as $locale){
+            $rules+=[$locale . '.title'=>'required'];
+            $rules+=[$locale . '.description'=>'required'];
+        }
+		$rules+=['image'=>'image|mimes:jpg,png,jpeg,JPG,PNG,JPEG'];
+		$rules+=['skills'=>'required|string'];
+
+		$request->validate($rules);
+		$data=$request->except(['image' , 'skills']);
+
+		if($request->hasFile('image')){
+
+			$image_name= image_name($request->image);
+			
+			image_upload($request->image , $image_name) ;
+
+			
+			$data['image']=$image_name;
+
+		}
+
+		
+		$skills = request('skills');
+
+		
+
+        $this->jobRepository->update($id ,$data , $skills);
+
+        session()->flash('success' , __('trainingmodule::training.success'));
+        return redirect(route('jobs_index'));
+
+
+
 	}
 
 	/**
@@ -97,6 +138,8 @@ class JobModuleController extends Controller {
 	 * @return Response
 	 */
 	public function destroy($id) {
-		//
+		$this->jobRepository->delete($id);
+        session()->flash('success' , 'Deleted successfully');
+        return back();
 	}
 }

@@ -158,12 +158,34 @@
                 </a>
             </li>
 
-            <li>
-                <a href="{{ route('jobs_index') }}">
-                    <i class="fa fa-user" aria-hidden="true"></i><span>{{__('commonmodule::sidebar.jobs')}} </span>
+            
+
+            <li class="treeview {{ active_menu('jobs') }} ">
+                <a href="#">
+                    <i class="fa fa-qrcode" aria-hidden="true"></i> <span>{{__('commonmodule::sidebar.jobs')}}</span>
                     <span class="pull-right-container">
-                </span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
                 </a>
+                <ul class="treeview-menu">
+                    <!-- Current -->
+
+                    <li>
+                        <a href="{{ route('job_category_index') }}">
+                            <i class="fa fa-circle-o"></i>{{__('commonmodule::sidebar.job_categories')}}
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('jobs_index') }}">
+                            <i class="fa fa-flag" aria-hidden="true"></i><span>{{__('commonmodule::sidebar.jobs')}} </span>
+                            <span class="pull-right-container">
+                        </span>
+                        </a>
+                    </li>
+
+
+                </ul>
             </li>
 
 

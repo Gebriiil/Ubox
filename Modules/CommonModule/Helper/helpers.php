@@ -28,6 +28,10 @@ if (!function_exists('my_lang')){
 		if ($lang=='ar') {
 			return 'Arabic';
 		}
+
+		if ($lang=='de') {
+			return 'German';
+		}
 	}
 }
 if (!function_exists('image_name')){

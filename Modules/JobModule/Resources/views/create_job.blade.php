@@ -42,7 +42,7 @@
 
               @foreach(config('translatable.locales') as $lang)
               <li @if($loop->first) class="active" @endif >
-                <a href="#{{ $lang }}" data-toggle="tab">{{ $lang }}</a>
+                <a href="#{{ $lang }}" data-toggle="tab">{{ my_lang($lang) }}</a>
               </li>
               @endforeach
 
@@ -68,13 +68,40 @@
                     <textarea id="editor{{$lang}}" name="{{$lang}}[description]" placeholder="Write Description" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                   </div>
                 </div>
+
+                
+              <div class="form-group" style="margin-left: 10px; margin-right: 5px;">
+                <label>Select</label>
+                <select class="form-control" name="job_category_id" >
+                  @foreach($categories as $category)
+                  <option value="{{$category->id}}">{{$category->translate($lang)->name}}</option>
+                  @endforeach
+                </select>
               </div>
+
+              <div class="form-group" style="margin-left: 10px; margin-right: 5px;">
+                <label>Select</label>
+
+                <?php $types = ['recent', 'fulltime' , 'intern' , 'parttime']; ?>
+
+                <select class="form-control" name="type" >
+                  @foreach($types as $type)
+                  <option value="{{$type}}">{{ $type}}</option>
+                  @endforeach
+                </select>
+              </div>
+
+              </div>
+              
+
               @endforeach
             </div>
             <!-- /.tab-content -->
           </div>
           <!-- /.nav-tabs-custom -->
         </div>
+
+        
 
         {{-- Upload photo --}}
         <div class="form-group">

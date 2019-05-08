@@ -59,5 +59,6 @@ return array(
     'projects'=>'Projects',
     'add_new' => 'Add New',
     'jobs' => 'Jobs',
+    'job_categories'=>'Job Categories',
 
 );

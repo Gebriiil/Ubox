@@ -15,6 +15,8 @@ Route::group(
 
 	Route::get('/', 'FrontModuleController@index')->name('home');
 	Route::get('/training', 'FrontModuleController@training')->name('only_training');
+	Route::get('/job/{id}', 'FrontModuleController@job')->name('only_job');
+	Route::get('/jobs', 'FrontModuleController@jobs')->name('jobs');
 
     Route::get('/', 'FrontModuleController@index')->name('home');
     Route::get('/contact_us', 'FrontModuleController@contact_us')->name('contact');

@@ -15,6 +15,9 @@ class CreateJobsTable extends Migration {
 			$table->bigIncrements('id');
 			$table->string('image');
 			$table->enum('status', ['active', 'notactive']);
+			$table->enum('type', ['recent', 'fulltime' , 'intern' , 'parttime']);
+			$table->bigInteger('job_category_id')->unsigned();
+			$table->foreign('job_category_id')->references('id')->on('job_categories')->onDelete('cascade');
 			$table->timestamps();
 		});
 
@@ -30,6 +33,8 @@ class CreateJobsTable extends Migration {
 			$table->bigInteger('job_id')->unsigned();
 			$table->unique(['job_id', 'locale']);
 			$table->foreign('job_id')->references('id')->on('jobs')->onDelete('cascade');
+			$table->timestamps();
+
 		});
 
 	}

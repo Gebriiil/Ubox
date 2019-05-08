@@ -22,7 +22,10 @@ return [
 	'status' => 'Status',
 	'active' => 'Active',
 	'notactive' => 'Not Active',
-	'skills' => 'Skills'
+	'skills' => 'Skills',
+	'mt' => 'Meta Title',
+	'md' => 'Meta Desc',
+	'tags' => 'Tags',
 ];
 
 ?>

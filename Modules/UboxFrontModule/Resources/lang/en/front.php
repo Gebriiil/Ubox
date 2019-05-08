@@ -208,7 +208,7 @@ return [
 	'Web application development is'=>'Web application development is an important and esay way to convert your daily bussiness requirements into a web applications for clients.',
 	'Our business experties'=>'Our business experties Provide you the great value',
 	'Being the best'=>'“Being the best in class Software application Development Company in the different domain of Knowledge”',
-	'data_send' => 'Data Send Successfully',
+	'data_send' => 'ata Send Successfully',
 
 	/*********************************/
 	'SATISFIED CLIENTS'=>'SATISFIED CLIENTS',
@@ -238,4 +238,13 @@ return [
 							care about your growth',
 	 'People'=>'People',
 	 'People_desc'=>'Makes your life easy and simple',
+	 'featured_job' => 'Featured Job Categories',
+	 'who_are_in_extremely' => 'Who are in extremely love with eco friendly system.',
+	 'job_nature' => 'Job Nature',
+	 'jobs_by_location' => 'Jobs by Location',
+	 'jobs_by_category' => 'Jobs by Category',
+	 'apply' => 'Apply',
+	 'experience_requirements' => 'Experience Requirements',
+	 'job_overviews' => 'Job Overviews',
+	 'job_details' => 'Job Details'
 ];

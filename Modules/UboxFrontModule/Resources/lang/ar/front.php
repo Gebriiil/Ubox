@@ -182,9 +182,18 @@ return [
 	 'For Companies_desc'=>'الحلول الابتكاريه لنمو عملك ',
 	 'People'=>'عامة الناس ',
 	 'People_desc'=>'يجعل حياتك سهلة وبسيطة',
+	 'featured_job' => 'فئات الوظائف المميزة',
+	 'who_are_in_extremely' => 'من هم في حالة حب شديد مع نظام صديق للبيئة.',
+	 'job_nature' => 'طبيعة العمل',
+	 
+	 'jobs_by_location' => 'وظائف حسب الموقع',
+	 'jobs_by_category' => 'وظائف حسب الفئة',
 
-
-	
+	 'apply' => 'قدم فى الوظيفة',
+	 
+	 'experience_requirements' => 'متطلبات الخبرة',
+	 'job_overviews' => 'نظرة عامة على الوظيفة',
+	 'job_details' => 'تفاصيل الوظيفة'
 
 
 

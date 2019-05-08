@@ -95,7 +95,7 @@
                                 <a class="nav-link" href="{{route('contact')}}">@lang('uboxfrontmodule::front.contact_us')</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="job.html">@lang('uboxfrontmodule::front.jobs')</a>
+                                <a class="nav-link" href="{{ route('jobs') }}">@lang('uboxfrontmodule::front.jobs')</a>
                             </li>
 
                         </ul>

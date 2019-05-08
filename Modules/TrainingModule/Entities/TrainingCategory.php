@@ -14,6 +14,6 @@ class TrainingCategory extends Model
 
     public function projects()
     {
-    	$this->hasMany(Training::class);
+    	return $this->hasMany(Training::class);
     }
 }

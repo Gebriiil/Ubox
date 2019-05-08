@@ -62,6 +62,6 @@ return array(
     'projects'=>'المشاريع',
     'add_new' => 'أضف',
     'jobs' => 'وظائف',
-
+    'job_categories' => 'اقسام الوظائف'
 );
 

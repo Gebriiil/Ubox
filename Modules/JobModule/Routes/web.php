@@ -16,4 +16,7 @@ Route::prefix('admin-panel')->group(function () {
 	Route::get('/jobs/index', 'JobModuleController@index')->name('jobs_index');
 	Route::resource('/jobs', 'JobModuleController')->except('index');
 	
+	Route::get('jobs-category/index' , 'CategoryController@job_category_index')->name('job_category_index');
+	Route::resource('jobs-category','CategoryController')->except('index');
+		
 });
