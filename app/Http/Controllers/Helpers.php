@@ -48,20 +48,19 @@ if (!function_exists('lang')) {
 
 	function lang() {
 
-	    return app()->getLocale();
+		return app()->getLocale();
 
 	}
 }
 
 if (!function_exists('assets')) {
 
-    function assets($url) {
+	function assets($url) {
 
-        return asset('../' . $url);
+		return asset('../' . $url);
 
-    }
+	}
 }
-
 
 if (!function_exists('checkInWishlist')) {
 
@@ -183,5 +182,15 @@ if (!function_exists('quick_sort')) {
 		}
 
 		return array_merge(quick_sort($loe), array($pivot_key => $pivot), quick_sort($gt));
+	}
+}
+
+if (!function_exists('active')) {
+	function active($url) {
+
+		if (\Request::segment(1) == $url) {
+			return 'active';
+		}
+
 	}
 }

@@ -44,10 +44,10 @@
 
             </div>
             <div class="col-12 col-sm-5 col-lg-4 text-rtl">
-                <p class="fables-third-text-color font-13"><span class="fables-iconphone fl-right"></span> Phone :  (888) 6000 6000 - (888) 6000 6000</p>
+                <p class="fables-third-text-color font-13"><span class="fables-iconphone fl-right"></span> Phone :  +20 109 889 5333</p>
             </div>
             <div class="col-12 col-sm-5 col-lg-3 text-rtl">
-                <p class="fables-third-text-color font-13"><span class="fables-iconemail fl-right"></span> @lang('uboxfrontmodule::front.email'): Design@domain.com</p>
+                <p class="fables-third-text-color font-13"><span class="fables-iconemail fl-right"></span> @lang('uboxfrontmodule::front.email'): Wieboxsol@gmail.com</p>
             </div>
 
         </div>
@@ -71,30 +71,30 @@
                     <div class="collapse navbar-collapse" id="fablesNavDropdown">
 
                         <ul class="navbar-nav mx-auto fables-nav" style="width: 1000px;">
-                            <li class="nav-item active">
+                            <li class="nav-item {{ active('') }}">
                                 <a class="nav-link " href="{{route('home')}}">@lang('uboxfrontmodule::front.home')</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item {{ active('services') }}">
                                 <a class="nav-link " href="{{route('services')}}">@lang('uboxfrontmodule::front.services')</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item {{ active('projects') }}">
                                 <a class="nav-link " href="{{route('projects')}}">@lang('uboxfrontmodule::front.projects')</a>
                             </li>
 
-                            <li class="nav-item">
+                            <li class="nav-item {{ active('training') }}">
                                 <a class="nav-link " href="{{route('only_training')}}">@lang('commonmodule::sidebar.training')</a>
                             </li>
 
-                            <li class="nav-item">
+                            <li class="nav-item {{ active('blog') }}">
                                 <a class="nav-link " href="{{route('blog')}}">@lang('uboxfrontmodule::front.blog')</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item {{ active('about_us') }}">
                                 <a class="nav-link" href="{{route('about_us')}}">@lang('uboxfrontmodule::front.about_us')</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item {{ active('contact_us') }}">
                                 <a class="nav-link" href="{{route('contact')}}">@lang('uboxfrontmodule::front.contact_us')</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item {{ active('jobs') }}">
                                 <a class="nav-link" href="{{ route('jobs') }}">@lang('uboxfrontmodule::front.jobs')</a>
                             </li>
 

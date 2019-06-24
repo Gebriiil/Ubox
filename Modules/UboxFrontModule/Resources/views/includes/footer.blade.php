@@ -8,12 +8,12 @@
 			    _token:"{{ csrf_token() }}"
 			  },
 			  function(data){
-				  	$('#mailnews').val(''); 
+				  	$('#mailnews').val('');
 				    notif({
 	                        msg: "<b>Added Successfully</b>",
 	                        type: "success",
 	                    });
-					
+
 			  });
 		});
 </script>
@@ -26,7 +26,7 @@
 			<div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 mt-2 mb-5 text-center">
 				<h2 class="font-30 semi-font mb-5">@lang('uboxfrontmodule::front.Newsletter')</h2>
 				<div class="form-inline position-relative">
-					
+
 					<div class="form-group fables-subscribe-formgroup">
 						<input type="email" class="form-control fables-subscribe-input fables-btn-rouned text-rtl" id="mailnews" placeholder="@lang('uboxfrontmodule::front.email')">
 					</div>
@@ -46,15 +46,15 @@
 				<h2 class="font-20 semi-font fables-second-border-color border-bottom pb-3 text-rtl">@lang('uboxfrontmodule::front.contact_us')</h2>
 				<div class="my-3">
 					<h4 class="font-16 semi-font"><span class="fables-iconmap-icon fables-second-text-color pr-2 font-20 mt-1 d-inline-block"></span> @lang('uboxfrontmodule::front.address')</h4>
-					<p class="font-14 fables-fifth-text-color mt-2 ml-4">level13, 2Elizabeth St, Melbourne, Victor 2000</p>
+					<p class="font-14 fables-fifth-text-color mt-2 ml-4">Egypt,Menfia,Shebin Elkom</p>
 				</div>
 				<div class="my-3">
 					<h4 class="font-16 semi-font"><span class="fables-iconphone fables-second-text-color pr-2 font-20 mt-1 d-inline-block"></span> @lang('uboxfrontmodule::front.call_now') </h4>
-					<p class="font-14 fables-fifth-text-color mt-2 ml-4">+333 111 111 000</p>
+					<p class="font-14 fables-fifth-text-color mt-2 ml-4">+20 109 889 5333</p>
 				</div>
 				<div class="my-3">
 					<h4 class="font-16 semi-font"><span class="fables-iconemail fables-second-text-color pr-2 font-20 mt-1 d-inline-block"></span> @lang('uboxfrontmodule::front.mail') </h4>
-					<p class="font-14 fables-fifth-text-color mt-2 ml-4">adminsupport@website.com</p>
+					<p class="font-14 fables-fifth-text-color mt-2 ml-4">Wieboxsol@gmail.com</p>
 				</div>
 			</div>
 			<div class="col-12 col-sm-6 col-lg-4">

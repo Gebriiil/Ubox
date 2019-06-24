@@ -23,7 +23,7 @@
                                         });
                                   });
                  });
-                 
+
                     </script>
 @endpush
     <!-- Start page content -->
@@ -70,7 +70,7 @@
                     <h2 class="font-30 font-weight-bold fables-second-text-color">@lang('uboxfrontmodule::front.WHY CHOOSE US')</h2>
                     <p class="fables-main-text-color font-14 my-3">
                         @lang('uboxfrontmodule::front.Innovating the technology')
-                        
+
                     </p>
                     <div id="accordion">
                         <div class="card border-0 mb-2">
@@ -81,7 +81,7 @@
                                     <i class="fas fa-plus"></i>
                                 </span>
                                     <button class="btn fables-main-text-color bg-transparent font-18 focus-0 d-block position-relative z-index pl-6 pt-2 pb-2 w-100 text-left border-0 text-truncate" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        
+
                                         @lang('uboxfrontmodule::front.Integrity')
                                     </button>
                                 </h5>
@@ -90,7 +90,7 @@
                             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                                 <div class="card-body fables-forth-text-color font-14 py-1 py-xl-2 pl-6 pr-0">
                                     @lang('uboxfrontmodule::front.Honest Business')
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -109,7 +109,7 @@
                             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                                 <div class="card-body fables-forth-text-color font-14 py-1 py-xl-2 pl-6 pr-0">
                                     @lang('uboxfrontmodule::front.We perform to provide')
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -128,7 +128,7 @@
                             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                                 <div class="card-body fables-forth-text-color font-14 py-1 py-xl-2 pl-6 pr-0">
                                     @lang('uboxfrontmodule::front.The challenge with innovation')
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -141,14 +141,14 @@
                                 </span>
                                     <button class="btn fables-main-text-color bg-transparent font-18 focus-0 d-block position-relative z-index pl-6 pt-2 pb-2 w-100 text-left border-0 text-truncate collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
                                         @lang('uboxfrontmodule::front.customers satisfaction')
-                                        
+
                                     </button>
                                 </h5>
                             </div>
                             <div id="collapseFour" class="collapse" aria-labelledby="headingfour" data-parent="#accordion">
                                 <div class="card-body fables-forth-text-color font-14 py-1 py-xl-2 pl-6 pr-0">
                                     @lang('uboxfrontmodule::front.customers satisfaction desc')
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -166,7 +166,7 @@
                 </h2>
                 <p class="fables-forth-text-color">
                     @lang('uboxfrontmodule::front.We always strive to')
-                    
+
                 </p>
             </div>
         </div>
@@ -212,15 +212,15 @@
             </div>
         </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    
+
         <div class="gallery-filter">
             <div class="portfolioFilter my-3 clearfix">
                 <a href="#" data-filter="*" class="current">@lang('uboxfrontmodule::front.ALL')</a>
-                
+
                 @foreach($categories as $category)
                     <a href="" data-filter=".webDesign"  class="fables-forth-text-color web" id="{{$category->id}}">{{$category->name}}</a>
-                    
-                    
+
+
                 @endforeach
             </div>
             <div class="portfolioContainer row filter-masonry" id="text">
@@ -264,7 +264,7 @@
         <div class="row overflow-hidden">
             <div class="col-12">
                 <h2 class="font-35 font-weight-bold text-center fables-main-text-color my-4 my-lg-5">
-                    @lang('uboxfrontmodule::front.latest_news') 
+                    @lang('uboxfrontmodule::front.latest_news')
                 </h2>
             </div>
             @foreach($news as $new)
@@ -286,54 +286,30 @@
         <div class="container">
             <h2 class="position-relative z-index white-color font-35 font-weight-bold text-center mb-4">@lang('uboxfrontmodule::front.Testimonial')</h2>
             <div class="owl-carousel owl-theme" id="fables-testimonial-carousel">
+
+                @foreach($testmonials as $tes)
                 <div class="row text-center fables-testimonial-carousel-item rounded py-4">
                     <div class="col-12 col-md-3">
-                        
-                        <h3 class="font-14 semi-font text-white">Billy Richards</h3>
-                        <h3 class="font-14 font-italic text-white mt-2">Chief Manager, Simba Co</h3>
+
+                        <h3 class="font-14 semi-font text-white">{{ $test->name }}</h3>
+                        <h3 class="font-14 font-italic text-white mt-2">{{ $test->job_title }}</h3>
                     </div>
                     <div class="col-12 col-md-9 p-0 p-md-2">
                         <div class="fables-testimonial-detail font-15 font-italic text-white p-4 position-relative">
-                            No matter what issue or questions pops up, you are always there to
-                            assist me. Thank you so much for your excellent assistance and great
-                            customer support through years.
+                            {{ $test->quote }}
                         </div>
                     </div>
                 </div>
-                <div class="row text-center fables-testimonial-carousel-item rounded py-4">
-                    <div class="col-12 col-md-3">
-                        <img src="{{assets('assets/front/custom/images/testimonial-img.png')}}" alt="Fables Template" class="fables-testimonial-carousel-img">
-                        <h3 class="font-14 semi-font text-white">Billy Richards</h3>
-                        <h3 class="font-14 font-italic text-white mt-2">Chief Manager, Simba Co</h3>
-                    </div>
-                    <div class="col-12 col-md-9 p-0 p-md-2">
-                        <div class="fables-testimonial-detail font-15 font-italic text-white p-4 position-relative">
-                            No matter what issue or questions pops up, you are always there to
-                            assist me. Thank you so much for your excellent assistance and great
-                            customer support through years.
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+
+
 
 
             </div>
         </div>
     </div>
-    <div class="container">
-        <h2 class="font-35 font-weight-bold text-center fables-main-text-color my-3 my-lg-5">@lang('uboxfrontmodule::front.Team')</h2>
-        <div class="row overflow-hidden">
-            <div class="col-12 col-md-12 mb-12 wow bounceInDown" data-wow-delay=".4s" data-wow-duration="1.5s">
-                <div class="card fables-team-block fables-second-hover-text-color fables-team-border fables-second-border-color">
-                  <div class="image-container shine-effect">
-                      <a href="#"><img class="w-100" src="{{assets('assets/front/custom/images/happy-employees.jpg')}}" style="height: 414px; width: 400px;" alt="Card image cap"></a> 
-                  </div>
-                  
-                </div>
-            </div>
-            
-        </div>
 
-    </div>
+
 
 
     <!-- /End page content -->
